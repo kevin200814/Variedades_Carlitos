@@ -16,8 +16,7 @@ class LoginController extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('login');
-		
+		$this->load->view('login');		
 	}
 
 
@@ -26,8 +25,9 @@ class LoginController extends CI_Controller {
 
 		if ($this->session->userdata('is_logued_in') === TRUE) {	
 			$data = array(
+				'icon' => '../assets/images/favicon.png',
 				'page_title' => 'Sistema de Inventario',
-				'view' => 'Home',
+				'view' => 'Home.html',
 				'data_view' => array()
 			);
 			$this->load->view('template/main',$data);

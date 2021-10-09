@@ -1,6 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+
 class UsuarioController extends CI_Controller {
 
 	function __construct(){
@@ -29,6 +30,10 @@ class UsuarioController extends CI_Controller {
 			'view' => 'usuario/AddUsuario',
 			'data_view' => array()
 		);
+			'page_title' => 'Nuevo usuario',
+			'view' => 'usuario/AddUsuario',
+			'data_view' => array()
+		);
 
 		$data['roles'] = $this->Roles->obtener_roles();
 		$this->load->view('template/main_view',$data);
@@ -37,12 +42,12 @@ class UsuarioController extends CI_Controller {
 	public function insert_usuario()
 	{
 		$data = array(
-			'NOMBRE_USUARIO' => $this->input->post('nombre_usuario'),
+			'NOMBRE_USUARIO' => $this->input->post('nombre'),
 			'NICK_USUARIO' => $this->input->post('nick'),
-			'CORREO_USUARIO' => $this->input->post('correo_usuario'),
-			'CONTRASENIA_USUARIO' => $this->input->post('contrasenia_usuario'),
+			'CORREO_USUARIO' => $this->input->post('correo'),
+			'CONTRASENIA_USUARIO' => $this->input->post('contrasenia'),
 			'FECHA_CAMBIOS' => $this->input->post('fecha_cambios'),
-			'ID_ROL' => $this->input->post('id_rol') 
+			'ID_ROL' => $this->input->post('id_rol')
 		);
 
 		$this->Usuario->insert_usuario($data);
@@ -52,23 +57,22 @@ class UsuarioController extends CI_Controller {
 	public function editar_usuario($ID_USUARIO)
 	{
 		$data = array(
-			'page_title' => 'Editar Usuario',
-			'view' => 'usuario/AddUsuario',
+			'page_title' => 'Editar usuario',
+			'view' => 'usuario/Addusuario',
 			'data_view' => array()
 		);
-
-		$data['update'] = $this->Usuario->obtener_usuario($ID_USUARIO);
 		$data['roles'] = $this->Roles->obtener_roles();
+		$data['update'] = $this->Usuario->obtener_usuario($ID_USUARIO);
 		$this->load->view('template/main_view',$data);
 	}
 
 	public function update_usuario()
 	{
 		$usuario = array(
-			'NOMBRE_USUARIO' => $this->input->post('nombre_usuario'),
+			'NOMBRE_USUARIO' => $this->input->post('nombre'),
 			'NICK_USUARIO' => $this->input->post('nick'),
-			'CORREO_USUARIO' => $this->input->post('correo_usuario'),
-			'CONTRASENIA_USUARIO' => $this->input->post('contrasenia_usuario'),
+			'CORREO_USUARIO' => $this->input->post('correo'),
+			'CONTRASENIA_USUARIO' => $this->input->post('contrasenia'),
 			'FECHA_CAMBIOS' => $this->input->post('fecha_cambios'),
 			'ID_ROL' => $this->input->post('id_rol'),
 			'ID_USUARIO' => $this->input->post('id_usuario')

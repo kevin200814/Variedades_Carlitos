@@ -5,12 +5,9 @@ class Usuario extends CI_Model {
 
 	public function obtener_usuarios()
 	{
-		$this->db->select('*');
-		$this->db->from('TBL_USUARIO u');
-		$this->db->join('TBL_ROL r','u.ID_ROL = r.ID_ROL','INNER');
-
-		$query = $this->db->get();
-		return $query->Result();
+		$this->db->join('TBL_ROL','TBL_ROL.ID_ROL = TBL_USUARIO.ID_ROL');
+		$query = $this->db->get('TBL_USUARIO');
+		return $query->result();
 	}
 
 	public function insert_usuario($data)
@@ -44,7 +41,6 @@ class Usuario extends CI_Model {
 		$this->db->set('CONTRASENIA_USUARIO',$usuario['CONTRASENIA_USUARIO']);
 		$this->db->set('FECHA_CAMBIOS',$usuario['FECHA_CAMBIOS']);
 		$this->db->set('ID_ROL',$usuario['ID_ROL']);
-
 		$this->db->where('ID_USUARIO',$usuario['ID_USUARIO']);
 		$this->db->update('TBL_USUARIO');
 	}

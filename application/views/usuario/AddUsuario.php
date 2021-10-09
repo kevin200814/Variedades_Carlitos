@@ -4,7 +4,7 @@ if (isset($update)) {
     $nombre = $update->NOMBRE_USUARIO;
     $nick = $update->NICK_USUARIO;
     $correo = $update->CORREO_USUARIO;
-    $contrasena = $update->CONTRASENIA_USUARIO;
+    $contrasenia = $update->CONTRASENIA_USUARIO;
     $fecha_cambios = $update->FECHA_CAMBIOS;
     $id_rol = $update->ID_ROL;
 
@@ -14,7 +14,7 @@ if (isset($update)) {
     $nombre = "";
     $nick = "";
     $correo = "";
-    $contrasena = "";
+    $contrasenia = "";
     $fecha_cambios = "";
     $id_rol = "";
 
@@ -32,45 +32,50 @@ if (isset($update)) {
                     <div class="card-body">
                         <?php echo $id; ?>
                         <div class="form-group">
-                            <label for="nombre_usuario">Nombre de usuario:</label>
-                            <input type="text" name="nombre_usuario" class="form-control" value="<?= $nombre; ?>">
+                            <label for="nombre">Nombre del usuario:</label>
+                            <input type="text" name="nombre" class="form-control" value="<?= $nombre; ?>">
                         </div>
+
                         <div class="form-group">
-                            <label for="nick">Nick de usuario:</label>
+                            <label for="nick">Nick del usuario:</label>
                             <input type="text" name="nick" class="form-control" value="<?= $nick; ?>">
                         </div>
+
                         <div class="form-group">
-                            <label for="correo_usuario">Correo eléctronico:</label>
-                            <input type="email" name="correo_usuario" class="form-control" value="<?= $correo; ?>">
+                            <label for="correo">Correo:</label>
+                            <input type="text" name="correo" class="form-control" value="<?= $correo; ?>">
                         </div>
+
                         <div class="form-group">
-                            <label for="contrasenia_usuario">Contraseña:</label>
-                            <input type="text" name="contrasenia_usuario" class="form-control" value="<?= $contrasena; ?>">
+                            <label for="contrasenia">Contraseña:</label>
+                            <input type="text" name="contrasenia" class="form-control" value="<?= $contrasenia; ?>">
                         </div>
+
                         <div class="form-group">
                             <label for="fecha_cambios">Fecha de cambios:</label>
                             <input type="date" name="fecha_cambios" class="form-control" value="<?= $fecha_cambios; ?>">
                         </div>
+
                         <div class="form-group">
-                            <label for="id_rol">Rol de usuario:</label>
+                            <label for="id_rol">Rol:</label>
                             <select name="id_rol" class="form-control">
                                 <option>Seleccionar</option>
                                 <?php foreach ($roles as $r): ?>
-                                    <?php if ($accion == 'nuevo_usuario'): ?>
-                                        <option value="<?= $r->ID_ROL; ?>"><?= $r->NOMBRE_ROL; ?></option>
+                                    <?php if ($accion == 'insert_usuario'): ?>
+                                        <option value="<?=$r->ID_ROL;?>"><?=$r->NOMBRE_ROL;?></option>
                                     <?php else: ?>
-                                        <option value="<?= $r->ID_ROL; ?>"<?= $r->ID_ROL == $id_rol ? 'selected' : ""; ?>>
-                                            <?= $r->NOMBRE_ROL; ?>
+                                        <option value="<?=$r->ID_ROL?>"<?=$r->ID_ROL == $id_rol ? 'selected' : ""; ?>>
+                                            <?=$r->NOMBRE_ROL; ?>
                                         </option>
                                     <?php endif ?>
-                                <?php endforeach ?>
+                                <?php endforeach; ?>
                             </select>
                         </div>
-
+                        
                     </div>
                     <div class="card-footer">
                         <button type="submit" class="btn btn-success">Enviar</button>
-                        <a class="btn btn-secondary" href="<?=base_url().'/UsuarioController/index';?>">Cancelar</a>
+                        <a class="btn btn-secondary" href="<?=base_url().'UsuarioController/index';?>">Cancelar</a>
                     </div>
                 </div>
 

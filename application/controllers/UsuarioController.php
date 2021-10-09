@@ -26,10 +26,6 @@ class UsuarioController extends CI_Controller {
 	public function nuevo_usuario()
 	{
 		$data = array(
-			'page_title' => 'Nuevo Usuario',
-			'view' => 'usuario/AddUsuario',
-			'data_view' => array()
-		);
 			'page_title' => 'Nuevo usuario',
 			'view' => 'usuario/AddUsuario',
 			'data_view' => array()

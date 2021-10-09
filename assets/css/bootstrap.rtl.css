@@ -1,6 +1,10 @@
 @charset "UTF-8";
 /*!
+<<<<<<< HEAD
  * Bootstrap v5.1.1 (https://getbootstrap.com/)
+=======
+ * Bootstrap v5.0.2 (https://getbootstrap.com/)
+>>>>>>> Kevin
  * Copyright 2011-2021 The Bootstrap Authors
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
@@ -19,6 +23,7 @@
   --bs-white: #fff;
   --bs-gray: #6c757d;
   --bs-gray-dark: #343a40;
+<<<<<<< HEAD
   --bs-gray-100: #f8f9fa;
   --bs-gray-200: #e9ecef;
   --bs-gray-300: #dee2e6;
@@ -28,6 +33,8 @@
   --bs-gray-700: #495057;
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
+=======
+>>>>>>> Kevin
   --bs-primary: #0d6efd;
   --bs-secondary: #6c757d;
   --bs-success: #198754;
@@ -36,6 +43,7 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
+<<<<<<< HEAD
   --bs-primary-rgb: 13, 110, 253;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
@@ -57,6 +65,11 @@
   --bs-body-line-height: 1.5;
   --bs-body-color: #212529;
   --bs-body-bg: #fff;
+=======
+  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+>>>>>>> Kevin
 }
 
 *,
@@ -73,6 +86,7 @@
 
 body {
   margin: 0;
+<<<<<<< HEAD
   font-family: var(--bs-body-font-family);
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
@@ -80,6 +94,14 @@ body {
   color: var(--bs-body-color);
   text-align: var(--bs-body-text-align);
   background-color: var(--bs-body-bg);
+=======
+  font-family: var(--bs-font-sans-serif);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+>>>>>>> Kevin
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -711,6 +733,209 @@ progress {
   width: 16.6666666667%;
 }
 
+<<<<<<< HEAD
+=======
+@media (min-width: 576px) {
+  .col-sm {
+    flex: 1 0 0%;
+  }
+
+  .row-cols-sm-auto > * {
+    flex: 0 0 auto;
+    width: auto;
+  }
+
+  .row-cols-sm-1 > * {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .row-cols-sm-2 > * {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+  .row-cols-sm-3 > * {
+    flex: 0 0 auto;
+    width: 33.3333333333%;
+  }
+
+  .row-cols-sm-4 > * {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+
+  .row-cols-sm-5 > * {
+    flex: 0 0 auto;
+    width: 20%;
+  }
+
+  .row-cols-sm-6 > * {
+    flex: 0 0 auto;
+    width: 16.6666666667%;
+  }
+}
+@media (min-width: 768px) {
+  .col-md {
+    flex: 1 0 0%;
+  }
+
+  .row-cols-md-auto > * {
+    flex: 0 0 auto;
+    width: auto;
+  }
+
+  .row-cols-md-1 > * {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .row-cols-md-2 > * {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+  .row-cols-md-3 > * {
+    flex: 0 0 auto;
+    width: 33.3333333333%;
+  }
+
+  .row-cols-md-4 > * {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+
+  .row-cols-md-5 > * {
+    flex: 0 0 auto;
+    width: 20%;
+  }
+
+  .row-cols-md-6 > * {
+    flex: 0 0 auto;
+    width: 16.6666666667%;
+  }
+}
+@media (min-width: 992px) {
+  .col-lg {
+    flex: 1 0 0%;
+  }
+
+  .row-cols-lg-auto > * {
+    flex: 0 0 auto;
+    width: auto;
+  }
+
+  .row-cols-lg-1 > * {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .row-cols-lg-2 > * {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+  .row-cols-lg-3 > * {
+    flex: 0 0 auto;
+    width: 33.3333333333%;
+  }
+
+  .row-cols-lg-4 > * {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+
+  .row-cols-lg-5 > * {
+    flex: 0 0 auto;
+    width: 20%;
+  }
+
+  .row-cols-lg-6 > * {
+    flex: 0 0 auto;
+    width: 16.6666666667%;
+  }
+}
+@media (min-width: 1200px) {
+  .col-xl {
+    flex: 1 0 0%;
+  }
+
+  .row-cols-xl-auto > * {
+    flex: 0 0 auto;
+    width: auto;
+  }
+
+  .row-cols-xl-1 > * {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .row-cols-xl-2 > * {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+  .row-cols-xl-3 > * {
+    flex: 0 0 auto;
+    width: 33.3333333333%;
+  }
+
+  .row-cols-xl-4 > * {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+
+  .row-cols-xl-5 > * {
+    flex: 0 0 auto;
+    width: 20%;
+  }
+
+  .row-cols-xl-6 > * {
+    flex: 0 0 auto;
+    width: 16.6666666667%;
+  }
+}
+@media (min-width: 1400px) {
+  .col-xxl {
+    flex: 1 0 0%;
+  }
+
+  .row-cols-xxl-auto > * {
+    flex: 0 0 auto;
+    width: auto;
+  }
+
+  .row-cols-xxl-1 > * {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .row-cols-xxl-2 > * {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+  .row-cols-xxl-3 > * {
+    flex: 0 0 auto;
+    width: 33.3333333333%;
+  }
+
+  .row-cols-xxl-4 > * {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+
+  .row-cols-xxl-5 > * {
+    flex: 0 0 auto;
+    width: 20%;
+  }
+
+  .row-cols-xxl-6 > * {
+    flex: 0 0 auto;
+    width: 16.6666666667%;
+  }
+}
+>>>>>>> Kevin
 .col-auto {
   flex: 0 0 auto;
   width: auto;
@@ -881,6 +1106,7 @@ progress {
 }
 
 @media (min-width: 576px) {
+<<<<<<< HEAD
   .col-sm {
     flex: 1 0 0%;
   }
@@ -920,6 +1146,8 @@ progress {
     width: 16.6666666667%;
   }
 
+=======
+>>>>>>> Kevin
   .col-sm-auto {
     flex: 0 0 auto;
     width: auto;
@@ -1094,6 +1322,7 @@ progress {
   }
 }
 @media (min-width: 768px) {
+<<<<<<< HEAD
   .col-md {
     flex: 1 0 0%;
   }
@@ -1133,6 +1362,8 @@ progress {
     width: 16.6666666667%;
   }
 
+=======
+>>>>>>> Kevin
   .col-md-auto {
     flex: 0 0 auto;
     width: auto;
@@ -1298,6 +1529,7 @@ progress {
 
   .g-md-5,
 .gx-md-5 {
+<<<<<<< HEAD
     --bs-gutter-x: 3rem;
   }
 
@@ -1346,6 +1578,17 @@ progress {
     width: 16.6666666667%;
   }
 
+=======
+    --bs-gutter-x: 3rem;
+  }
+
+  .g-md-5,
+.gy-md-5 {
+    --bs-gutter-y: 3rem;
+  }
+}
+@media (min-width: 992px) {
+>>>>>>> Kevin
   .col-lg-auto {
     flex: 0 0 auto;
     width: auto;
@@ -1520,6 +1763,7 @@ progress {
   }
 }
 @media (min-width: 1200px) {
+<<<<<<< HEAD
   .col-xl {
     flex: 1 0 0%;
   }
@@ -1559,6 +1803,8 @@ progress {
     width: 16.6666666667%;
   }
 
+=======
+>>>>>>> Kevin
   .col-xl-auto {
     flex: 0 0 auto;
     width: auto;
@@ -1733,6 +1979,7 @@ progress {
   }
 }
 @media (min-width: 1400px) {
+<<<<<<< HEAD
   .col-xxl {
     flex: 1 0 0%;
   }
@@ -1772,6 +2019,8 @@ progress {
     width: 16.6666666667%;
   }
 
+=======
+>>>>>>> Kevin
   .col-xxl-auto {
     flex: 0 0 auto;
     width: auto;
@@ -2287,7 +2536,11 @@ progress {
 }
 
 .form-control-sm {
+<<<<<<< HEAD
   min-height: calc(1.5em + 0.5rem + 2px);
+=======
+  min-height: calc(1.5em + (0.5rem + 2px));
+>>>>>>> Kevin
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.2rem;
@@ -2306,7 +2559,11 @@ progress {
 }
 
 .form-control-lg {
+<<<<<<< HEAD
   min-height: calc(1.5em + 1rem + 2px);
+=======
+  min-height: calc(1.5em + (1rem + 2px));
+>>>>>>> Kevin
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   border-radius: 0.3rem;
@@ -2325,6 +2582,7 @@ progress {
 }
 
 textarea.form-control {
+<<<<<<< HEAD
   min-height: calc(1.5em + 0.75rem + 2px);
 }
 textarea.form-control-sm {
@@ -2336,6 +2594,19 @@ textarea.form-control-lg {
 
 .form-control-color {
   width: 3rem;
+=======
+  min-height: calc(1.5em + (0.75rem + 2px));
+}
+textarea.form-control-sm {
+  min-height: calc(1.5em + (0.5rem + 2px));
+}
+textarea.form-control-lg {
+  min-height: calc(1.5em + (1rem + 2px));
+}
+
+.form-control-color {
+  max-width: 3rem;
+>>>>>>> Kevin
   height: auto;
   padding: 0.375rem;
 }
@@ -3451,6 +3722,7 @@ textarea.form-control-lg {
     transition: none;
   }
 }
+<<<<<<< HEAD
 .collapsing.collapse-horizontal {
   width: 0;
   height: auto;
@@ -3461,6 +3733,8 @@ textarea.form-control-lg {
     transition: none;
   }
 }
+=======
+>>>>>>> Kevin
 
 .dropup,
 .dropend,
@@ -4078,6 +4352,7 @@ textarea.form-control-lg {
   .navbar-expand-sm .navbar-toggler {
     display: none;
   }
+<<<<<<< HEAD
   .navbar-expand-sm .offcanvas-header {
     display: none;
   }
@@ -4105,6 +4380,8 @@ textarea.form-control-lg {
     padding: 0;
     overflow-y: visible;
   }
+=======
+>>>>>>> Kevin
 }
 @media (min-width: 768px) {
   .navbar-expand-md {
@@ -4131,6 +4408,7 @@ textarea.form-control-lg {
   .navbar-expand-md .navbar-toggler {
     display: none;
   }
+<<<<<<< HEAD
   .navbar-expand-md .offcanvas-header {
     display: none;
   }
@@ -4158,6 +4436,8 @@ textarea.form-control-lg {
     padding: 0;
     overflow-y: visible;
   }
+=======
+>>>>>>> Kevin
 }
 @media (min-width: 992px) {
   .navbar-expand-lg {
@@ -4184,6 +4464,7 @@ textarea.form-control-lg {
   .navbar-expand-lg .navbar-toggler {
     display: none;
   }
+<<<<<<< HEAD
   .navbar-expand-lg .offcanvas-header {
     display: none;
   }
@@ -4211,6 +4492,8 @@ textarea.form-control-lg {
     padding: 0;
     overflow-y: visible;
   }
+=======
+>>>>>>> Kevin
 }
 @media (min-width: 1200px) {
   .navbar-expand-xl {
@@ -4237,6 +4520,7 @@ textarea.form-control-lg {
   .navbar-expand-xl .navbar-toggler {
     display: none;
   }
+<<<<<<< HEAD
   .navbar-expand-xl .offcanvas-header {
     display: none;
   }
@@ -4264,6 +4548,8 @@ textarea.form-control-lg {
     padding: 0;
     overflow-y: visible;
   }
+=======
+>>>>>>> Kevin
 }
 @media (min-width: 1400px) {
   .navbar-expand-xxl {
@@ -4290,6 +4576,7 @@ textarea.form-control-lg {
   .navbar-expand-xxl .navbar-toggler {
     display: none;
   }
+<<<<<<< HEAD
   .navbar-expand-xxl .offcanvas-header {
     display: none;
   }
@@ -4317,6 +4604,8 @@ textarea.form-control-lg {
     padding: 0;
     overflow-y: visible;
   }
+=======
+>>>>>>> Kevin
 }
 .navbar-expand {
   flex-wrap: nowrap;
@@ -4342,6 +4631,7 @@ textarea.form-control-lg {
 .navbar-expand .navbar-toggler {
   display: none;
 }
+<<<<<<< HEAD
 .navbar-expand .offcanvas-header {
   display: none;
 }
@@ -4369,6 +4659,8 @@ textarea.form-control-lg {
   padding: 0;
   overflow-y: visible;
 }
+=======
+>>>>>>> Kevin
 
 .navbar-light .navbar-brand {
   color: rgba(0, 0, 0, 0.9);
@@ -4492,6 +4784,12 @@ textarea.form-control-lg {
   margin-bottom: 0;
 }
 
+<<<<<<< HEAD
+=======
+.card-link:hover {
+  text-decoration: none;
+}
+>>>>>>> Kevin
 .card-link + .card-link {
   margin-right: 1rem;
 }
@@ -5367,10 +5665,17 @@ textarea.form-control-lg {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   border-radius: 0.25rem;
 }
+<<<<<<< HEAD
 .toast.showing {
   opacity: 0;
 }
 .toast:not(.show) {
+=======
+.toast:not(.showing):not(.show) {
+  opacity: 0;
+}
+.toast.hide {
+>>>>>>> Kevin
   display: none;
 }
 
@@ -5410,7 +5715,11 @@ textarea.form-control-lg {
   position: fixed;
   top: 0;
   right: 0;
+<<<<<<< HEAD
   z-index: 1055;
+=======
+  z-index: 1060;
+>>>>>>> Kevin
   display: none;
   width: 100%;
   height: 100%;
@@ -5475,7 +5784,11 @@ textarea.form-control-lg {
   position: fixed;
   top: 0;
   right: 0;
+<<<<<<< HEAD
   z-index: 1050;
+=======
+  z-index: 1040;
+>>>>>>> Kevin
   width: 100vw;
   height: 100vh;
   background-color: #000;
@@ -6187,7 +6500,11 @@ textarea.form-control-lg {
 .offcanvas {
   position: fixed;
   bottom: 0;
+<<<<<<< HEAD
   z-index: 1045;
+=======
+  z-index: 1050;
+>>>>>>> Kevin
   display: flex;
   flex-direction: column;
   max-width: 100%;
@@ -6203,6 +6520,7 @@ textarea.form-control-lg {
   }
 }
 
+<<<<<<< HEAD
 .offcanvas-backdrop {
   position: fixed;
   top: 0;
@@ -6219,6 +6537,8 @@ textarea.form-control-lg {
   opacity: 0.5;
 }
 
+=======
+>>>>>>> Kevin
 .offcanvas-header {
   display: flex;
   align-items: center;
@@ -6282,6 +6602,7 @@ textarea.form-control-lg {
   transform: none;
 }
 
+<<<<<<< HEAD
 .placeholder {
   display: inline-block;
   min-height: 1em;
@@ -6345,6 +6666,8 @@ textarea.form-control-lg {
     mask-position: -200% 0%;
   }
 }
+=======
+>>>>>>> Kevin
 .clearfix::after {
   display: block;
   clear: both;
@@ -6503,6 +6826,7 @@ textarea.form-control-lg {
     z-index: 1020;
   }
 }
+<<<<<<< HEAD
 .hstack {
   display: flex;
   flex-direction: row;
@@ -6517,6 +6841,8 @@ textarea.form-control-lg {
   align-self: stretch;
 }
 
+=======
+>>>>>>> Kevin
 .visually-hidden,
 .visually-hidden-focusable:not(:focus):not(:focus-within) {
   position: absolute !important;
@@ -6546,6 +6872,7 @@ textarea.form-control-lg {
   white-space: nowrap;
 }
 
+<<<<<<< HEAD
 .vr {
   display: inline-block;
   align-self: stretch;
@@ -6555,6 +6882,8 @@ textarea.form-control-lg {
   opacity: 0.25;
 }
 
+=======
+>>>>>>> Kevin
 .align-baseline {
   vertical-align: baseline !important;
 }
@@ -6591,6 +6920,7 @@ textarea.form-control-lg {
   float: none !important;
 }
 
+<<<<<<< HEAD
 .opacity-0 {
   opacity: 0 !important;
 }
@@ -6611,6 +6941,8 @@ textarea.form-control-lg {
   opacity: 1 !important;
 }
 
+=======
+>>>>>>> Kevin
 .overflow-auto {
   overflow: auto !important;
 }
@@ -7626,6 +7958,7 @@ textarea.form-control-lg {
   white-space: nowrap !important;
 }
 .text-primary {
+<<<<<<< HEAD
   --bs-text-opacity: 1;
   color: rgba(var(--bs-primary-rgb), var(--bs-text-opacity)) !important;
 }
@@ -7682,20 +8015,69 @@ textarea.form-control-lg {
 
 .text-muted {
   --bs-text-opacity: 1;
+=======
+  color: #0d6efd !important;
+}
+
+.text-secondary {
+  color: #6c757d !important;
+}
+
+.text-success {
+  color: #198754 !important;
+}
+
+.text-info {
+  color: #0dcaf0 !important;
+}
+
+.text-warning {
+  color: #ffc107 !important;
+}
+
+.text-danger {
+  color: #dc3545 !important;
+}
+
+.text-light {
+  color: #f8f9fa !important;
+}
+
+.text-dark {
+  color: #212529 !important;
+}
+
+.text-white {
+  color: #fff !important;
+}
+
+.text-body {
+  color: #212529 !important;
+}
+
+.text-muted {
+>>>>>>> Kevin
   color: #6c757d !important;
 }
 
 .text-black-50 {
+<<<<<<< HEAD
   --bs-text-opacity: 1;
+=======
+>>>>>>> Kevin
   color: rgba(0, 0, 0, 0.5) !important;
 }
 
 .text-white-50 {
+<<<<<<< HEAD
   --bs-text-opacity: 1;
+=======
+>>>>>>> Kevin
   color: rgba(255, 255, 255, 0.5) !important;
 }
 
 .text-reset {
+<<<<<<< HEAD
   --bs-text-opacity: 1;
   color: inherit !important;
 }
@@ -7796,6 +8178,55 @@ textarea.form-control-lg {
   --bs-bg-opacity: 1;
 }
 
+=======
+  color: inherit !important;
+}
+
+.bg-primary {
+  background-color: #0d6efd !important;
+}
+
+.bg-secondary {
+  background-color: #6c757d !important;
+}
+
+.bg-success {
+  background-color: #198754 !important;
+}
+
+.bg-info {
+  background-color: #0dcaf0 !important;
+}
+
+.bg-warning {
+  background-color: #ffc107 !important;
+}
+
+.bg-danger {
+  background-color: #dc3545 !important;
+}
+
+.bg-light {
+  background-color: #f8f9fa !important;
+}
+
+.bg-dark {
+  background-color: #212529 !important;
+}
+
+.bg-body {
+  background-color: #fff !important;
+}
+
+.bg-white {
+  background-color: #fff !important;
+}
+
+.bg-transparent {
+  background-color: transparent !important;
+}
+
+>>>>>>> Kevin
 .bg-gradient {
   background-image: var(--bs-gradient) !important;
 }

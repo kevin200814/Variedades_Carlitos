@@ -1,9 +1,14 @@
 /*!
+<<<<<<< HEAD
  * Bootstrap Grid v5.1.1 (https://getbootstrap.com/)
+=======
+ * Bootstrap Grid v5.0.2 (https://getbootstrap.com/)
+>>>>>>> Kevin
  * Copyright 2011-2021 The Bootstrap Authors
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+<<<<<<< HEAD
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -58,6 +63,8 @@
   --bs-body-bg: #fff;
 }
 
+=======
+>>>>>>> Kevin
 .container,
 .container-fluid,
 .container-xxl,
@@ -155,6 +162,209 @@
   width: 16.6666666667%;
 }
 
+<<<<<<< HEAD
+=======
+@media (min-width: 576px) {
+  .col-sm {
+    flex: 1 0 0%;
+  }
+
+  .row-cols-sm-auto > * {
+    flex: 0 0 auto;
+    width: auto;
+  }
+
+  .row-cols-sm-1 > * {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .row-cols-sm-2 > * {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+  .row-cols-sm-3 > * {
+    flex: 0 0 auto;
+    width: 33.3333333333%;
+  }
+
+  .row-cols-sm-4 > * {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+
+  .row-cols-sm-5 > * {
+    flex: 0 0 auto;
+    width: 20%;
+  }
+
+  .row-cols-sm-6 > * {
+    flex: 0 0 auto;
+    width: 16.6666666667%;
+  }
+}
+@media (min-width: 768px) {
+  .col-md {
+    flex: 1 0 0%;
+  }
+
+  .row-cols-md-auto > * {
+    flex: 0 0 auto;
+    width: auto;
+  }
+
+  .row-cols-md-1 > * {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .row-cols-md-2 > * {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+  .row-cols-md-3 > * {
+    flex: 0 0 auto;
+    width: 33.3333333333%;
+  }
+
+  .row-cols-md-4 > * {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+
+  .row-cols-md-5 > * {
+    flex: 0 0 auto;
+    width: 20%;
+  }
+
+  .row-cols-md-6 > * {
+    flex: 0 0 auto;
+    width: 16.6666666667%;
+  }
+}
+@media (min-width: 992px) {
+  .col-lg {
+    flex: 1 0 0%;
+  }
+
+  .row-cols-lg-auto > * {
+    flex: 0 0 auto;
+    width: auto;
+  }
+
+  .row-cols-lg-1 > * {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .row-cols-lg-2 > * {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+  .row-cols-lg-3 > * {
+    flex: 0 0 auto;
+    width: 33.3333333333%;
+  }
+
+  .row-cols-lg-4 > * {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+
+  .row-cols-lg-5 > * {
+    flex: 0 0 auto;
+    width: 20%;
+  }
+
+  .row-cols-lg-6 > * {
+    flex: 0 0 auto;
+    width: 16.6666666667%;
+  }
+}
+@media (min-width: 1200px) {
+  .col-xl {
+    flex: 1 0 0%;
+  }
+
+  .row-cols-xl-auto > * {
+    flex: 0 0 auto;
+    width: auto;
+  }
+
+  .row-cols-xl-1 > * {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .row-cols-xl-2 > * {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+  .row-cols-xl-3 > * {
+    flex: 0 0 auto;
+    width: 33.3333333333%;
+  }
+
+  .row-cols-xl-4 > * {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+
+  .row-cols-xl-5 > * {
+    flex: 0 0 auto;
+    width: 20%;
+  }
+
+  .row-cols-xl-6 > * {
+    flex: 0 0 auto;
+    width: 16.6666666667%;
+  }
+}
+@media (min-width: 1400px) {
+  .col-xxl {
+    flex: 1 0 0%;
+  }
+
+  .row-cols-xxl-auto > * {
+    flex: 0 0 auto;
+    width: auto;
+  }
+
+  .row-cols-xxl-1 > * {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .row-cols-xxl-2 > * {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+  .row-cols-xxl-3 > * {
+    flex: 0 0 auto;
+    width: 33.3333333333%;
+  }
+
+  .row-cols-xxl-4 > * {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+
+  .row-cols-xxl-5 > * {
+    flex: 0 0 auto;
+    width: 20%;
+  }
+
+  .row-cols-xxl-6 > * {
+    flex: 0 0 auto;
+    width: 16.6666666667%;
+  }
+}
+>>>>>>> Kevin
 .col-auto {
   flex: 0 0 auto;
   width: auto;
@@ -325,6 +535,7 @@
 }
 
 @media (min-width: 576px) {
+<<<<<<< HEAD
   .col-sm {
     flex: 1 0 0%;
   }
@@ -364,6 +575,8 @@
     width: 16.6666666667%;
   }
 
+=======
+>>>>>>> Kevin
   .col-sm-auto {
     flex: 0 0 auto;
     width: auto;
@@ -538,6 +751,7 @@
   }
 }
 @media (min-width: 768px) {
+<<<<<<< HEAD
   .col-md {
     flex: 1 0 0%;
   }
@@ -577,6 +791,8 @@
     width: 16.6666666667%;
   }
 
+=======
+>>>>>>> Kevin
   .col-md-auto {
     flex: 0 0 auto;
     width: auto;
@@ -751,6 +967,7 @@
   }
 }
 @media (min-width: 992px) {
+<<<<<<< HEAD
   .col-lg {
     flex: 1 0 0%;
   }
@@ -790,6 +1007,8 @@
     width: 16.6666666667%;
   }
 
+=======
+>>>>>>> Kevin
   .col-lg-auto {
     flex: 0 0 auto;
     width: auto;
@@ -964,6 +1183,7 @@
   }
 }
 @media (min-width: 1200px) {
+<<<<<<< HEAD
   .col-xl {
     flex: 1 0 0%;
   }
@@ -1003,6 +1223,8 @@
     width: 16.6666666667%;
   }
 
+=======
+>>>>>>> Kevin
   .col-xl-auto {
     flex: 0 0 auto;
     width: auto;
@@ -1177,6 +1399,7 @@
   }
 }
 @media (min-width: 1400px) {
+<<<<<<< HEAD
   .col-xxl {
     flex: 1 0 0%;
   }
@@ -1216,6 +1439,8 @@
     width: 16.6666666667%;
   }
 
+=======
+>>>>>>> Kevin
   .col-xxl-auto {
     flex: 0 0 auto;
     width: auto;

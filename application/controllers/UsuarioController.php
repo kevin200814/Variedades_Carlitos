@@ -49,8 +49,7 @@ class UsuarioController extends CI_Controller {
 		$this->Usuario->insert_usuario($data);
 		$this->index();
 	}
-	//para las vistas normales dejar el template/main_view
-	//para los crud de actualizar dejar el template/main porque si no da conflicto el navbar con el css del crud
+
 	public function editar_usuario($ID_USUARIO)
 	{
 		$data = array(
@@ -60,7 +59,7 @@ class UsuarioController extends CI_Controller {
 		);
 		$data['roles'] = $this->Roles->obtener_roles();
 		$data['update'] = $this->Usuario->obtener_usuario($ID_USUARIO);
-		$this->load->view('template/main',$data);
+		$this->load->view('template/main_view',$data);
 	}
 
 	public function update_usuario()
@@ -76,12 +75,12 @@ class UsuarioController extends CI_Controller {
 		);
 
 		$this->Usuario->editar_usuario($usuario);
-redirect('usuarioController/');
+		$this->index();
 	}
-//redireccionar al controlador porque si no se friega el diseño tanto del controlador como del navbar
+
 	public function eliminar_usuario($ID_USUARIO)
 	{
 		$this->Usuario->delete_usuario($ID_USUARIO);
-		redirect('usuarioController/');
+		$this->index();
 	}
 }

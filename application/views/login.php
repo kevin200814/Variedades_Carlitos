@@ -36,7 +36,6 @@
 
 </style>
 </head>
-<section class="home-section">
 <body>
 	<main class="d-flex align-items-center min-vh-100 py-3 py-md-0">
 		<div class="container">

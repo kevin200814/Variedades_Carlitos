@@ -9,11 +9,6 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-
- #table{
-	align-items: center;
-}
-
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -194,8 +189,10 @@ address {
   line-height: inherit;
 }
 
-
-
+ol,
+ul {
+  padding-left: 2rem;
+}
 
 ol,
 ul,
@@ -204,7 +201,12 @@ dl {
   margin-bottom: 1rem;
 }
 
-
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0;
+}
 
 dt {
   font-weight: 700;
@@ -2194,11 +2196,6 @@ progress {
     --bs-gutter-y: 3rem;
   }
 }
-#tabla2{
-
-  width: 210%;
-
-}
 .table {
   --bs-table-bg: transparent;
   --bs-table-accent-bg: transparent;
@@ -2209,7 +2206,6 @@ progress {
   --bs-table-hover-color: #212529;
   --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
   width: 100%;
-  height: 0;
   margin-bottom: 1rem;
   color: #212529;
   vertical-align: top;

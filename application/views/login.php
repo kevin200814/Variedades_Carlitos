@@ -40,17 +40,7 @@
 		}
 	</style>
 </head>
-
 <section class="home-section">
-
-<body>
-	<main class="d-flex align-items-center min-vh-100 py-3 py-md-0">
-		<div class="container">
-			<div class="card login-card">
-				<div class="row no-gutters">
-					<div class="col-md-5">
-						<img src="<?php echo base_url(); ?>assets/images/1.png" alt="login" class="login-card-img">
-
 
 	<body>
 		<main class="d-flex align-items-center min-vh-100 py-3 py-md-0">
@@ -65,7 +55,6 @@
 								<div class="brand-wrapper">
 									<h1>Sistema de Inventario</h1>
 								</div>
-
 								<p class="login-card-description">Inicio de sesión</p>
 								<form method="post" action="<?php echo base_url(); ?>LoginController/userAuth">
 									<div class="form-group">
@@ -84,13 +73,6 @@
 								</form>
 								<a href="#!" class="forgot-password">¿Olvidaste tu contraseña?</a>
 							</div>
-
-								 <label style="color:red;"><?php echo $this->session->flashdata('msg');  ?></label>
-								<input  name="login" id="login" class="btn btn-block login-btn mb-4" type="submit" value="Entrar">
-								
-							</form>
-							<a href="#!"   class="forgot-password">¿Olvidaste tu contraseña?</a>
-
 						</div>
 					</div>
 				</div>

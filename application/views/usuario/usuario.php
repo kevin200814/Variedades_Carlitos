@@ -1,10 +1,13 @@
+<link rel="stylesheet" type="text/css" href="<?=base_url().'assets/css/button_style.css';?>"> 
+<section class="home-section">
+	<div class="text">Usuarios</div>
 <div class="container">
 	<div class="row">
 		<div class="col-md-12">
-			<a class="btn btn-warning" style="background-color: #ffe484;" href="<?=base_url().'UsuarioController/nuevo_usuario';?>">
+			<a class="custom-btn btn-14"  href="<?=base_url().'UsuarioController/nuevo_usuario';?>">
 				Nuevo usuario <i class="bi bi-person-plus-fill float-end"></i>
 			</a>
-		</div>
+		</div><br>
 		<br/><hr>
 		<div class="col-md-12">
 			<table id="tabla" class="table table-responsive table-striped table-bordered table-hover">

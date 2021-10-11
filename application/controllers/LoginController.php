@@ -30,7 +30,7 @@ class LoginController extends CI_Controller {
 				'view' => 'Home.html',
 				'data_view' => array()
 			);
-			$this->load->view('template/main',$data);
+			$this->load->view('template/main_view',$data);
 		}else{
 			$this->load->view('login');
 		}

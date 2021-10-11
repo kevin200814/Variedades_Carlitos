@@ -1,14 +1,16 @@
-  <section class="home-section">
-      <div class="text">Colores</div>
+<link rel="stylesheet" type="text/css" href="<?=base_url().'assets/css/button_style.css';?>"> 
+
+ <section class="home-section">
+      <div class="text">Marcas</div>
 
 
       <div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<a class="btn btn-warning" style="background-color: #ffe484; color: black;" href="<?=base_url().'MarcaController/nuevo_marca';?>">
-					Nueva marca <i class="bi bi-person-plus-fill float-end"></i>
+				<a class="custom-btn btn-14"  href="<?=base_url().'MarcaController/nuevo_marca';?>">
+					Nueva marca <i class="fa fa-check-circle"></i>
 				</a>
-			</div>
+			</div><br>
 			<br/><hr>
 			<div class="col-md-12">
 				<table id="tabla" class="table table-striped table-bordered" style="width:100%; background-color: white;">

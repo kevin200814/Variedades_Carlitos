@@ -9,7 +9,6 @@ class UsuarioController extends CI_Controller {
 		$this->load->model('Usuario');
 		$this->load->model('Roles');
 	}
-
 	public function index()
 	{
 		$data = array(
@@ -22,7 +21,6 @@ class UsuarioController extends CI_Controller {
 		$data['roles'] = $this->Roles->obtener_roles();
 		$this->load->view('template/main_view',$data);
 	}
-
 	public function nuevo_usuario()
 	{
 		$data = array(
@@ -34,7 +32,6 @@ class UsuarioController extends CI_Controller {
 		$data['roles'] = $this->Roles->obtener_roles();
 		$this->load->view('template/main_view',$data);
 	}
-
 	public function insert_usuario()
 	{
 		$data = array(

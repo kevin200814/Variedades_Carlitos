@@ -7,7 +7,6 @@ class RolController extends CI_Controller {
 		parent::__construct();
 		$this->load->model('Roles');
 	}
-
 	public function index()
 	{
 		$data = array(
@@ -40,7 +39,6 @@ class RolController extends CI_Controller {
 		$this->Roles->insert_rol($data);
 		$this->index();
 	}
-
 	//para las vistas normales dejar el template/main_view
 	//para los crud de actualizar dejar el template/main porque si no da conflicto el navbar con el css del crud
 	public function editar_rol($ID_ROL)

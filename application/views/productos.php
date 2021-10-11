@@ -4,10 +4,8 @@
 
 <link rel="stylesheet" type="<?=base_url().'assets/css/dataTables.bootstrap4.min.css';?>">
 
-
 <section class="home-section">
 	<div class="text">Productos</div>
-
 
 	<div class="container">
 		<div class="row">

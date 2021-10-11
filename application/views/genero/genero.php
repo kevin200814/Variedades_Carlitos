@@ -1,14 +1,15 @@
+<link rel="stylesheet" type="text/css" href="<?=base_url().'assets/css/button_style.css';?>"> 
   <section class="home-section">
-      <div class="text">Colores</div>
+      <div class="text">Generos</div>
 
 
       <div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<a class="btn btn-warning" style="background-color: #ffe484; color: black;" href="<?=base_url().'GeneroController/nuevo_genero';?>">
-					Nuevo Genero <i class="bi bi-person-plus-fill float-end"></i>
+				<a class="custom-btn btn-14" href="<?=base_url().'GeneroController/nuevo_genero';?>">
+						Nuevo Genero <i class="fa fa-female"></i><i class="fa fa-male"></i>
 				</a>
-			</div>
+			</div><br>
 			<br/><hr>
 			<div class="col-md-12">
 				<table id="tabla" class="table table-striped table-bordered" style="width:100%; background-color: white;">

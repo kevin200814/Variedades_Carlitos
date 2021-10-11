@@ -41,6 +41,8 @@ class RolController extends CI_Controller {
 		$this->index();
 	}
 
+	//para las vistas normales dejar el template/main_view
+	//para los crud de actualizar dejar el template/main porque si no da conflicto el navbar con el css del crud
 	public function editar_rol($ID_ROL)
 	{
 		$data = array(
@@ -50,7 +52,7 @@ class RolController extends CI_Controller {
 		);
 
 		$data['update'] = $this->Roles->obtener_rol($ID_ROL);
-		$this->load->view('template/main_view',$data);
+		$this->load->view('template/main',$data);
 	}
 
 	public function update_rol()
@@ -63,10 +65,10 @@ class RolController extends CI_Controller {
 		$this->Roles->editar_rol($rol);
 		$this->index();
 	}
-
+//redireccionar al controlador porque si no se friega el diseño tanto del controlador como del navbar
 	public function eliminar_rol($ID_ROL)
 	{
 		$this->Roles->delete_rol($ID_ROL);
-		$this->index();
+		redirect('RolController/');
 	}
 }

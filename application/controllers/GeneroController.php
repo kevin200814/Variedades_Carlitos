@@ -22,7 +22,7 @@ class GeneroController extends CI_Controller {
 		);
 
 		$data['genero'] = $this->GeneroModel->obtener_genero();
-		$this->load->view('template/main',$data);
+		$this->load->view('template/main_view',$data);
 	}
 	
 	public function nuevo_genero()
@@ -33,7 +33,7 @@ class GeneroController extends CI_Controller {
 			'data_view' => array()
 		);
 
-		$this->load->view('template/main',$data);
+		$this->load->view('template/main_view',$data);
 	}
 
 	public function insert_genero()
@@ -43,7 +43,7 @@ class GeneroController extends CI_Controller {
 		);
 
 		$this->GeneroModel->insert_genero($data);
-		$this->index(); //index
+		redirect('GeneroController/');
 	}
 
 	public function editar_genero($ID_GENERO)
@@ -66,12 +66,12 @@ class GeneroController extends CI_Controller {
 		);
 
 		$this->GeneroModel->editar_generos($marca);
-		$this->index();
+		redirect('GeneroController/');
 	}
 
 	public function eliminar_genero($ID_GENERO)
 	{
 		$this->GeneroModel->delete_genero($ID_GENERO);
-		$this->index();
+		redirect('GeneroController/');
 	}
 }

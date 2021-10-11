@@ -21,7 +21,7 @@ class ColoresController extends CI_Controller {
 			'data_view' => array()
 		);
 
-		$this->load->view('template/main_view',$data);
+		$this->load->view('template/main',$data);
 	}
 
 	public function vista()
@@ -33,7 +33,7 @@ class ColoresController extends CI_Controller {
 		);
 
 		$data['colores'] = $this->ColoresModel->obtener_colores();
-		$this->load->view('template/main_view',$data);
+		$this->load->view('template/main',$data);
 	}
 
 	public function nuevo_color()
@@ -44,7 +44,7 @@ class ColoresController extends CI_Controller {
 			'data_view' => array()
 		);
 
-		$this->load->view('template/main_view',$data);
+		$this->load->view('template/main',$data);
 	}
 
 	public function insert_color()
@@ -54,7 +54,7 @@ class ColoresController extends CI_Controller {
 		);
 
 		$this->ColoresModel->insert_color($data);
-		redirect('ColoresController/vista');
+		$this->vista(); //index
 	}
 
 	public function editar_color($ID_COLORES)
@@ -78,13 +78,11 @@ class ColoresController extends CI_Controller {
 
 		$this->ColoresModel->editar_color($colores);
 		$this->vista();
-		redirect('ColoresController/vista');
 	}
 
 	public function eliminar_color($ID_COLORES)
 	{
 		$this->ColoresModel->delete_color($ID_COLORES);
 		$this->vista();
-		redirect('ColoresController/vista');
 	}
 }

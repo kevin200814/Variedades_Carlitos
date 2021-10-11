@@ -12,37 +12,34 @@ if (isset($update)) {
     $accion = "insert_color";
 }
 ?>
-<link rel="stylesheet" type="text/css" href="<?=base_url().'assets/css/form_style.css';?>">
-<link rel="stylesheet" type="text/css" href="<?=base_url().'assets/css/button_style.css';?>">
-<section class="home-section">
+  <section class="home-section">
 
-	<div class="container">
-		<div class="form-form">
-			<div class="form-wrap">
-				<div class="col-md-6 col-lg-6 col-sm-12 float-center">
-					<form action="<?= base_url() . 'ColoresController/' . $accion; ?>" method="post" autocomplete="off">
+      <div class="container">
+    <div class="row">
+        <div class="col-md-6 col-lg-6 col-sm-12 float-center">
+            <form action="<?= base_url() . 'ColoresController/' . $accion; ?>" method="post" autocomplete="off">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Colores</h3>
+                    </div>
+                    <div class="card-body">
+                        <?php echo $id; ?>
+                        <div class="form-group">
+                            <label for="color">Nombre del color:</label>
+                            <input type="text" name="color" class="form-control" value="<?= $color; ?>">
+                        </div>
+                        
+                    </div>
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-success">Enviar</button>
+                        <a class="btn btn-danger" href="<?=base_url().'ColoresController/vista';?>">Cancelar</a>
+                    </div>
+                </div>
 
-						<h3 class="card-title">Colores</h3>
-
-						<div class="card-body">
-							<?php echo $id; ?>
-							<div class="group">
-								<label for="color" class="label">Nombre del color:</label>
-								<input type="text" name="color" class="input" value="<?= $color; ?>">
-							</div>
-
-						</div>
-
-						<button type="submit" class="custom-btn btn-7"><span>Agregar Datos</span></button>
-						<a id="boton" class="custom-btn btn-5"
-							href="<?=base_url().'ColoresController/vista';?>"><span>Cancelar</span></a>
-
-				</div>
-
-				</form>
-			</div>
-		</div>
-	</div>
+            </form>
+        </div>
+    </div>
+</div>
 
 
-</section>
+  </section>

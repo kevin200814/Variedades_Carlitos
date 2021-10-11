@@ -22,7 +22,7 @@ class MarcaController extends CI_Controller {
 		);
 
 		$data['marca'] = $this->MarcaModel->obtener_marca();
-		$this->load->view('template/main_view',$data);
+		$this->load->view('template/main',$data);
 	}
 
 	
@@ -34,7 +34,7 @@ class MarcaController extends CI_Controller {
 			'data_view' => array()
 		);
 
-		$this->load->view('template/main_view',$data);
+		$this->load->view('template/main',$data);
 	}
 
 	public function insert_marca()
@@ -45,7 +45,6 @@ class MarcaController extends CI_Controller {
 
 		$this->MarcaModel->insert_marca($data);
 		$this->index(); //index
-		redirect('MarcaController/');
 	}
 
 	public function editar_marca($ID_MARCA)
@@ -69,13 +68,11 @@ class MarcaController extends CI_Controller {
 
 		$this->MarcaModel->editar_marcas($marca);
 		$this->index();
-		redirect('MarcaController/');
 	}
 
 	public function eliminar_marca($ID_MARCA)
 	{
 		$this->MarcaModel->delete_marca($ID_MARCA);
 		$this->index();
-		redirect('MarcaController/');
 	}
 }

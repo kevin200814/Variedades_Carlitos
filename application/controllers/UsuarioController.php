@@ -57,7 +57,7 @@ class UsuarioController extends CI_Controller {
 		);
 		$data['roles'] = $this->Roles->obtener_roles();
 		$data['update'] = $this->Usuario->obtener_usuario($ID_USUARIO);
-		$this->load->view('template/main',$data);
+		$this->load->view('template/main_view',$data);
 	}
 
 	public function update_usuario()

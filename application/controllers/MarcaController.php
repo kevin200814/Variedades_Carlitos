@@ -57,7 +57,7 @@ class MarcaController extends CI_Controller {
 		);
 
 		$data['update'] = $this->MarcaModel->obtener_marca_update($ID_MARCA);
-		$this->load->view('template/main',$data);
+		$this->load->view('template/main_view',$data);
 	}
 
 	public function update_marca()

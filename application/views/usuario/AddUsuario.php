@@ -8,6 +8,8 @@ if (isset($update)) {
     $fecha_cambios = $update->FECHA_CAMBIOS;
     $id_rol = $update->ID_ROL;
 
+    $titulo = "Actualizando a: ". $nick;
+    $boton = "Actualizar Usuario";
     $accion = "update_usuario";
 } else {
     $id = "";
@@ -18,6 +20,8 @@ if (isset($update)) {
     $fecha_cambios = "";
     $id_rol = "";
 
+    $titulo = "Agregar Usuario";
+    $boton = "Agregar Usuario";
     $accion = "insert_usuario";
 }
 ?>
@@ -49,75 +53,62 @@ if (isset($update)) {
 <script>
 	$('#element').toast('show')
 </script>
-<link rel="stylesheet" type="text/css" href="<?=base_url().'assets/css/form_style.css';?>">
+<?php
+date_default_timezone_set('UTC');
+$hoy = date('d/m/Y');
+?>
+
+
 <link rel="stylesheet" type="text/css" href="<?=base_url().'assets/css/button_style.css';?>">
 <div class="container">
+	<div class="row">
+		<div class="col-xs-12" style="margin-left: 75px; padding-right: 20px">
+			<h3><?php echo $titulo ?></h3>
+			<br>
+			<form class="row g-3" action="<?= base_url() . 'UsuarioController/' . $accion; ?>" method="post" autocomplete="off">
+				<?php echo $id; ?>
+			  <div class="col-md-6">
+			    <label for="nombreUsuario" class="form-label">Nombre del usuario</label>
+			    <input type="text" class="form-control" name="nombre" value="<?= $nombre; ?>">
+			  </div>
+			  <div class="col-md-6">
+			    <label for="inputPassword4" class="form-label">Nick</label>
+			    <input type="text" class="form-control" name="nick" value="<?= $nick; ?>">
+			  </div>
+			  <div class="col-md-4">
+			    <label for="inputAddress" class="form-label">Correo</label>
+			    <input type="text" class="form-control" name="correo" value="<?= $correo; ?>">
+			  </div>
+			  <div class="col-md-4">
+			    <label for="inputAddress2" class="form-label">Contraseña</label>
+			    <input type="password" class="form-control" name="contrasenia"  value="<?= $contrasenia; ?>">
+			  </div>
+			  <div class="col-md-4">
+			    <label for="inputAddress" class="form-label">Fecha</label>
+			    <input type="text" class="form-control" name="fecha_cambios" value="<?php print_r($hoy); ?>" readonly="readonly">
+			  </div>
+			  <div class="col-md-4">
+			    <label for="inputState" class="form-label">Rol</label>
+			    <select name="id_rol" class="form-select">
+					<option class="option" required>Seleccionar</option>
+					<?php foreach ($roles as $r): ?>
+					<?php if ($accion == 'insert_usuario'): ?>
+					<option required value="<?=$r->ID_ROL;?>"><?=$r->NOMBRE_ROL;?></option>
+					<?php else: ?>
+					<option required value="<?=$r->ID_ROL?>" <?=$r->ID_ROL == $id_rol ? 'selected' : ""; ?>>
+						<?=$r->NOMBRE_ROL; ?>
+					</option>
+					<?php endif ?>
+					<?php endforeach; ?>
+				</select>
+			  </div>
 
-	<div class="form-wrap">
-
-		<div class="form-form">
-			<div class="col-md-6 col-lg-6 col-sm-12 float-center">
-				<form action="<?= base_url() . 'UsuarioController/' . $accion; ?>" method="post">
-
-					<h3 class="card-title">Usuario</h3>
-
-					<div class="card-body">
-						<?php echo $id; ?>
-						<div class="group">
-							<label for="nombre" class="label">Nombre del usuario:</label>
-							<input type="text" name="nombre" class="input" value="<?= $nombre; ?>" required>
-						</div>
-
-						<div class="group">
-							<label for="nick" class="label">Nick del usuario:</label>
-							<input type="text" name="nick" class="input" value="<?= $nick; ?>" required>
-						</div>
-
-						<div class="group">
-							<label for="correo" class="label">Correo:</label>
-							<input type="text" name="correo" class="input" value="<?= $correo; ?>" required>
-						</div>
-
-						<div class="group">
-							<label for="contrasenia" class="label">Contraseña:</label>
-							<input type="text" name="contrasenia" class="input" value="<?= $contrasenia; ?>" required>
-						</div>
-
-						<div class="group">
-							<label for="fecha_cambios" class="label">Fecha de cambios:</label>
-							<input type="date" id="date" name="fecha_cambios" class="input"
-								value="<?= $fecha_cambios; ?>" style=" color:white;"
-								min="<?php echo date("Y-m-d",strtotime(date("Y-m-d")."- 1 days"));?>"
-								max="<?php echo date("Y-m-d",strtotime(date("Y-m-d")."- 1 days"));?>" required>
-						</div>
-
-
-
-						<div class="group">
-							<label for="id_rol" class="label">Rol:</label>
-							<select name="id_rol" class="input-rol">
-								<option class="option" required>Seleccionar</option>
-								<?php foreach ($roles as $r): ?>
-								<?php if ($accion == 'insert_usuario'): ?>
-								<option required value="<?=$r->ID_ROL;?>"><?=$r->NOMBRE_ROL;?></option>
-								<?php else: ?>
-								<option required value="<?=$r->ID_ROL?>" <?=$r->ID_ROL == $id_rol ? 'selected' : ""; ?>>
-									<?=$r->NOMBRE_ROL; ?>
-								</option>
-								<?php endif ?>
-								<?php endforeach; ?>
-							</select>
-						</div>
-
-					</div>
-
-					<button class="custom-btn btn-7"><span>Agregar Datos</span></button>
-					<a id="boton" class="custom-btn btn-5" href="<?=base_url().'UsuarioController/index';?>"><span>Cancelar</span></a>
-
-
-
-				</form>
-			</div>
-		</div>
+			  <div class="col-12">
+			    <button class="custom-btn btn-7"><span><?php echo $boton ?></span></button>
+				<a id="boton" class="custom-btn btn-5" href="<?=base_url().'UsuarioController/index';?>"><span>Cancelar</span></a>
+			  </div>
+			</form>
+		</div>		
 	</div>
 </div>
+

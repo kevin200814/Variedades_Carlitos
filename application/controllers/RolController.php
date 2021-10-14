@@ -50,7 +50,7 @@ class RolController extends CI_Controller {
 		);
 
 		$data['update'] = $this->Roles->obtener_rol($ID_ROL);
-		$this->load->view('template/main',$data);
+		$this->load->view('template/main_view',$data);
 	}
 
 	public function update_rol()

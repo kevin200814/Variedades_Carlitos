@@ -16,7 +16,7 @@ class GeneroController extends CI_Controller {
 	public function index()
 	{
 		$data = array(
-			'page_title' => 'Marca',
+			'page_title' => 'Genero',
 			'view' => 'genero/genero',
 			'data_view' => array()
 		);
@@ -55,7 +55,7 @@ class GeneroController extends CI_Controller {
 		);
 
 		$data['update'] = $this->GeneroModel->obtener_genero_update($ID_GENERO);
-		$this->load->view('template/main',$data);
+		$this->load->view('template/main_view',$data);
 	}
 
 	public function update_genero()

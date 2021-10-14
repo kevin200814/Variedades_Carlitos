@@ -66,7 +66,7 @@ class ColoresController extends CI_Controller {
 		);
 
 		$data['update'] = $this->ColoresModel->obtener_color_update($ID_COLORES);
-		$this->load->view('template/main',$data);
+		$this->load->view('template/main_view',$data);
 	}
 
 	public function update_color()

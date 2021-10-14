@@ -229,7 +229,8 @@ body {
 }
   #boton:hover {
     color: #f0094a;
-    background: transparent;
+    background: #F35959;
+    color: black;
      box-shadow:none;
   }
   #boton:before,
@@ -377,7 +378,8 @@ body {
   }
   .btn-7:hover{
     background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);
-    background: transparent;
+    background: #94E8D7;
+    color: black
   }
   .btn-7:hover:before {
     height: 100%;

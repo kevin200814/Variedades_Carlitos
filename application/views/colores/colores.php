@@ -1,20 +1,18 @@
 <link rel="stylesheet" type="text/css" href="<?=base_url().'assets/css/button_style.css';?>"> 
-
- 
- <section class="home-section">
+<section class="home-section">
       <div class="text">Colores</div>
-
-
       <div class="container">
 		<div class="row">
 			<div class="col-md-12">
+				<h3>Colores</h3>
+				<br>
 				<a class="custom-btn btn-14" href="<?=base_url().'ColoresController/nuevo_color';?>">
-					Nuevo color <i class="fas fa-tint" style="color: rgb(148, 37, 228);"></i>
+					Nuevo color <i class='bx bxs-color-fill'></i>
 				</a>
 			</div><br>
 			<br/><hr>
 			<div class="col-md-12">
-				<table id="tabla" class="table table-striped table-bordered" style="width:100%; background-color: white;">
+				<table id="example" class="table table-striped table-bordered nowrap" style="width: 100%">
 					<thead>
 						<tr>
 							<th>ID</th>
@@ -29,10 +27,10 @@
 								<td><?=$c->NOMBRE_COLOR;?></td>
 								<td>
 									<a href="<?php echo base_url().'ColoresController/editar_color/'.$c->ID_COLORES; ?>" class="btn btn-primary">
-										<i class="fa fa-pencil"></i>
+										<i class="bi bi-pencil-square"></i>
 									</a>
 									<a href="<?php echo base_url().'ColoresController/eliminar_color/'.$c->ID_COLORES; ?>" class="btn btn-danger">
-										<i class="fa fa-trash"></i>
+										<i class="bi bi-trash-fill"></i>
 									</a>
 								</td>
 							</tr>

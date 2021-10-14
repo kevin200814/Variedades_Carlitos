@@ -85,6 +85,8 @@ class LoginController extends CI_Controller {
 		if ($this->session->userdata('is_logued_in') == TRUE ) {
 			$this->session->sess_destroy();
 			redirect(base_url().'LoginController');
+		}else{
+			redirect(base_url().'LoginController');
 		}
 
 

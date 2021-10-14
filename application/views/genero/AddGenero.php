@@ -3,45 +3,41 @@ if (isset($update)) {
     $id = '<input type="hidden" name="id_genero" value="' . $this->uri->segment(3) . '">';
     $genero = $update->TIPO_GENERO;
     
-
+    $titulo = "Actualizando Genero";
+    $boton = "Actualizar Genero";
     $accion = "update_genero";
 } else {
     $id = "";
     $genero = "";
-    
+
+    $titulo = "Agregar Genero";
+    $boton = "Agregar Genero";    
     $accion = "insert_genero";
 }
 ?>
-<link rel="stylesheet" type="text/css" href="<?=base_url().'assets/css/form_style.css';?>">
+
 <link rel="stylesheet" type="text/css" href="<?=base_url().'assets/css/button_style.css';?>">
 <section class="home-section">
 
-	<div class="container">
-    <div class="form-form">
-			<div class="form-wrap">
-			<div class="col-md-6 col-lg-6 col-sm-12 float-center">
-				<form action="<?= base_url() . 'GeneroController/' . $accion; ?>" method="post" autocomplete="off">
-	
-							<h3 class="card-title">Genero</h3>
-		
-						<div class="card-body">
-							<?php echo $id; ?>
-							<div class="group">
-								<label for="genero" class="label">Tipo de genero:</label>
-								<input type="text" name="genero" class="input" value="<?= $genero; ?>">
-							</div>
+<div class="container">
+	<div class="row">
+		<div class="col-xs-6" style="margin-left: 0px; padding-right: 20px">
+			<h3><?php echo $titulo ?></h3>
+			<br>
+			<form class="row g-3" action="<?= base_url() . 'GeneroController/' . $accion; ?>" method="post" autocomplete="off">
+				<?php echo $id; ?>
+			  <div class="col-md-12">
+			    <label class="form-label">Nombre del genero</label>
+			    <input type="text" class="form-control" name="genero" style="width: 50%;" value="<?= $genero; ?>">
+			  </div>
 
-						</div>
-						<button type="submit" class="custom-btn btn-7"><span>Agregar Datos</span></button>
-						<a id="boton" class="custom-btn btn-5"
-							href="<?=base_url().'GeneroController/index';?>"><span>Cancelar</span></a>
-					</div>
-
-				</form>
-			</div>
-		</div>
-        </div>
-    </div>
-
-
+			  <div class="col-xs-12">
+			    <button class="custom-btn btn-7"><span><?php echo $boton ?></span></button>
+				<a id="boton" class="custom-btn btn-5" href="<?=base_url().'GeneroController/index';?>"><span>Cancelar</span></a>
+			  </div>
+			</form>
+		</div>		
+	</div>
+</div>
 </section>
+

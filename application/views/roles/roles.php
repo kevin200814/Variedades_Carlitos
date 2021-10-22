@@ -1,17 +1,18 @@
 
 <link rel="stylesheet" type="text/css" href="<?=base_url().'assets/css/button_style.css';?>"> 
 <section class="home-section">
-	<div class="text">Roles</div>
 <div class="container">
 	<div class="row">
 		<div class="col-md-12">
-			<a class="custom-btn btn-14" href="<?=base_url().'RolController/nuevo_rol';?>">Nuevo rol
-				<i class="bi bi-plus-lg float-end"></i>
+			<h3>Roles</h3>
+			<br>
+			<a class="custom-btn btn-14" href="<?=base_url().'RolController/nuevo_rol';?>">
+					Nuevo Rol <i class="bi bi-plus-lg float-end"></i>
 			</a>
 		</div><br>
 		<br/><hr>
-		<div class="col-md-6" id="tabla2">
-			<table id="tabla" class="table table-responsive table-striped table-bordered table-hover">
+		<div class="col-md-12">
+			<table id="example" class="table table-striped table-bordered nowrap" style="width:100%">
 				<thead>
 					<tr>
 						<th>ID</th>
@@ -33,5 +34,6 @@
 				</tbody>
 			</table>
 		</div>
+		
 	</div>
 </div>

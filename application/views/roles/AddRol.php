@@ -3,14 +3,51 @@ if (isset($update)) {
     $id = '<input type="hidden" name="id_rol" value="' . $this->uri->segment(3) . '">';
     $nombre = $update->NOMBRE_ROL;
 
+	$titulo = "Actualizando Rol";
+    $boton = "Actualizar Rol";    
     $accion = "update_rol";
 } else {
     $id = "";
     $nombre = "";
 
+	$titulo = "Agregar Rol";
+    $boton = "Agregar Rol";
     $accion = "insert_rol";
 }
 ?>
+
+
+<link rel="stylesheet" type="text/css" href="<?=base_url().'assets/css/button_style.css';?>">
+<section class="home-section">
+
+<div class="container">
+	<div class="row">
+		<div class="col-xs-6 col-md-12" style="margin-left: 0px; padding-right: 20px">
+			<h3><?php echo $titulo ?></h3>
+			<br>
+			<form class="row g-3" action="<?= base_url() . 'RolController/' . $accion; ?>" method="post" autocomplete="off">
+				<?php echo $id; ?>
+			  <div class="col-xs-6 col-md-12">
+			    <label class="form-label">Rol de usuario</label>
+			    <input type="text" class="form-control" name="nombre_rol" style="width: 90%;" value="<?= $nombre; ?>">
+			  </div>
+
+			  <div class="col-xs-6 col-md-12">
+			    <button class="custom-btn btn-7"><span><?php echo $boton ?></span></button>
+				<a id="boton" class="custom-btn btn-5" href="<?=base_url().'RolController/index';?>"><span>Cancelar</span></a>
+			  </div>
+			</form>
+		</div>		
+	</div>
+</div>
+</section>
+
+
+
+
+
+
+<!--
 <link rel="stylesheet" type="text/css" href="<?=base_url().'assets/css/form_style.css';?>">
 <link rel="stylesheet" type="text/css" href="<?=base_url().'assets/css/button_style.css';?>">
 <div class="container">
@@ -39,4 +76,4 @@ if (isset($update)) {
 
 
 	</div>
-</div>
+</div>-->

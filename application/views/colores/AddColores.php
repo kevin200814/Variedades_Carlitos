@@ -26,12 +26,12 @@ if (isset($update)) {
 			<br>
 			<form class="row g-3" action="<?= base_url() . 'ColoresController/' . $accion; ?>" method="post" autocomplete="off">
 				<?php echo $id; ?>
-			  <div class="col-md-12">
+			  <div class="col-xs-6 col-md-12">
 			    <label class="form-label">Nombre del color</label>
-			    <input type="text" class="form-control" style="width: 50%;" name="color" value="<?= $color; ?>">
+			    <input type="text" class="form-control" style="width: 90%;" name="color" value="<?= $color; ?>">
 			  </div>
 
-			  <div class="col-xs-12">
+			  <div class="col-xs-6 col-md-12">
 			    <button class="custom-btn btn-7"><span><?php echo $boton ?></span></button>
 				<a id="boton" class="custom-btn btn-5" href="<?=base_url().'ColoresController/vista';?>"><span>Cancelar</span></a>
 			  </div>

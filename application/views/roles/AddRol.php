@@ -15,19 +15,21 @@ if (isset($update)) {
     $accion = "insert_rol";
 }
 ?>
+<body >
+	
 
-
+<section class="home-section" style="margin: 60px;">
 <link rel="stylesheet" type="text/css" href="<?=base_url().'assets/css/button_style.css';?>">
-<section class="home-section">
 
-<div class="container">
-	<div class="row">
-		<div class="col-xs-6 col-md-12" style="margin-left: 0px; padding-right: 20px">
+
+<div class="container" >
+	<div class="row" > 
+		<div class="col-xs-12" style="margin-left: 0px; padding-right: 20px">
 			<h3><?php echo $titulo ?></h3>
 			<br>
 			<form class="row g-3" action="<?= base_url() . 'RolController/' . $accion; ?>" method="post" autocomplete="off">
 				<?php echo $id; ?>
-			  <div class="col-xs-6 col-md-12">
+			  <div class="ol-xs-6 col-mcd-12">
 			    <label class="form-label">Rol de usuario</label>
 			    <input type="text" class="form-control" name="nombre_rol" style="width: 90%;" value="<?= $nombre; ?>">
 			  </div>
@@ -42,7 +44,7 @@ if (isset($update)) {
 </div>
 </section>
 
-
+</body>
 
 
 

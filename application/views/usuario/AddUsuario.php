@@ -58,7 +58,7 @@ date_default_timezone_set('UTC');
 $hoy = date('d/m/Y');
 ?>
 
-
+<section class="home-section">
 <link rel="stylesheet" type="text/css" href="<?=base_url().'assets/css/button_style.css';?>">
 <div class="container">
 	<div class="row">
@@ -112,3 +112,4 @@ $hoy = date('d/m/Y');
 	</div>
 </div>
 
+					</section>

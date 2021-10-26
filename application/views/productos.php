@@ -1,5 +1,5 @@
 <section class="home-section">
-      <div class="text">Caracteristicas de Productos</div>
+      
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap.min.css">
 
@@ -8,6 +8,8 @@
 <section class="home-section">
 	<div class="container">
 		<div class="row">
+      <h2 align="center">Caracteristicas de Productos</h2>
+      <br><br><br><br><br><br>
 			<div class="col-xs-12 col-sm-12 col-md-4">
 				<a href="<?= base_url("ColoresController/vista") ?>"><div class="well-lg BotonAzulGrande" align="center">Colores <i class="fa fa-tint"></i></div></a>
 			</div>

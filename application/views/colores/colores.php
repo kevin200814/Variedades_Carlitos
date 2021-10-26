@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="<?=base_url().'assets/css/button_style.css';?>"> 
 <section class="home-section">
-      <div class="text">Colores</div>
+      
       <div class="container">
 		<div class="row">
 			<div class="col-md-12">

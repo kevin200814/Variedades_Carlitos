@@ -34,6 +34,10 @@
 
 	<link rel="stylesheet" type="text/css" href="<?=base_url().'assets/css/button_style.css';?>">
 
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+  	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap4.min.css">
+  	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap4.min.css">
+
     <link rel="stylesheet" href="<?=base_url("assets/css/style.css") ?>">
 
 </head>
@@ -188,28 +192,4 @@
 		<div class="text"><br><br></div>
 
 	</section>
-	<script>
-		let closeBtn = document.querySelector("#btn");
-		let searchBtn = document.querySelector(".bx-search");
-
-		closeBtn.addEventListener("click", () => {
-			sidebar.classList.toggle("open");
-			menuBtnChange();
-		});
-
-		searchBtn.addEventListener("click", () => {
-			sidebar.classList.toggle("open");
-			menuBtnChange();
-		});
-
-
-		function menuBtnChange() {
-			if (sidebar.classList.contains("open")) {
-				closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
-			} else {
-				closeBtn.classList.replace("bx-menu-alt-right", "bx-menu"); //replacing the iocns class
-			}
-		}
-	</script>
-	<script src="https://kit.fontawesome.com/cc794b3cc5.js" crossorigin="anonymous"></script>
-</body>
+	

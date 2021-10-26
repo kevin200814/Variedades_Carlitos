@@ -9,6 +9,7 @@ class LoginController extends CI_Controller {
 		parent::__construct();
 
 		$this->load->model('LoginModel');
+		$this->load->model('ChartModel');
 		$this->load->library('form_validation');
 		$this->load->helper('form');
 		
@@ -27,16 +28,23 @@ class LoginController extends CI_Controller {
 			$data = array(
 				'icon' => '../assets/images/favicon.png',
 				'page_title' => 'Sistema de Inventario',
-				'view' => 'Home.html',
+				'view' => 'Home.php',
 				'data_view' => array()
 			);
 			$this->load->view('template/main_view',$data);
 		}else{
 			$this->load->view('login');
 		}
+	}
 
+	public function graficaDatos(){
+		$result = $this->ChartModel->getGrafica();
+		echo json_encode($result);
+	}
 
-
+	public function graficaTotales(){
+		$result = $this->ChartModel->getTotal();
+		echo json_encode($result);
 	}
 
 

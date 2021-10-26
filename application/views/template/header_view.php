@@ -42,9 +42,13 @@
 
 
 
-
+		
 
 	<div class="sidebar ">
+
+<div class="scrollbar" id="style-1" >
+
+       
 
 		<div class="logo-details">
 
@@ -53,6 +57,9 @@
 			<i class='bx bx-menu' id="btn"></i>
 		</div>
 
+	
+
+
 		<ul class="nav-links">
 			<li>
 				<i class="fas fa-search "></i>
@@ -60,6 +67,8 @@
 				<span class="tooltip">Buscar</span>
 			</li>
 
+
+			
 			<li>
         <a href="<?= base_url("LoginController/inicio")?>">
 					<i class="fas fa-home"></i></i>
@@ -83,20 +92,22 @@
 				<span class="tooltip" href="#">Administrar Inventario</span>
 			</li>
 
-			<li>
-				<div class="iocn-link">
+			
+			<li >
+				<div class="iocn-link" >
 					<a href="<?= base_url("ColoresController/index")?>">
 						<i class='bx bx-purchase-tag-alt'></i>
 						<span class="links_name">Caracteristicas</span>
 					</a>
 					<span class="tooltip" href="#">Caracteristicas</span>
 				</div>
-				<ul class="sub-menu blank">
+				<div class="sub-menu blank" >
+				<ul >
 					<li><a class="link_name" href="<?= base_url("ColoresController/vista") ?>">Colores</a></li>
 					<li><a class="link_name" href="<?=base_url("GeneroController/index") ?>">Genero</a></li>
 					<li><a class="link_name" href="<?=base_url("MarcaController/index") ?>">Marca</a></li>
 				</ul>
-
+			</div>
 			</li>
 
 
@@ -165,6 +176,13 @@
 			</div>
 		</ul>
 	</div>
+
+
+
+
+
+
+</div>
 
 	<section class="">
 		<div class="text"><br><br></div>

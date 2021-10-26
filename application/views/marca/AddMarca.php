@@ -10,8 +10,8 @@ if (isset($update)) {
     $id = "";
     $marca = "";
     
-    $titulo = "Actualizando Marca";
-    $boton = "Actualizar Marca";
+    $titulo = "Agregando Marca";
+    $boton = "Agregar Marca";
     $accion = "insert_marca";
 }
 ?>

@@ -1,10 +1,12 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 
-class UsuarioController extends CI_Controller {
+class UsuarioController extends CI_Controller
+{
 
-	function __construct(){
+	function __construct()
+	{
 		parent::__construct();
 		$this->load->model('Usuario');
 		$this->load->model('Roles');
@@ -19,7 +21,7 @@ class UsuarioController extends CI_Controller {
 
 		$data['usuario'] = $this->Usuario->obtener_usuarios();
 		$data['roles'] = $this->Roles->obtener_roles();
-		$this->load->view('template/main_view',$data);
+		$this->load->view('template/main_view', $data);
 	}
 	public function nuevo_usuario()
 	{
@@ -30,16 +32,20 @@ class UsuarioController extends CI_Controller {
 		);
 
 		$data['roles'] = $this->Roles->obtener_roles();
-		$this->load->view('template/main_view',$data);
+		$this->load->view('template/main_view', $data);
 	}
 	public function insert_usuario()
 	{
+		$originalDate = $this->input->post('fecha_cambios');
+		$timestamp = strtotime($originalDate);
+		$newDate = date("Y-m-d", $timestamp);
+
 		$data = array(
 			'NOMBRE_USUARIO' => $this->input->post('nombre'),
 			'NICK_USUARIO' => $this->input->post('nick'),
 			'CORREO_USUARIO' => $this->input->post('correo'),
 			'CONTRASENIA_USUARIO' => $this->input->post('contrasenia'),
-			'FECHA_CAMBIOS' => $this->input->post('fecha_cambios'),
+			'FECHA_CAMBIOS' => $newDate,
 			'ID_ROL' => $this->input->post('id_rol')
 		);
 
@@ -57,25 +63,29 @@ class UsuarioController extends CI_Controller {
 		);
 		$data['roles'] = $this->Roles->obtener_roles();
 		$data['update'] = $this->Usuario->obtener_usuario($ID_USUARIO);
-		$this->load->view('template/main_view',$data);
+		$this->load->view('template/main_view', $data);
 	}
 
 	public function update_usuario()
 	{
+		$originalDate = $this->input->post('fecha_cambios');
+		$timestamp = strtotime($originalDate);
+		$newDate = date("Y-m-d", $timestamp);
+
 		$usuario = array(
 			'NOMBRE_USUARIO' => $this->input->post('nombre'),
 			'NICK_USUARIO' => $this->input->post('nick'),
 			'CORREO_USUARIO' => $this->input->post('correo'),
 			'CONTRASENIA_USUARIO' => $this->input->post('contrasenia'),
-			'FECHA_CAMBIOS' => $this->input->post('fecha_cambios'),
+			'FECHA_CAMBIOS' => $newDate,
 			'ID_ROL' => $this->input->post('id_rol'),
 			'ID_USUARIO' => $this->input->post('id_usuario')
 		);
 
 		$this->Usuario->editar_usuario($usuario);
-redirect('usuarioController/');
+		redirect('usuarioController/');
 	}
-//redireccionar al controlador porque si no se friega el diseño tanto del controlador como del navbar
+	//redireccionar al controlador porque si no se friega el diseño tanto del controlador como del navbar
 	public function eliminar_usuario($ID_USUARIO)
 	{
 		$this->Usuario->delete_usuario($ID_USUARIO);

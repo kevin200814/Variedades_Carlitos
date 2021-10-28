@@ -55,7 +55,7 @@ if (isset($update)) {
 </script>
 <?php
 date_default_timezone_set('UTC');
-$hoy = date('d/m/Y');
+$hoy = date('Y-m-d');
 ?>
 
 <section class="home-section">

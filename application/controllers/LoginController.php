@@ -31,6 +31,9 @@ class LoginController extends CI_Controller {
 				'view' => 'Home.php',
 				'data_view' => array()
 			);
+
+			$data['alerta'] = $this->ChartModel->getExistencias();
+
 			$this->load->view('template/main_view',$data);
 		}else{
 			$this->load->view('login');

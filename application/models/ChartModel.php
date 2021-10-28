@@ -23,11 +23,24 @@ class ChartModel extends CI_Model {
 
 	    $query = $this->db->get();
 	    return $query->result();
-	    /*$resultados = $this->db->get();
-	    return $resultados->result();*/
+	}
+
+	public function getExistencias()
+	{
+	    $this->db->select('*');
+	    $this->db->from('INTER_ENTRADA_SALIDA');
+	    $this->db->where('STOCK_FINAL <= 5');
+
+	    $query = $this->db->get();
+
+	    if($query->num_rows()==0){
+	    	return false; //Si es cero es por que no hay productos con < 20
+	    }else{
+	    	return true; // si es mayor a 0 es por que si hay productos sin existencias
+	    }      
 
 	}
 
-	
+	 
 
 }

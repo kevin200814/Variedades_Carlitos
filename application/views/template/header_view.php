@@ -76,18 +76,31 @@
 			<li>
         <a href="<?= base_url("LoginController/inicio")?>">
 					<i class="fas fa-home"></i></i>
-					<span class="links_name">Index</span>
+					<span class="links_name">Inicio</span>
 				</a>
 				<span class="tooltip">Pagina Principal</span>
 			</li>
 			<li>
-				<a href="#">
+				<a href="<?= base_url("InventarioController/index")?>">
 					<i class="fas fa-boxes "></i>
-					<span class="links_name">Agregar Inventario</span>
+					<span class="links_name">Nuevo Inventario</span>
 				</a>
-				<span class="tooltip">Agregar Inventario</span>
+				<span class="tooltip">Nuevo Inventario</span>
 			</li>
-
+			<li>
+				<a href="<?= base_url("ProductosController/index")?>">
+					<i class="fas fa-boxes "></i>
+					<span class="links_name">Productos</span>
+				</a>
+				<span class="tooltip">Productos</span>
+			</li>
+			<li>
+				<a href="<?= base_url("ProveedorController/index")?>">
+					<i class="fas fa-boxes "></i>
+					<span class="links_name">Proveedores</span>
+				</a>
+				<span class="tooltip">Proveedores</span>
+			</li>
 			<li>
 				<a href="#">
 					<i class='bx bx-brightness'></i>
@@ -109,7 +122,10 @@
 				<ul >
 					<li><a class="link_name" href="<?= base_url("ColoresController/vista") ?>">Colores</a></li>
 					<li><a class="link_name" href="<?=base_url("GeneroController/index") ?>">Genero</a></li>
+					<li><a class="link_name" href="<?=base_url("TallaController/index") ?>">Talla</a></li>
 					<li><a class="link_name" href="<?=base_url("MarcaController/index") ?>">Marca</a></li>
+					<li><a class="link_name" href="<?=base_url("StockController/index") ?>">Stock</a></li>
+					<li><a class="link_name" href="<?=base_url("PagoController/index") ?>">Pago</a></li>
 				</ul>
 			</div>
 			</li>

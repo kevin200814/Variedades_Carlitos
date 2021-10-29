@@ -29,7 +29,7 @@ class ChartModel extends CI_Model {
 	{
 	    $this->db->select('*');
 	    $this->db->from('INTER_ENTRADA_SALIDA');
-	    $this->db->where('STOCK_FINAL <= 5');
+	    $this->db->where('STOCK_FINAL <= 20');
 
 	    $query = $this->db->get();
 
@@ -41,6 +41,6 @@ class ChartModel extends CI_Model {
 
 	}
 
-	 
+	  
 
 }

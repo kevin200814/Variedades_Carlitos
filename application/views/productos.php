@@ -19,6 +19,15 @@
   			<div class="col-xs-12 col-sm-12 col-md-4">
   				<a href="<?=base_url("GeneroController/index") ?>"><div class="well-lg BotonAzulGrande" align="center">Genero <i class="fa fa-female"></i><i class="fa fa-male"></i></div></a>
   			</div>
+  			<div class="col-xs-12 col-sm-12 col-md-4">
+  				<a href="<?=base_url("TallaController/index") ?>"><div class="well-lg BotonAzulGrande" align="center">Talla <i class="fa fa-female"></i><i class="fa fa-male"></i></div></a>
+  			</div>
+  			<div class="col-xs-12 col-sm-12 col-md-4">
+  				<a href="<?=base_url("StockController/index") ?>"><div class="well-lg BotonAzulGrande" align="center">Estado de Stock <i class="fa fa-female"></i><i class="fa fa-male"></i></div></a>
+  			</div>
+  			<div class="col-xs-12 col-sm-12 col-md-4">
+				<a href="<?= base_url("PagoController/vista") ?>"><div class="well-lg BotonAzulGrande" align="center">Estado de Pago <i class="fa fa-tint"></i></div></a>
+			</div>
   		</div>
   	</div>
   </section>

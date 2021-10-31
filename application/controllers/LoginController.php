@@ -60,11 +60,13 @@ class LoginController extends CI_Controller {
 			$data = $validacion->row_array();
 			$id_usuario = $data['ID_USUARIO'];
 			$usuario = $data['NICK_USUARIO'];
+			$nombre = $data['NOMBRE_USUARIO'];
 			$contraseña = $data['CONTRASENIA_USUARIO'];
 			$id_rol = $data['ID_ROL'];
 
 			$session_data = array(
 				'ID_USUARIO' => $id_usuario,
+				'NOMBRE_USUARIO' => $nombre,
 				'NICK_USUARIO' => $usuario,
 				'CONTRASENIA_USUARIO' => $contraseña,
 				'ID_ROL' => $id_rol,

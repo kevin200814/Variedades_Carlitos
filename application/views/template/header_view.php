@@ -211,7 +211,7 @@
 
 				</li>
 				<li>
-					<a href="#">
+					<a href="<?= base_url("LoginController/inicio") ?>">
 						<i class='bx bx-cart'></i>
 						<span class="links_name">Abono</span>
 					</a>
@@ -220,7 +220,7 @@
 
 				</li>
 
-				<li style="position: relative; top: 120px;">
+				<!-- <li style="position: relative; top: 120px;">
 					<a href="<?php echo base_url(); ?>LoginController/logout">
 
 						<i class="fas fa-power-off"></i>
@@ -230,7 +230,7 @@
 
 					<span class="tooltip">Cerrar Sesion</span>
 
-				</li>
+				</li> -->
 				<div id="page-wrapper">
 
 				</div>

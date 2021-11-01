@@ -202,7 +202,7 @@
 
 				</li>
 				<li>
-					<a href="#">
+					<a  href="<?= base_url("LoginController/inicio") ?>">
 						<i class='bx bx-bar-chart-alt'></i>
 						<span class="links_name">Contabilidad</span>
 					</a>

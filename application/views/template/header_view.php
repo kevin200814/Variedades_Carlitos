@@ -39,8 +39,7 @@
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap4.min.css">
 
 	<link rel="stylesheet" href="<?= base_url("assets/css/style.css") ?>">
-
-	<style type="text/css">
+<style type="text/css">
 		a {
 			text-decoration: none;
 		}

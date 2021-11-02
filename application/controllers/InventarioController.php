@@ -7,7 +7,7 @@ class InventarioController extends CI_Controller {
 	public function __construct(){
 
 		parent::__construct();
-
+		$this->load->model('Inventario');
 		
 	}
 
@@ -21,8 +21,7 @@ class InventarioController extends CI_Controller {
 				'view' => 'inventario/inventario',
 				'data_view' => array()
 			);
-
-
+			$data['inventario'] = $this->Inventario->obtener_inventario();
 			$this->load->view('template/main_view',$data);
 		}else{
 			$this->load->view('login');

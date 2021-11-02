@@ -1,3 +1,9 @@
+<style>
+  
+.texto{
+  color: rgb(180, 180, 180);
+}
+</style>
 <link rel="stylesheet" href="<?= base_url("assets/css/cartas_style.css") ?>">
 
 
@@ -19,12 +25,12 @@
       </div>
       <div class="profile__stats">
        <!-- <p class="profile__stats__title">Categoria: <?=$I->TIPO_CATEGORIA;?></p> -->
-       <h5 class="profile__stats__info">Descripcion: <?=$I->DESCRIPCION;?></h5>
-       <h5 class="profile__stats__info">Categoria: <?=$I->TIPO_CATEGORIA;?></h5>
-       <h5 class="profile__stats__info">Marca: <?=$I->NOMBRE_MARCA;?></h5>
-       <h5 class="profile__stats__info">Color: <?=$I->NOMBRE_COLOR;?></h5>
-       <h5 class="profile__stats__info">Para: <?=$I->TIPO_GENERO;?></h5>
-       <h5 class="profile__stats__info">Talla: <?=$I->TALLA;?></h5>
+       <h5 class="profile__stats__info">Descripcion:<b class="texto">&nbsp;<?=$I->DESCRIPCION;?></b></h5>
+       <h5 class="profile__stats__info">Categoria:<b class="texto">&nbsp;<?=$I->TIPO_CATEGORIA;?></b> </h5>
+       <h5 class="profile__stats__info">Marca:<b class="texto">&nbsp;<?=$I->NOMBRE_MARCA;?></b> </h5>
+       <h5 class="profile__stats__info">Color:<b class="texto">&nbsp;<?=$I->NOMBRE_COLOR;?></b></h5>
+       <h5 class="profile__stats__info">Para:<b class="texto">&nbsp;<?=$I->TIPO_GENERO;?></b></h5>
+       <h5 class="profile__stats__info">Talla:<b class="texto">&nbsp;<?=$I->TALLA;?></b></h5>
      </div>
      
      <div class="profile__cta"><a class="button" style="text-decoration:none;">Seleccionar</a></div>

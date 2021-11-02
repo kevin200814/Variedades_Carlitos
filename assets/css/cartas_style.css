@@ -13,9 +13,6 @@ body {
 
 }
 
-* {
-  box-sizing: border-box;
-}
 
 main {
   --neutralShade1: #f2f2f2;
@@ -433,9 +430,15 @@ footer.dark, footer.dark a {
 .profile-default .profile__info {
   grid-column: span 3;
   margin: 20px 25px 0;
+  width: 216%
+}
+
+.profile-default .profile__info2 {
+  grid-column: span 3;
+  margin: 20px 25px 0 147px;
 }
 .profile-default .profile__stats {
-  margin: 5px 25px;
+  margin: 12px 25px;
 }
 .profile-default .profile__cta {
   grid-column: span 3;
@@ -532,7 +535,7 @@ footer.dark, footer.dark a {
   display: grid;
   grid-template-columns: auto repeat(3, 1fr);
   grid-auto-flow: dense;
- width: 400px;
+ width: 470px;
 
 
 }
@@ -600,7 +603,9 @@ footer.dark, footer.dark a {
 }
 .profile-imgonly .profile__info p {
   display: none;
+
 }
+
 .profile-imgonly .profile__cta a {
   border-radius: 0;
 }

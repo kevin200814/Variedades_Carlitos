@@ -15,7 +15,7 @@
       </div>
       <div class="profile__stats">
         <p class="profile__stats__title">Categoria Del Producto</p>
-        <h5 class="profile__stats__info"><?=$I->ID_CATEGORIA;?></h5>
+        <h5 class="profile__stats__info"><?=$I->TIPO_CATEGORIA;?></h5>
       </div>
      
       <div class="profile__cta"><a class="button">Seleccionar</a></div>

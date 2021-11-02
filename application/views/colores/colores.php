@@ -11,7 +11,7 @@
 				</a>
 			</div><br>
 			<br/><hr>
-			<div class="col-md-12">
+			<div class="col-12 col-sm-12 col-md-12 col-lg-12">
 				<table id="example" class="table table-striped table-bordered nowrap" style="width: 100%">
 					<thead>
 						<tr>

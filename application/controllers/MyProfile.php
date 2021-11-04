@@ -50,6 +50,8 @@ class MyProfile extends CI_Controller
 			'CORREO_USUARIO' => $this->input->post('correo'),
 			'CONTRASENIA_USUARIO' => $this->input->post('contrasenia'),
 			'FECHA_CAMBIOS' => $newDate,
+			'RECOVERY_PREGUNTA' => base64_encode($this->input->post('pregunta')),
+			'RECOVERY_RESPUESTA' => base64_encode($this->input->post('respuesta')),
 			'ID_ROL' => $this->input->post('id_rol'),
 			'ID_USUARIO' => $this->input->post('id_usuario')
 		);

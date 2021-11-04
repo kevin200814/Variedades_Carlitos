@@ -72,7 +72,7 @@
 										value="Entrar">
 
 								</form>
-								<a href="#!" class="forgot-password">¿Olvidaste tu contraseña?</a>
+								<a href="<?=base_url().'RecoveryController/FormaRequestPassword';?>" class="forgot-password">¿Olvidaste tu contraseña?</a>
 							</div>
 						</div>
 					</div>

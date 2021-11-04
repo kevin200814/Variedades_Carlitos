@@ -45,6 +45,8 @@ class UsuarioController extends CI_Controller
 			'NICK_USUARIO' => $this->input->post('nick'),
 			'CORREO_USUARIO' => $this->input->post('correo'),
 			'CONTRASENIA_USUARIO' => $this->input->post('contrasenia'),
+			'RECOVERY_PREGUNTA' => base64_encode($this->input->post('pregunta')),
+			'RECOVERY_RESPUESTA' => base64_encode($this->input->post('respuesta')),
 			'FECHA_CAMBIOS' => $newDate,
 			'ID_ROL' => $this->input->post('id_rol')
 		);
@@ -77,6 +79,8 @@ class UsuarioController extends CI_Controller
 			'NICK_USUARIO' => $this->input->post('nick'),
 			'CORREO_USUARIO' => $this->input->post('correo'),
 			'CONTRASENIA_USUARIO' => $this->input->post('contrasenia'),
+			'RECOVERY_PREGUNTA' => $this->input->post('pregunta'),
+			'RECOVERY_RESPUESTA' => $this->input->post('respuesta'),
 			'FECHA_CAMBIOS' => $newDate,
 			'ID_ROL' => $this->input->post('id_rol'),
 			'ID_USUARIO' => $this->input->post('id_usuario')

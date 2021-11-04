@@ -9,6 +9,7 @@ class RecoveryController extends CI_Controller {
 		$this->load->model('Usuario');
 		$this->load->library('form_validation');
 		$this->load->helper('form');
+		$this->load->helper('url');
 	}
 
 	public function FormaRequestPassword()
@@ -102,6 +103,6 @@ class RecoveryController extends CI_Controller {
 		);
 
 		$this->Usuario->editar_usuario($usuario);
-		redirect('LoginController/');
+		redirect(base_url());
 	}
 }

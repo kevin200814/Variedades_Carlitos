@@ -5,7 +5,7 @@
 
 <link rel="stylesheet" type="<?=base_url().'assets/css/dataTables.bootstrap4.min.css';?>">
 
-<section class="home-section">
+<section class="home-section2">
 	<div class="container">
 		<div class="row">
       <h2 align="center">Caracteristicas de Productos</h2>

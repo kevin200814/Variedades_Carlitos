@@ -9,7 +9,7 @@
 
 <input  class="variation" id="pinkaru" type="radio" value="5" name="color"/>
 
-<main class="home-section">
+<main class="home-section2">
   <?php if(!empty($inventario)){ ?>
     <?php foreach ($inventario as $I): ?>
       <section>

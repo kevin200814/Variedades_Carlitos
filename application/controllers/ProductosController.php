@@ -68,11 +68,11 @@ class ProductosController extends CI_Controller {
 			$config['max_height'] = '2008';
 			$this->load->library('upload',$config);
 
-			if (!$this->upload->do_upload("imagenes")) {
+			/*if (!$this->upload->do_upload("imagenes")) {
 
 				$data['error'] = $this->upload->display_errors();
 
-			} else {
+			} else {*/
 
 				$file_info = $this->upload->data();
 
@@ -94,7 +94,7 @@ class ProductosController extends CI_Controller {
 			redirect('/ProductosController/index', 'refresh');
 
 
-			}
+			//s}
 
 		}else{
 			$this->load->view('login');

@@ -61,18 +61,18 @@ class ProductosController extends CI_Controller {
 	{
 		if ($this->session->userdata('is_logued_in') === TRUE) {
 
-			$config['upload_path'] = './assets/images/Upload/'; //CONFIGURACIONES DE LA IMAGEN
+			$config['upload_path'] = './assets/images/Upload'; //CONFIGURACIONES DE LA IMAGEN
 			$config['allowed_types'] = 'gif|jpg|png|jpeg';
 			$config['max_size'] = '2048';
 			$config['max_width'] = '2024';
 			$config['max_height'] = '2008';
 			$this->load->library('upload',$config);
 
-			/*if (!$this->upload->do_upload("imagenes")) {
+			if (!$this->upload->do_upload("imagenes")) {
 
 				$data['error'] = $this->upload->display_errors();
 
-			} else {*/
+			} else {
 
 				$file_info = $this->upload->data();
 
@@ -94,7 +94,7 @@ class ProductosController extends CI_Controller {
 			redirect('/ProductosController/index', 'refresh');
 
 
-			//s}
+			}
 
 		}else{
 			$this->load->view('login');

@@ -59,7 +59,7 @@ if (isset($productos)) {
 			    <label class="form-label">Categoria</label>
 			    <!--<input type="text" style="width: 90%;" class="form-control" name="categoria" value="<?= $marca; ?>">-->
 			    <select name="categoria" class="form-select">
-					<option class="option">Seleccionar</option>
+					<option class="option">Debes Seleccionar una Categoria</option>
 					<?php foreach ($cate as $c): ?>
 					<?php if ($accion == 'insert_producto'): ?>
 					<option value="<?=$c->ID_CATEGORIA;?>"><?=$c->TIPO_CATEGORIA;?></option>
@@ -75,7 +75,7 @@ if (isset($productos)) {
 			    <label class="form-label">Genero</label>
 			    <!--<input type="text" style="width: 90%;" class="form-control" name="genero" value="<?= $marca; ?>">-->
 			    <select name="genero" class="form-select">
-					<option class="option">Seleccionar</option>
+					<option class="option">Debes Seleccionar un Genero</option>
 					<?php foreach ($ge as $c): ?>
 					<?php if ($accion == 'insert_producto'): ?>
 					<option value="<?=$c->ID_GENERO;?>"><?=$c->TIPO_GENERO;?></option>
@@ -91,7 +91,7 @@ if (isset($productos)) {
 			    <label class="form-label">Talla</label>
 			    <!--<input type="text" style="width: 90%;" class="form-control" name="talla" value="<?= $marca; ?>">-->
 			    <select name="talla" class="form-select">
-					<option class="option">Seleccionar</option>
+					<option class="option">Debes Seleccionar una Talla</option>
 					<?php foreach ($ta as $c): ?>
 					<?php if ($accion == 'insert_producto'): ?>
 					<option value="<?=$c->ID_TALLA;?>"><?=$c->TALLA;?></option>
@@ -107,7 +107,7 @@ if (isset($productos)) {
 			    <label class="form-label">Colores</label>
 			    <!--<input type="text" style="width: 90%;" class="form-control" name="colores" value="<?= $marca; ?>">-->
 			    <select name="colores" class="form-select">
-					<option class="option" required>Seleccionar</option>
+					<option class="option" required>Debes Seleccionar un Color</option>
 					<?php foreach ($co as $c): ?>
 					<?php if ($accion == 'insert_producto'): ?>
 					<option required value="<?=$c->ID_COLORES;?>"><?=$c->NOMBRE_COLOR;?></option>

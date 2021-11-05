@@ -536,7 +536,7 @@ footer.dark, footer.dark a {
   grid-template-columns: auto repeat(3, 1fr);
   grid-auto-flow: dense;
  width: 470px;
-
+ height: 450px;
 
 }
 .profile-wide .profile__image {

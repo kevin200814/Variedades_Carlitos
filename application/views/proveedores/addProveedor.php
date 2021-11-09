@@ -28,7 +28,7 @@ if (isset($update)) {
 				<?php echo $id; ?>
 			  <div class="col-xs-6 col-md-12">
 			    <label class="form-label">Proveedor: </label>
-			    <input type="text" class="form-control" style="width: 90%;" name="proveedor" value="<?= $proveedor; ?>">
+			    <input type="text" class="form-control" style="width: 90%;" name="proveedor" value="<?= $proveedor; ?>" required>
 			  </div>
 
 			  <div class="col-xs-6 col-md-12">

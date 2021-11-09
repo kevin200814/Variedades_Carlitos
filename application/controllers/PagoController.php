@@ -32,58 +32,78 @@ class PagoController extends CI_Controller {
 
 	public function nuevoPago()
 	{
-		$data = array(
-			'page_title' => 'Nueva estado de pago',
-			'view' => 'estado_pago/addPago',
-			'data_view' => array()
-		);
+		if ($this->session->userdata('is_logued_in') === TRUE) {	
+			$data = array(
+				'page_title' => 'Nueva estado de pago',
+				'view' => 'estado_pago/addPago',
+				'data_view' => array()
+			);
 
-		$this->load->view('template/main_view',$data);
+			$this->load->view('template/main_view',$data);
+		}else{
+			$this->load->view('login');
+		}
 	}
 
 
 	public function insertPago()
 	{
-		$data = array(
-			'ESTADO_PAGO' => $this->input->post('pago')
-		);
+		if ($this->session->userdata('is_logued_in') === TRUE) {	
+			$data = array(
+				'ESTADO_PAGO' => $this->input->post('pago')
+			);
 
-		$this->PagoModel->insertPago($data);
-		redirect('PagoController/index');
+			$this->PagoModel->insertPago($data);
+			redirect('PagoController/index');
+		}else{
+			$this->load->view('login');
+		}
 	}
 
 
 	public function editarPago($ID_ESTADO_PAGO)
 	{
-		$data = array(
-			'page_title' => 'Editar estado de pago',
-			'view' => 'estado_pago/addPago',
-			'data_view' => array()
-		);
+		if ($this->session->userdata('is_logued_in') === TRUE) {	
+			$data = array(
+				'page_title' => 'Editar estado de pago',
+				'view' => 'estado_pago/addPago',
+				'data_view' => array()
+			);
 
-		$data['update'] = $this->PagoModel->obtenerPago($ID_ESTADO_PAGO);
-		$this->load->view('template/main_view',$data);
+			$data['update'] = $this->PagoModel->obtenerPago($ID_ESTADO_PAGO);
+			$this->load->view('template/main_view',$data);
+		}else{
+			$this->load->view('login');
+		}
 	}
 
 
 	public function updatePago()
 	{
-		$pago = array(
-			'ESTADO_PAGO' => $this->input->post('pago'),
-			'ID_ESTADO_PAGO' => $this->input->post('id_estado_pago')
-		);
+		if ($this->session->userdata('is_logued_in') === TRUE) {	
+			$pago = array(
+				'ESTADO_PAGO' => $this->input->post('pago'),
+				'ID_ESTADO_PAGO' => $this->input->post('id_estado_pago')
+			);
 
-		$this->PagoModel->updatePago($pago);
-		redirect('PagoController/index');
+			$this->PagoModel->updatePago($pago);
+			redirect('PagoController/index');
+		}else{
+			$this->load->view('login');
+		}
 	}
 
 
 
 	public function eliminarPago($ID_ESTADO_PAGO)
 	{
-		$this->PagoModel->deletePago($ID_ESTADO_PAGO);
-		
-		redirect('PagoController/index');
+		if ($this->session->userdata('is_logued_in') === TRUE) {	
+			$this->PagoModel->deletePago($ID_ESTADO_PAGO);
+
+			redirect('PagoController/index');
+		}else{
+			$this->load->view('login');
+		}
 	}
 	
 }

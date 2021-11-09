@@ -28,6 +28,9 @@
   			<div class="col-xs-12 col-sm-12 col-md-4">
 				<a href="<?= base_url("PagoController/index") ?>"><div class="well-lg BotonAzulGrande" align="center">Estado de Pago <i class="fa fa-tint"></i></div></a>
 			</div>
+			<div class="col-xs-12 col-sm-12 col-md-4">
+				<a href="<?= base_url("CategoriaController/index") ?>"><div class="well-lg BotonAzulGrande" align="center">Categoria <i class="fa fa-tint"></i></div></a>
+			</div>
   		</div>
   	</div>
   </section>

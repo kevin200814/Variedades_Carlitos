@@ -28,7 +28,7 @@ if (isset($update)) {
 				<?php echo $id; ?>
 			  <div class="col-xs-6 col-md-12">
 			    <label class="form-label">Nombre de la marca</label>
-			    <input type="text" style="width: 90%;" class="form-control" name="marca" value="<?= $marca; ?>">
+			    <input type="text" style="width: 90%;" class="form-control" name="marca" value="<?= $marca; ?>" required>
 			  </div>
 
 			  <div class="col-xs-6 col-md-12">

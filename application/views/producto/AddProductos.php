@@ -53,12 +53,13 @@ if (isset($productos)) {
 				<?php echo $id_producto; ?>
 			  <div class="col-xs-12 col-md-6">
 			    <label class="form-label">Producto</label>
-			    <input type="text" style="width: 90%;" class="form-control" name="nombre" value="<?= $produc; ?>">
+			    <input type="text" style="width: 90%;" class="form-control" name="nombre" value="<?= $produc; ?>" required>
 			  </div>
+
 			  <div class="col-xs-12 col-md-6">
 			    <label class="form-label">Categoria</label>
 			    <!--<input type="text" style="width: 90%;" class="form-control" name="categoria" value="<?= $marca; ?>">-->
-			    <select name="categoria" class="form-select">
+			    <select name="categoria" class="form-select" required>
 					<option class="option">Debes Seleccionar una Categoria</option>
 					<?php foreach ($cate as $c): ?>
 					<?php if ($accion == 'insert_producto'): ?>
@@ -71,10 +72,11 @@ if (isset($productos)) {
 					<?php endforeach; ?>
 				</select>
 			  </div>
+
 			  <div class="col-xs-12 col-md-6">
 			    <label class="form-label">Genero</label>
 			    <!--<input type="text" style="width: 90%;" class="form-control" name="genero" value="<?= $marca; ?>">-->
-			    <select name="genero" class="form-select">
+			    <select name="genero" class="form-select" required>
 					<option class="option">Debes Seleccionar un Genero</option>
 					<?php foreach ($ge as $c): ?>
 					<?php if ($accion == 'insert_producto'): ?>
@@ -90,7 +92,7 @@ if (isset($productos)) {
 			  <div class="col-xs-12 col-md-6">
 			    <label class="form-label">Talla</label>
 			    <!--<input type="text" style="width: 90%;" class="form-control" name="talla" value="<?= $marca; ?>">-->
-			    <select name="talla" class="form-select">
+			    <select name="talla" class="form-select" required>
 					<option class="option">Debes Seleccionar una Talla</option>
 					<?php foreach ($ta as $c): ?>
 					<?php if ($accion == 'insert_producto'): ?>
@@ -106,7 +108,7 @@ if (isset($productos)) {
 			  <div class="col-xs-12 col-md-6">
 			    <label class="form-label">Colores</label>
 			    <!--<input type="text" style="width: 90%;" class="form-control" name="colores" value="<?= $marca; ?>">-->
-			    <select name="colores" class="form-select">
+			    <select name="colores" class="form-select" required>
 					<option class="option" required>Debes Seleccionar un Color</option>
 					<?php foreach ($co as $c): ?>
 					<?php if ($accion == 'insert_producto'): ?>
@@ -122,7 +124,7 @@ if (isset($productos)) {
 			  <div class="col-xs-12 col-md-6">
 			    <label class="form-label">Marca</label>
 			    <!--<input type="text" style="width: 90%;" class="form-control" name="marca" value="<?= $marca; ?>">-->
-			    <select name="marcas" class="form-select">
+			    <select name="marcas" class="form-select" required>
 					<option class="option">Seleccionar</option>
 					<?php foreach ($mar as $c): ?>
 					<?php if ($accion == 'insert_producto'): ?>
@@ -137,12 +139,12 @@ if (isset($productos)) {
 			  </div>
 			  <div class="col-xs-12 col-md-6">
 			    <label class="form-label">Descripcion</label>
-			    <textarea class="form-control" name="descripcion"><?= $desc ?></textarea>
+			    <textarea class="form-control" name="descripcion" required><?= $desc ?></textarea>
 			    <!--<input type="text" style="width: 90%;" class="form-control" name="descripcion" value="<?= $desc; ?>">-->
 			  </div>
 			  <div class="col-xs-12 col-md-6">
 			    <label class="form-label">Imagen</label>
-			    <input type="file" style="width: 90%;" class="form-control" name="imagenes">
+			    <input type="file" style="width: 90%;" class="form-control" name="imagenes" >
 			    <?php echo $imgAntes ?>
 			  </div>
 

@@ -57,7 +57,7 @@
 									<h1>Sistema de Inventario</h1>
 								</div>
 								<p class="login-card-description">Inicio de sesión</p>
-								<form method="post" action="<?php echo base_url(); ?>LoginController/userAuth">
+								<form method="post" action="<?php echo base_url(); ?>LoginController/userAuth" autocomplete="off">
 									<div class="form-group">
 										<label for="user" class="sr-only">Usuario</label>
 										<input type="text" name="usuario" class="form-control" placeholder="Usuario">

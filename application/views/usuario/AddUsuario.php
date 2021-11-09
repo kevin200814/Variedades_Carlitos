@@ -78,23 +78,23 @@ $hoy = date('Y-m-d');
 					<?php echo $id; ?>
 					<div class="col-md-6">
 						<label for="nombreUsuario" class="form-label">Nombre del usuario</label>
-						<input type="text" class="form-control" name="nombre" value="<?= $nombre; ?>">
+						<input type="text" class="form-control" name="nombre" value="<?= $nombre; ?>" required>
 					</div>
 					<div class="col-md-6">
 						<label for="inputPassword4" class="form-label">Nick</label>
-						<input type="text" class="form-control" name="nick" value="<?= $nick; ?>">
+						<input type="text" class="form-control" name="nick" value="<?= $nick; ?>" required>
 					</div>
 					<div class="col-md-6">
 						<label for="inputAddress" class="form-label">Correo</label>
-						<input type="text" class="form-control" name="correo" value="<?= $correo; ?>">
+						<input type="text" class="form-control" name="correo" value="<?= $correo; ?>" required>
 					</div>
 					<div class="col-md-6">
 						<label for="inputAddress2" class="form-label">Contraseña</label>
-						<input type="password" class="form-control" name="contrasenia"  value="<?= $contrasenia; ?>">
+						<input type="password" class="form-control" name="contrasenia"  value="<?= $contrasenia; ?>" required>
 					</div>
 					<div class="col-md-12 alert alert-success">
 						<label class="text-success">Subjerecias de posibles preguntas o pistas</label>
-						<select class="form-control" name="generador" id="generador">
+						<select class="form-control" name="generador" id="generador" required>
 							<option value="" selected="selected">Seleccione</option>
                                 <option value="1">Nombre de tu mamá</option>
                                 <option value="2">Nombre de tu papá</option>
@@ -112,19 +112,19 @@ $hoy = date('Y-m-d');
 					</div>
 					<div class="col-md-6 alert alert-warning">
 						<label for="inputAddress2" class="form-label">Pregunta de recuperación</label>
-						<input type="text" class="form-control" id="pregunta" name="pregunta"  value="<?= $recovery_pregunta; ?>">
+						<input type="text" class="form-control" id="pregunta" name="pregunta"  value="<?= $recovery_pregunta; ?>" required>
 					</div>
 					<div class="col-md-6 alert alert-danger">
 						<label for="inputAddress2" class="form-label">Respuesta de recuperación</label>
-						<input type="text" class="form-control" name="respuesta"  value="<?= $recovery_respuesta; ?>">
+						<input type="text" class="form-control" name="respuesta"  value="<?= $recovery_respuesta; ?>" required>
 					</div>
 					<div class="col-md-4">
 						<label for="inputAddress" class="form-label">Fecha</label>
-						<input type="text" class="form-control" name="fecha_cambios" value="<?php print_r($hoy); ?>" readonly="readonly">
+						<input type="text" class="form-control" name="fecha_cambios" value="<?php print_r($hoy); ?>" readonly="readonly" required>
 					</div>
 					<div class="col-md-4">
 						<label for="inputState" class="form-label">Rol</label>
-						<select name="id_rol" class="form-select">
+						<select name="id_rol" class="form-select" required>
 							<option class="option" required>Seleccionar</option>
 							<?php foreach ($roles as $r): ?>
 								<?php if ($accion == 'insert_usuario'): ?>

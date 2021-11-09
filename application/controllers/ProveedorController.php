@@ -31,54 +31,74 @@ class ProveedorController extends CI_Controller {
 
 	public function nuevoProveedor()
 	{
-		$data = array(
-			'page_title' => 'Editar Estado de Pago',
-			'view' => 'proveedores/addProveedor',
-			'data_view' => array()
-		);
+		if ($this->session->userdata('is_logued_in') === TRUE) {	
+			$data = array(
+				'page_title' => 'Editar Estado de Pago',
+				'view' => 'proveedores/addProveedor',
+				'data_view' => array()
+			);
 
-		
-		$this->load->view('template/main_view',$data);
+			
+			$this->load->view('template/main_view',$data);
+		}else{
+			$this->load->view('login');
+		}
 	}
 
 	public function insertProveedor()
 	{
-		$data = array(
-			'PROVEEDOR_PRODUCTO' => $this->input->post('proveedor')
-		);
+		if ($this->session->userdata('is_logued_in') === TRUE) {	
+			$data = array(
+				'PROVEEDOR_PRODUCTO' => $this->input->post('proveedor')
+			);
 
-		$this->ProveedorModel->insertProveedor($data);
-		redirect('ProveedorController/index');
+			$this->ProveedorModel->insertProveedor($data);
+			redirect('ProveedorController/index');
+		}else{
+			$this->load->view('login');
+		}
 	}
 
 	public function editarProveedor($ID_PROVEEDOR)
 	{
-		$data = array(
-			'page_title' => 'Editar proveedor',
-			'view' => 'proveedores/addProveedor',
-			'data_view' => array()
-		);
+		if ($this->session->userdata('is_logued_in') === TRUE) {	
+			$data = array(
+				'page_title' => 'Editar proveedor',
+				'view' => 'proveedores/addProveedor',
+				'data_view' => array()
+			);
 
-		$data['update'] = $this->ProveedorModel->obtenerProveedor($ID_PROVEEDOR);
-		$this->load->view('template/main_view',$data);
+			$data['update'] = $this->ProveedorModel->obtenerProveedor($ID_PROVEEDOR);
+			$this->load->view('template/main_view',$data);
+		}else{
+			$this->load->view('login');
+		}
 	}
 
 	public function updateProveedor()
 	{
-		$stock = array(
-			'PROVEEDOR_PRODUCTO' => $this->input->post('proveedor'),
-			'ID_PROVEEDOR' => $this->input->post('id_proveedor')
-		);
+		if ($this->session->userdata('is_logued_in') === TRUE) {	
+			$stock = array(
+				'PROVEEDOR_PRODUCTO' => $this->input->post('proveedor'),
+				'ID_PROVEEDOR' => $this->input->post('id_proveedor')
+			);
 
-		$this->ProveedorModel->updateProveedor($stock);
-		redirect('ProveedorController/index');
+			$this->ProveedorModel->updateProveedor($stock);
+			redirect('ProveedorController/index');
+		}else{
+			$this->load->view('login');
+		}
 	}
 
 	public function eliminarProveedor($ID_PROVEEDOR)
 	{
-		$this->ProveedorModel->deleteProveedor($ID_PROVEEDOR);
-		
-		redirect('ProveedorController/index');
+		if ($this->session->userdata('is_logued_in') === TRUE) {	
+			$this->ProveedorModel->deleteProveedor($ID_PROVEEDOR);
+			
+			redirect('ProveedorController/index');
+		}else{
+			$this->load->view('login');
+		}
 	}
 	
 }

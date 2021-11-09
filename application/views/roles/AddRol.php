@@ -31,7 +31,7 @@ if (isset($update)) {
 				<?php echo $id; ?>
 			  <div class="ol-xs-6 col-mcd-12">
 			    <label class="form-label">Rol de usuario</label>
-			    <input type="text" class="form-control" name="nombre_rol" style="width: 90%;" value="<?= $nombre; ?>">
+			    <input type="text" class="form-control" name="nombre_rol" style="width: 90%;" value="<?= $nombre; ?>" required>
 			  </div>
 
 			  <div class="col-xs-6 col-md-12">

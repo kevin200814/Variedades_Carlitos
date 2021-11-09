@@ -28,7 +28,7 @@ if (isset($update)) {
 				<?php echo $id; ?>
 			  <div class="col-xs-6 col-md-12">
 			    <label class="form-label">Nombre del genero</label>
-			    <input type="text" class="form-control" name="genero" style="width: 90%;" value="<?= $genero; ?>">
+			    <input type="text" class="form-control" name="genero" style="width: 90%;" value="<?= $genero; ?>" required>
 			  </div>
 
 			  <div class="col-xs-6 col-md-12">

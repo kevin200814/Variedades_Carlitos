@@ -23,10 +23,7 @@ class ProductosController extends CI_Controller {
 			//$this->load->view('template/main_view',$data);
 
 			$data['producto'] = $this->ProductosModel->obtener_productos();
-			
 			$this->load->view('template/main_view', $data);
-
-
 
 		}else{
 			$this->load->view('login');
@@ -80,18 +77,18 @@ class ProductosController extends CI_Controller {
 
 
 				$data = array(
-				'NOMBRE_PRODUCTO' => $this->input->post('nombre'),
-				'DESCRIPCION' => $this->input->post('descripcion'),
-				'ID_CATEGORIA' => $this->input->post('categoria'),
-				'ID_GENERO' => $this->input->post('genero'),
-				'ID_TALLA' => $this->input->post('talla'),
-				'ID_COLORES' => $this->input->post('colores'),
-				'ID_MARCA' => $this->input->post('marcas'),
-				'IMAGEN' => $imgform
-			);
+					'NOMBRE_PRODUCTO' => $this->input->post('nombre'),
+					'DESCRIPCION' => $this->input->post('descripcion'),
+					'ID_CATEGORIA' => $this->input->post('categoria'),
+					'ID_GENERO' => $this->input->post('genero'),
+					'ID_TALLA' => $this->input->post('talla'),
+					'ID_COLORES' => $this->input->post('colores'),
+					'ID_MARCA' => $this->input->post('marcas'),
+					'IMAGEN' => $imgform
+				);
 
-			$this->ProductosModel->insert_producto($data);
-			redirect('/ProductosController/index', 'refresh');
+				$this->ProductosModel->insert_producto($data);
+				redirect('/ProductosController/index', 'refresh');
 
 
 			}
@@ -129,8 +126,7 @@ class ProductosController extends CI_Controller {
 
 	public function update_producto()
 	{
-
-
+		if ($this->session->userdata('is_logued_in') === TRUE) {
 			$config['upload_path'] = './assets/images/Upload/'; //CONFIGURACIONES DE LA IMAGEN
 			$config['allowed_types'] = 'gif|jpg|png|jpeg';
 			$config['max_size'] = '2048';
@@ -186,14 +182,20 @@ class ProductosController extends CI_Controller {
 				redirect('ProductosController/index');
 
 			}
+		}else{
+			$this->load->view('login');
+		}
 
 	}
 
 	public function eliminar_producto($ID_PRODUCTO)
-	{
+	{if ($this->session->userdata('is_logued_in') === TRUE) {
 		$this->ProductosModel->delete_producto($ID_PRODUCTO);
 		redirect('ProductosController/index');
+	}else{
+		$this->load->view('login');
 	}
+}
 
-	
+
 }

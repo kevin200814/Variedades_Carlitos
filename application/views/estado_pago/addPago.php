@@ -28,7 +28,7 @@ if (isset($update)) {
 				<?php echo $id; ?>
 			  <div class="col-xs-6 col-md-12">
 			    <label class="form-label">Nombre del estado de pago</label>
-			    <input type="text" class="form-control" style="width: 90%;" name="pago" value="<?= $pago; ?>">
+			    <input type="text" class="form-control" style="width: 90%;" name="pago" value="<?= $pago; ?>" required>
 			  </div>
 
 			  <div class="col-xs-6 col-md-12">

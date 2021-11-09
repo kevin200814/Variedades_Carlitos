@@ -61,7 +61,7 @@ class LoginController extends CI_Controller {
 			$id_usuario = $data['ID_USUARIO'];
 			$usuario = $data['NICK_USUARIO'];
 			$nombre = $data['NOMBRE_USUARIO'];
-			$contraseña = $data['CONTRASENIA_USUARIO'];
+			$contraseña = $data['CONTRASENIA_USUARIO']; 
 			$id_rol = $data['ID_ROL'];
 
 			$session_data = array(

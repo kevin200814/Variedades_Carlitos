@@ -93,22 +93,14 @@
 		</div>
 	</div>
 
-
 	<div class="sidebar ">
-
-		<div class="scrollbar" id="style-1">
-
-
-
+	<div class="scrollbar" id="style-1">
 			<div class="logo-details">
 
 				<i class="icon-logo3 icon -2x" id="icon"></i>
 				<div class="logo_name">Variedades Carlitos</div>
 				<i class='bx bx-menu' id="btn"></i>
 			</div>
-
-
-
 
 			<ul class="nav-links">
 
@@ -150,7 +142,7 @@
 				</li>
 
 				<li>
-					<a href="<?= base_url("LoginController/inicio") ?>">
+					<a href="<?= base_url("VentaController/index") ?>">
 						<i class='bx bx-cart'></i>
 						<span class="links_name">Nueva Venta</span>
 					</a>
@@ -158,12 +150,12 @@
 					<span class="tooltip" href="#">Nueva Venta</span>
 
 				</li>
-				<li>
+			<li>
 					<a href="#">
 						<i class='bx bx-brightness bx-spin'></i>
-						<span class="links_name">Administrar Inventario</span>
+						<span class="links_name">Administrar permisos</span>
 					</a>
-					<span class="tooltip" href="#">Administrar Inventario</span>
+					<span class="tooltip" href="#">Administrar permisos</span>
 				</li>
 
 
@@ -183,6 +175,7 @@
 							<li><a class="link_name" href="<?= base_url("MarcaController/index") ?>">Marca</a></li>
 							<li><a class="link_name" href="<?= base_url("StockController/index") ?>">Stock</a></li>
 							<li><a class="link_name" href="<?= base_url("PagoController/index") ?>">Pago</a></li>
+							<li><a class="link_name" href="<?= base_url("CategoriaController/index") ?>">Categoria</a></li>
 						</ul>
 					</div>
 				</li>

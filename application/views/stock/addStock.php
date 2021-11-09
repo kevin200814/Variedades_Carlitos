@@ -28,7 +28,7 @@ if (isset($update)) {
 				<?php echo $id; ?>
 			  <div class="col-xs-6 col-md-12">
 			    <label class="form-label">Nombre de estado de stock</label>
-			    <input type="text" class="form-control" style="width: 90%;" name="estado_stock" value="<?= $estado_stock; ?>">
+			    <input type="text" class="form-control" style="width: 90%;" name="estado_stock" value="<?= $estado_stock; ?>" required>
 			  </div>
 
 			  <div class="col-xs-6 col-md-12">

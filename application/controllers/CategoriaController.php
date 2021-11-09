@@ -1,13 +1,13 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class StockController extends CI_Controller {
+class CategoriaController extends CI_Controller {
 
 	
 	public function __construct(){
 
 		parent::__construct();
-		$this->load->model('StockModel');
+		$this->load->model('CategoriaModel');
 		
 	}
 
@@ -18,87 +18,87 @@ class StockController extends CI_Controller {
 			$data = array(
 				'icon' => '../assets/images/favicon.png',
 				'page_title' => 'Sistema de Inventario',
-				'view' => 'stock/stock',
+				'view' => 'categoria/categoria',
 				'data_view' => array()
 			);
-
-			$data['stock'] = $this->StockModel->allStock();
+			$data['categoria'] = $this->CategoriaModel->categoriaAll();
 			$this->load->view('template/main_view',$data);
 		}else{
 			$this->load->view('login');
 		}
 	}
 
-	public function nuevoStock()
+	public function nuevaCategoria()
 	{
 		if ($this->session->userdata('is_logued_in') === TRUE) {
 			$data = array(
-				'page_title' => 'Editar Estado de Pago',
-				'view' => 'stock/addStock',
+				'page_title' => 'Nueva categoria',
+				'view' => 'categoria/addCategoria',
 				'data_view' => array()
 			);
 
+			$this->load->view('template/main_view',$data);
+		}else{
+			$this->load->view('login');
+		}
+	}
+
+	public function insertCategoria()
+	{	
+		if ($this->session->userdata('is_logued_in') === TRUE) {
+			$data = array(
+				'TIPO_CATEGORIA' => $this->input->post('tipo_categoria')
+			);
+
+			$this->CategoriaModel->insertCategoria($data);
+			redirect('CategoriaController/index');
 			
-			$this->load->view('template/main_view',$data);
 		}else{
 			$this->load->view('login');
 		}
 	}
 
-	public function insertStock()
+	public function editarCategoria($ID_CATEGORIA)
 	{
 		if ($this->session->userdata('is_logued_in') === TRUE) {
 			$data = array(
-				'ESTADO_STOCK' => $this->input->post('estado_stock')
-			);
-
-			$this->StockModel->insertStock($data);
-			redirect('StockController/index');
-		}else{
-			$this->load->view('login');
-		}
-	}
-
-	public function editarStock($ID_ESTADO_STOCK)
-	{
-		if ($this->session->userdata('is_logued_in') === TRUE) {
-			$data = array(
-				'page_title' => 'Editar Estado de Pago',
-				'view' => 'stock/addStock',
+				'page_title' => 'Editar categoria',
+				'view' => 'categoria/addCategoria',
 				'data_view' => array()
 			);
 
-			$data['update'] = $this->StockModel->obtenerStock($ID_ESTADO_STOCK);
+			$data['update'] = $this->CategoriaModel->obtenerCategoria($ID_CATEGORIA);
 			$this->load->view('template/main_view',$data);
 		}else{
 			$this->load->view('login');
 		}
 	}
 
-	public function updateStock()
+	public function updateCategoria()
 	{
 		if ($this->session->userdata('is_logued_in') === TRUE) {
-			$stock = array(
-				'ESTADO_STOCK' => $this->input->post('estado_stock'),
-				'ID_ESTADO_STOCK' => $this->input->post('id_estado_stock')
+			$categoria = array(
+				'TIPO_CATEGORIA' => $this->input->post('tipo_categoria'),
+				'ID_CATEGORIA' => $this->input->post('id_categoria')
 			);
 
-			$this->StockModel->updateStock($stock);
-			redirect('StockController/index');
+			$this->CategoriaModel->updateCategoria($categoria);
+			
+			redirect('CategoriaController/index');
 		}else{
 			$this->load->view('login');
 		}
 	}
 
-	public function eliminarStock($ID_ESTADO_STOCK)
+	public function eliminarCategoria($ID_CATEGORIA)
 	{
 		if ($this->session->userdata('is_logued_in') === TRUE) {
-			$this->StockModel->deleteStock($ID_ESTADO_STOCK);
+			$this->CategoriaModel->deleteCategoria($ID_CATEGORIA);
 			
-			redirect('StockController/index');
+			redirect('CategoriaController/index');
 		}else{
 			$this->load->view('login');
 		}
 	}
-	
+	 
 }

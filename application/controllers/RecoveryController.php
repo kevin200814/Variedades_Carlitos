@@ -14,6 +14,7 @@ class RecoveryController extends CI_Controller {
 
 	public function FormaRequestPassword()
 	{
+		
 		$data = array(
 			'icon' => '../assets/images/favicon.png',
 			'page_title' => 'Solicitud de recuperación de contraseña',

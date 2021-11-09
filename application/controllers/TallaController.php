@@ -32,53 +32,73 @@ class TallaController extends CI_Controller {
 
 	public function nueva_talla()
 	{
-		$data = array(
-			'page_title' => 'Nueva Talla',
-			'view' => 'talla/AddTalla',
-			'data_view' => array()
-		);
+		if ($this->session->userdata('is_logued_in') === TRUE) {	
+			$data = array(
+				'page_title' => 'Nueva Talla',
+				'view' => 'talla/AddTalla',
+				'data_view' => array()
+			);
 
-		$this->load->view('template/main_view',$data);
+			$this->load->view('template/main_view',$data);
+		}else{
+			$this->load->view('login');
+		}
 	}
 
 	public function insert_talla()
 	{
-		$data = array(
-			'TALLA' => $this->input->post('talla')
-		);
+		if ($this->session->userdata('is_logued_in') === TRUE) {	
+			$data = array(
+				'TALLA' => $this->input->post('talla')
+			);
 
-		$this->TallaModel->insert_talla($data);
-		redirect('TallaController/index');
+			$this->TallaModel->insert_talla($data);
+			redirect('TallaController/index');
+		}else{
+			$this->load->view('login');
+		}
 	}
 
 	public function editar_talla($ID_TALLA)
 	{
-		$data = array(
-			'page_title' => 'Editar talla',
-			'view' => 'talla/AddTalla',
-			'data_view' => array()
-		);
+		if ($this->session->userdata('is_logued_in') === TRUE) {	
+			$data = array(
+				'page_title' => 'Editar talla',
+				'view' => 'talla/AddTalla',
+				'data_view' => array()
+			);
 
-		$data['update'] = $this->TallaModel->editar_update($ID_TALLA);
-		$this->load->view('template/main_view',$data);
+			$data['update'] = $this->TallaModel->editar_update($ID_TALLA);
+			$this->load->view('template/main_view',$data);
+		}else{
+			$this->load->view('login');
+		}
 	}
 
 	public function update_talla()
 	{
-		$talla = array(
-			'TALLA' => $this->input->post('talla'),
-			'ID_TALLA' => $this->input->post('id_talla')
-		);
+		if ($this->session->userdata('is_logued_in') === TRUE) {	
+			$talla = array(
+				'TALLA' => $this->input->post('talla'),
+				'ID_TALLA' => $this->input->post('id_talla')
+			);
 
-		$this->TallaModel->update_talla($talla);
-		redirect('TallaController/index');
+			$this->TallaModel->update_talla($talla);
+			redirect('TallaController/index');
+		}else{
+			$this->load->view('login');
+		}
 	}
 
 	public function eliminar_talla($ID_TALLA)
 	{
-		$this->TallaModel->delete_talla($ID_TALLA);
-		
-		redirect('TallaController/index');
+		if ($this->session->userdata('is_logued_in') === TRUE) {	
+			$this->TallaModel->delete_talla($ID_TALLA);
+			
+			redirect('TallaController/index');
+		}else{
+			$this->load->view('login');
+		}
 	}
 	
 }

@@ -14,64 +14,87 @@ class GeneroController extends CI_Controller {
 	}
 
 	public function index()
-	{
-		$data = array(
-			'page_title' => 'Genero',
-			'view' => 'genero/genero',
-			'data_view' => array()
-		);
+	{	
+		if ($this->session->userdata('is_logued_in') === TRUE) {	
+			$data = array(
+				'page_title' => 'Genero',
+				'view' => 'genero/genero',
+				'data_view' => array()
+			);
 
-		$data['genero'] = $this->GeneroModel->obtener_genero();
-		$this->load->view('template/main_view',$data);
+			$data['genero'] = $this->GeneroModel->obtener_genero();
+			$this->load->view('template/main_view',$data);
+		}else{
+			$this->load->view('login');
+		}
 	}
 	
 	public function nuevo_genero()
 	{
-		$data = array(
-			'page_title' => 'Nuevo Genero',
-			'view' => 'genero/AddGenero',
-			'data_view' => array()
-		);
+		if ($this->session->userdata('is_logued_in') === TRUE) {	
+			$data = array(
+				'page_title' => 'Nuevo Genero',
+				'view' => 'genero/AddGenero',
+				'data_view' => array()
+			);
 
-		$this->load->view('template/main_view',$data);
+			$this->load->view('template/main_view',$data);
+		}else{
+			$this->load->view('login');
+		}
 	}
 
 	public function insert_genero()
 	{
-		$data = array(
-			'TIPO_GENERO' => $this->input->post('genero')
-		);
+		if ($this->session->userdata('is_logued_in') === TRUE) {	
+			$data = array(
+				'TIPO_GENERO' => $this->input->post('genero')
+			);
 
-		$this->GeneroModel->insert_genero($data);
-		redirect('GeneroController/');
+			$this->GeneroModel->insert_genero($data);
+			redirect('GeneroController/');
+		}else{
+			$this->load->view('login');
+		}
 	}
 
 	public function editar_genero($ID_GENERO)
 	{
-		$data = array(
-			'page_title' => 'Editar Genero',
-			'view' => 'genero/AddGenero',
-			'data_view' => array()
-		);
+		if ($this->session->userdata('is_logued_in') === TRUE) {	
+			$data = array(
+				'page_title' => 'Editar Genero',
+				'view' => 'genero/AddGenero',
+				'data_view' => array()
+			);
 
-		$data['update'] = $this->GeneroModel->obtener_genero_update($ID_GENERO);
-		$this->load->view('template/main_view',$data);
+			$data['update'] = $this->GeneroModel->obtener_genero_update($ID_GENERO);
+			$this->load->view('template/main_view',$data);
+		}else{
+			$this->load->view('login');
+		}
 	}
 
 	public function update_genero()
 	{
-		$marca = array(
-			'TIPO_GENERO' => $this->input->post('genero'),
-			'ID_GENERO' => $this->input->post('id_genero')
-		);
+		if ($this->session->userdata('is_logued_in') === TRUE) {	
+			$marca = array(
+				'TIPO_GENERO' => $this->input->post('genero'),
+				'ID_GENERO' => $this->input->post('id_genero')
+			);
 
-		$this->GeneroModel->editar_generos($marca);
-		redirect('GeneroController/');
+			$this->GeneroModel->editar_generos($marca);
+			redirect('GeneroController/');
+		}else{
+			$this->load->view('login');
+		}
 	}
 
 	public function eliminar_genero($ID_GENERO)
 	{
-		$this->GeneroModel->delete_genero($ID_GENERO);
-		redirect('GeneroController/');
+		if ($this->session->userdata('is_logued_in') === TRUE) {	
+			$this->GeneroModel->delete_genero($ID_GENERO);
+			redirect('GeneroController/');}else{
+				$this->load->view('login');
+			}
+		}
 	}
-}

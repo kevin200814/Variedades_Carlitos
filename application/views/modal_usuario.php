@@ -54,7 +54,7 @@
 
     function traer_lista() {
         $.ajax({
-            url: 'UsuarioController/editar_usuario',
+            url: 'UsuarioController/editar_usuario', 
             type: 'post',
             dataType: 'json',
             beforeSend: function() {

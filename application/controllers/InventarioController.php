@@ -8,6 +8,7 @@ class InventarioController extends CI_Controller {
 
 		parent::__construct();
 		$this->load->model('Inventario');
+		$this->load->model('PermisosModel');
 		
 	}
 

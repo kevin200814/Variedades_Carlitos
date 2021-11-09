@@ -10,6 +10,7 @@ class GeneroController extends CI_Controller {
 
 		$this->load->model('GeneroModel');
 		$this->load->helper('form');
+		$this->load->model('PermisosModel');
 		
 	}
 

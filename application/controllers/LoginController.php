@@ -12,6 +12,8 @@ class LoginController extends CI_Controller {
 		$this->load->model('ChartModel');
 		$this->load->library('form_validation');
 		$this->load->helper('form');
+		$this->load->model('PermisosModel');
+		
 		
 	}
 
@@ -77,9 +79,7 @@ class LoginController extends CI_Controller {
 			$this->session->set_userdata($session_data);
 			if ($id_rol === 1 ) {
 				redirect('LoginController/inicio');
-			}elseif($id_rol === 2){
-				redirect('LoginController/inicio');
-			}elseif ($id_rol === 3) {
+			}elseif($id_rol != 1){
 				redirect('LoginController/inicio');
 			}
 

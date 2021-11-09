@@ -10,6 +10,7 @@ class UsuarioController extends CI_Controller
 		parent::__construct();
 		$this->load->model('Usuario');
 		$this->load->model('Roles');
+		$this->load->model('PermisosModel');
 	}
 	public function index()
 	{

@@ -8,6 +8,7 @@ class ProductosController extends CI_Controller {
 		parent::__construct();
 		$this->load->model('ProductosModel');
 		//$this->load->library('upload');
+		$this->load->model('PermisosModel');
 	}
 
 	public function index()

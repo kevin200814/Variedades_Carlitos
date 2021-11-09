@@ -44,7 +44,7 @@
 </section>
 <?php endforeach ?>
 <?php  }else{?>
-  <div class="alert alert-danger col-12 col-sm-12 col-md-12 col-lg-12" role="alert"> ¡No hay productos disponibles! </div>
+  <div class="alert alert-danger col-12 col-sm-12 col-md-12 col-lg-12" role="alert"> ¡No hay productos disponibles en Nueva Venta! </div>
 <?php } ?>
 
 </main>

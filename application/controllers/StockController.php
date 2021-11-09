@@ -8,7 +8,7 @@ class StockController extends CI_Controller {
 
 		parent::__construct();
 		$this->load->model('StockModel');
-		
+		$this->load->model('PermisosModel');
 	}
 
 	public function index()

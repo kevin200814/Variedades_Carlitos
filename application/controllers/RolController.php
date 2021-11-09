@@ -6,6 +6,7 @@ class RolController extends CI_Controller {
 	function __construct(){
 		parent::__construct();
 		$this->load->model('Roles');
+		$this->load->model('PermisosModel');
 	}
 	public function index()
 	{

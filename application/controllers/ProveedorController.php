@@ -8,6 +8,7 @@ class ProveedorController extends CI_Controller {
 
 		parent::__construct();
 		$this->load->model('ProveedorModel');
+		$this->load->model('PermisosModel');
 		
 	}
 

@@ -10,6 +10,7 @@ class MyProfile extends CI_Controller
 		parent::__construct();
 		$this->load->model('Usuario');
 		$this->load->model('Roles');
+		$this->load->model('PermisosModel');
 	}
 
 	//para las vistas normales dejar el template/main_view

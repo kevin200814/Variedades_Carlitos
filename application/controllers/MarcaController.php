@@ -10,7 +10,7 @@ class MarcaController extends CI_Controller {
 
 		$this->load->model('MarcaModel');
 		$this->load->helper('form');
-		
+		$this->load->model('PermisosModel');
 	}
 
 	public function index()

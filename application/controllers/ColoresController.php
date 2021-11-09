@@ -10,6 +10,7 @@ class ColoresController extends CI_Controller {
 
 		$this->load->model('ColoresModel');
 		$this->load->helper('form');
+		$this->load->model('PermisosModel');
 		
 	}
 

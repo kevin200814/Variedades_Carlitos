@@ -8,7 +8,7 @@ class TallaController extends CI_Controller {
 
 		parent::__construct();
 		$this->load->model('TallaModel');
-		
+		$this->load->model('PermisosModel');
 	}
 
 	public function index()

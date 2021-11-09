@@ -13,36 +13,16 @@ class PermisosModel extends CI_Model {
 
 
 	public function getModulos($id_usuario){
-        $query = $this->db->query("SELECT U.ID_USUARIO,
-            U.NICK_USUARIO,
-            MO.ID_MDOULO,
-            MO.NOMBRE_MODULO,
-            MO.URL_MODULO,
-            MO.ICONO_MODULO,
-            M.crear,
-            M.actualizar,
-            M.eliminar
+        $query = $this->db->query("SELECT U.ID_USUARIO, U.NICK_USUARIO, MO.ID_MODULO, MO.NOMBRE_MODULO, MO.URL_MODULO, MO.ICONO_MODULO
             FROM MENU_ROL_MODULO M, MODULOS MO, TBL_ROL R, TBL_USUARIO U
-            where U.ID_ROL = R.ID_ROL
-            and M.ID_MODULO = MO.ID_MODULO
-            and M.ID_ROL = R.ID_ROL
-            and U.ID_USUARIO = '$id_usuario'
-            and MO.TIPO = '1';");
+            where U.ID_ROL = R.ID_ROL and M.ID_MODULO = MO.ID_MODULO and M.ID_ROL = R.ID_ROL and U.ID_USUARIO = $id_usuario and MO.TIPO = 1;" );
         return $query->result();
     }
 
     public function getModulos2($id_usuario){
-        $query = $this->db->query("SELECT U.ID_USUARIO,
-            U.NICK_USUARIO,
-            MO.ID_MDOULO,
-            MO.NOMBRE_MODULO,
-            MO.URL_MODULO
+        $query = $this->db->query("SELECT U.ID_USUARIO, U.NICK_USUARIO, MO.ID_MODULO, MO.NOMBRE_MODULO, MO.URL_MODULO
             FROM MENU_ROL_MODULO M, MODULOS MO, TBL_ROL R, TBL_USUARIO U
-            where U.ID_ROL = R.ID_ROL
-            and M.ID_MODULO = MO.ID_MODULO
-            and M.ID_ROL = R.ID_ROL
-            and U.ID_USUARIO = '$id_usuario'
-            and MO.TIPO = '2';");
+            where U.ID_ROL = R.ID_ROL and M.ID_MODULO = MO.ID_MODULO and M.ID_ROL = R.ID_ROL and U.ID_USUARIO = $id_usuario and MO.TIPO = 2;");
         return $query->result();
     }
 

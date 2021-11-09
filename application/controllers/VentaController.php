@@ -8,7 +8,7 @@ class VentaController extends CI_Controller {
 
 		parent::__construct();
 		$this->load->model('VentaModel');
-
+		$this->load->model('PermisosModel');
 		
 	}
 

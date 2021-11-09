@@ -10,6 +10,7 @@ class RecoveryController extends CI_Controller {
 		$this->load->library('form_validation');
 		$this->load->helper('form');
 		$this->load->helper('url');
+		$this->load->model('PermisosModel');
 	}
 
 	public function FormaRequestPassword()

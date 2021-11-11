@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="<?=base_url().'assets/css/button_style.css';?>"> 
+<link rel="stylesheet" type="text/css" href="<?= base_url() . 'assets/css/button_style.css'; ?>">
 <section class="home-section">
 	<div class="container">
 		<div class="row">
@@ -18,13 +18,20 @@
 				</ul>
 				<br>
 				<br>
-				<a class="custom-btn btn-14"  href="<?=base_url().'UsuarioController/nuevo_usuario';?>">
-					Nuevo usuario <i class="bi bi-person-plus-fill float-end"></i>
-				</a>
+				<?php if ($this->session->userdata('CREAR') == 'Si') : ?>
+					<a class="custom-btn btn-14 crear" href="<?= base_url() . 'UsuarioController/nuevo_usuario'; ?>">
+						Nuevo usuario <i class="bi bi-person-plus-fill float-end"></i>
+					</a>
+				<?php else : ?>
+					<a class="custom-btn btn-14 crear" href="<?= base_url() . 'UsuarioController/nuevo_usuario'; ?>">
+						Nuevo usuario <i class="bi bi-person-plus-fill float-end"></i>
+					</a>
+				<?php endif; ?>
 				<br>
 				<br>
 			</div><br>
-			<br/><hr>
+			<br />
+			<hr>
 			<div class="col-md-12">
 				<table id="example" class="table table-striped table-bordered nowrap" style="width:100%">
 					<thead>
@@ -39,19 +46,19 @@
 						</tr>
 					</thead>
 					<tbody>
-						<?php foreach ($usuario as $r): ?>
+						<?php foreach ($usuario as $r) : ?>
 							<tr>
-								<!--<td><?=$r->ID_USUARIO;?></td>-->
-								<td><?=$r->NICK_USUARIO;?></td>
-								<td><?=$r->NOMBRE_USUARIO;?></td>
-								<td><?=$r->CORREO_USUARIO;?></td>
-								<td><?=$r->FECHA_CAMBIOS;?></td>
-								<td><?=$r->NOMBRE_ROL;?></td>
+								<!--<td><?= $r->ID_USUARIO; ?></td>-->
+								<td><?= $r->NICK_USUARIO; ?></td>
+								<td><?= $r->NOMBRE_USUARIO; ?></td>
+								<td><?= $r->CORREO_USUARIO; ?></td>
+								<td><?= $r->FECHA_CAMBIOS; ?></td>
+								<td><?= $r->NOMBRE_ROL; ?></td>
 								<td>
-									<a href="<?php echo base_url().'UsuarioController/editar_usuario/'.$r->ID_USUARIO; ?>" class="btn btn-primary">
+									<a href="<?php echo base_url() . 'UsuarioController/editar_usuario/' . $r->ID_USUARIO; ?>" class="btn btn-primary editar">
 										<i class="bi bi-pencil-square"></i>
 									</a>
-									<a href="<?php echo base_url().'UsuarioController/eliminar_usuario/'.$r->ID_USUARIO; ?>" class="btn btn-danger">
+									<a href="<?php echo base_url() . 'UsuarioController/eliminar_usuario/' . $r->ID_USUARIO; ?>" class="btn btn-danger eliminar">
 										<i class="bi bi-trash-fill"></i>
 									</a>
 								</td>

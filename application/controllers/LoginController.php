@@ -65,6 +65,9 @@ class LoginController extends CI_Controller {
 			$nombre = $data['NOMBRE_USUARIO'];
 			$contraseña = $data['CONTRASENIA_USUARIO']; 
 			$id_rol = $data['ID_ROL'];
+			$crear = $data['CREAR'];
+			$actualizar = $data['ACTUALIZAR'];
+			$eliminar = $data['ELIMINAR'];
 
 			$session_data = array(
 				'ID_USUARIO' => $id_usuario,
@@ -72,8 +75,10 @@ class LoginController extends CI_Controller {
 				'NICK_USUARIO' => $usuario,
 				'CONTRASENIA_USUARIO' => $contraseña,
 				'ID_ROL' => $id_rol,
+				'CREAR' => $crear,
+				'ACTUALIZAR' => $actualizar,
+				'ELIMINAR' => $eliminar, 
 				'is_logued_in' => TRUE 
-
 			);
 
 			$this->session->set_userdata($session_data);

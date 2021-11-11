@@ -1,5 +1,4 @@
-
-<link rel="stylesheet" type="text/css" href="<?=base_url().'assets/css/button_style.css';?>"> 
+<link rel="stylesheet" type="text/css" href="<?= base_url() . 'assets/css/button_style.css'; ?>">
 <section class="home-section">
 	<div class="container">
 		<div class="row">
@@ -19,13 +18,20 @@
 				</ul>
 				<br>
 				<br>
-				<a class="custom-btn btn-14" href="<?=base_url().'RolController/nuevo_rol';?>">
-					Nuevo Rol <i class="bi bi-plus-lg float-end"></i>
-				</a>
+				<?php if ($this->session->userdata('CREAR') == 'Si') : ?>
+					<a class="custom-btn btn-14 crear" href="<?= base_url() . 'RolController/nuevo_rol'; ?>">
+						Nuevo Rol <i class="bi bi-plus-lg float-end"></i>
+					</a>
+				<?php else : ?>
+					<a class="btn btn-warning crear disabled" href="<?= base_url() . 'RolController/nuevo_rol'; ?>">
+						Nuevo Rol <i class="bi bi-plus-lg float-end"></i>
+					</a>
+				<?php endif; ?>
 				<br>
 				<br>
 			</div><br>
-			<br/><hr>
+			<br />
+			<hr>
 			<div class="col-md-12">
 				<table id="example" class="table table-striped table-bordered nowrap" style="width:100%">
 					<thead>
@@ -39,16 +45,16 @@
 						</tr>
 					</thead>
 					<tbody>
-						<?php foreach ($roles as $r): ?>
+						<?php foreach ($roles as $r) : ?>
 							<tr>
-								<td><?=$r->ID_ROL;?></td>
-								<td><?=$r->NOMBRE_ROL;?></td>
-								<td><?=$r->CREAR;?></td>
-								<td><?=$r->ACTUALIZAR;?></td>
-								<td><?=$r->ELIMINAR;?></td>
+								<td><?= $r->ID_ROL; ?></td>
+								<td><?= $r->NOMBRE_ROL; ?></td>
+								<td><?= $r->CREAR; ?></td>
+								<td><?= $r->ACTUALIZAR; ?></td>
+								<td><?= $r->ELIMINAR; ?></td>
 								<td>
-									<a href="<?php echo base_url().'RolController/editar_rol/'.$r->ID_ROL; ?>" class="btn btn-primary"><i class="bi bi-pencil-square"></i></a>
-									<a href="<?php echo base_url().'RolController/eliminar_rol/'.$r->ID_ROL; ?>" class="btn btn-danger"><i class="bi bi-trash-fill"></i></a>
+									<a href="<?php echo base_url() . 'RolController/editar_rol/' . $r->ID_ROL; ?>" class="btn btn-primary editar"><i class="bi bi-pencil-square"></i></a>
+									<a href="<?php echo base_url() . 'RolController/eliminar_rol/' . $r->ID_ROL; ?>" class="btn btn-danger eliminar"><i class="bi bi-trash-fill"></i></a>
 								</td>
 							</tr>
 						<?php endforeach ?>

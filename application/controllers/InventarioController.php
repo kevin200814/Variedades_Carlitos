@@ -95,6 +95,7 @@ class InventarioController extends CI_Controller {
 			$this->load->view('login');
 		}
 
+		redirect(base_url().'InventarioController/index');
 	}
 
 

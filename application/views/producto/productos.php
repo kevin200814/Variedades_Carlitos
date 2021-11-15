@@ -19,7 +19,7 @@
 			<br />
 			<hr>
 			<div class="col-md-12">
-				<table id="example" class="table table-striped table-bordered nowrap" style="width: 100%">
+				<table id="example" class="table table-striped table-bordered nowrap " style="width: 100%">
 					<thead>
 						<tr>
 							<th>ID</th>

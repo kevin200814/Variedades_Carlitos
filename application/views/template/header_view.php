@@ -123,7 +123,7 @@
 						<span class="tooltip">Pagina Principal</span>
 					</li>
 					<li>
-						<a href="<?= base_url("InventarioController/index") ?>">
+						<a href="<?= base_url("InventarioController/inicio") ?>">
 							<i class="fas fa-boxes "></i>
 							<span class="links_name">Nuevo Inventario</span>
 						</a>
@@ -186,7 +186,7 @@
 						<span class="tooltip" href="<?= base_url("UsuarioController/index") ?>">Usuarios y Roles</span>
 					</li>
 					<li>
-						<a href="<?= base_url("DeudasController/inicio") ?>">
+						<a href="<?= base_url("DeudasController/index") ?>">
 							<i class='bx bx-bar-chart-alt'></i>
 							<span class="links_name">Contabilidad</span>
 						</a>

@@ -14,4 +14,37 @@ Class Inventario extends CI_Model{
         return $query->result();
     }
 
-}
+
+
+    public function getLista(){
+
+        
+        $query = $this->db->get('LISTA_PRODUCTOS');
+        return $query->result();
+    }
+
+    public function insertLista($data)
+    {
+        if ($this->db->insert('LISTA_PRODUCTOS',$data))
+            return true;
+        else
+            return false;
+    }
+
+    public function updateLista($data)
+    {   
+       
+        $this->db->set('TOTAL_DOCENA',$data['TOTAL_DOCENA']);
+        $this->db->set('CANTIDAD',$data['CANTIDAD']);
+        $this->db->where('ID_LISTA',$data['ID_LISTA']);
+        $this->db->update('LISTA_PRODUCTOS');
+    }
+
+
+    public function eliminarProd($ID_LISTA)
+    {
+        $this->db->where('ID_LISTA', $ID_LISTA);
+        $this->db->delete('LISTA_PRODUCTOS');
+    }
+
+} 

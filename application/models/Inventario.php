@@ -36,6 +36,7 @@ Class Inventario extends CI_Model{
        
         $this->db->set('TOTAL_DOCENA',$data['TOTAL_DOCENA']);
         $this->db->set('CANTIDAD',$data['CANTIDAD']);
+        $this->db->set('UNITARIO',$data['UNITARIO']);
         $this->db->where('ID_LISTA',$data['ID_LISTA']);
         $this->db->update('LISTA_PRODUCTOS');
     }

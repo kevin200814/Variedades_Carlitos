@@ -31,15 +31,15 @@
 							<tr>
 								
 								<td><?= $deuda->COD_DEUDA; ?></td>
-								<td><?= $m->FECHA_SALIDA; ?></td>
-								<td><?= $m->NOMBRE_PRODUCTO; ?></td>
-								<td><?= $m->TIPO_CATEGORIA; ?></td>
-								<td><?= $m->TALLA; ?></td>
-								<td><?= $m->NOMBRE_COLOR; ?></td>
-								<td><?= $m->TIPO_GENERO; ?></td>
-								<td><?= $m->NOMBRE_MARCA; ?></td>
-								<td><?= $m->STOCK_ACTUAL; ?></td>
-								<td><?= $m->PRECIO_DOCENA; ?></td>
+								<td><?= $deuda->FECHA_SALIDA; ?></td>
+								<td><?= $deuda->NOMBRE_PRODUCTO; ?></td>
+								<td><?= $deuda->TIPO_CATEGORIA; ?></td>
+								<td><?= $deuda->TALLA; ?></td>
+								<td><?= $deuda->NOMBRE_COLOR; ?></td>
+								<td><?= $deuda->TIPO_GENERO; ?></td>
+								<td><?= $deuda->NOMBRE_MARCA; ?></td>
+								<td><?= $deuda->STOCK_ACTUAL; ?></td>
+								<td><?= $deuda->PRECIO_DOCENA; ?></td>
 								
 							</tr>
 						<?php endforeach ?>

@@ -9,6 +9,21 @@
 
 <input  class="variation" id="pinkaru" type="radio" value="5" name="color"/>
 
+<div class="container">
+  <div class="row">
+    <ul class="nav nav-tabs card-header-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" href="<?php echo base_url(); ?>InventarioController/inicio">Productos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<?php echo base_url(); ?>InventarioController/index">Inventario</a>
+      </li>
+    </ul>
+    
+  </div>
+</div>
+
+
 <main class="home-section2">
   <?php if(!empty($inventario)){ ?>
     <?php foreach ($inventario as $I): ?>

@@ -35,7 +35,7 @@
 								<td><?= $m->TOTAL_A_PAGAR; ?></td>
 								<td><?= $m->ID_ESTADO_PAGO; ?></td>
 								<td>
-		<a href="<?php echo base_url() . 'DeudasController/editarMovimiento/' .  $m->ID_MOVIMIENTO ?>" class="btn btn-primary editar">
+		<a href="<?php echo base_url() . 'DeudasController/editarMovimiento/' .  $m->ID_MOVIMIENTO ?>" class="btn btn-primary">
 										<i class="bi bi-pencil-square"></i>
 									</a>
 									<a href="<?php echo base_url() . 'DeudasController/detallesMovimiento/' . $m->COD_DEUDA; ?>" class="btn btn-success detalles">

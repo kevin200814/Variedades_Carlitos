@@ -68,6 +68,24 @@ class DeudasController extends CI_Controller {
 		}
 	}
 
+	public function updateAbono()
+	{
+		if ($this->session->userdata('is_logued_in') === TRUE) {
+			$abono = array(
+				'ABONO_PROVEEDOR' => $this->input->post('ABONO_PROVEEDOR'),
+				'COD_DEUDA' => $this->input->post('COD_DEUDA'),
+				'ID_MOVIMIENTO' => $this->input->post('ID_MOVIMIENTO')
+			);
+
+			$this->DeudaModel->updateAbono($abono);
+			redirect('DeudasController/index');
+		}else{
+			$this->load->view('login');
+		}
+
+		
+	}
+
 	
 	 
 }

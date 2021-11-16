@@ -41,4 +41,12 @@ class DeudaModel extends CI_Model {
 		$this->db->where('ID_CATEGORIA',$categoria['ID_CATEGORIA']);
 		$this->db->update('TBL_CATEGORIA');
 	}
+
+	public function updateAbono($abono)
+	{
+		$this->db->set('ABONO_PROVEEDOR',$abono['ABONO_PROVEEDOR']);
+		$this->db->where('COD_DEUDA',$abono['COD_DEUDA']);
+		$this->db->where('ID_MOVIMIENTO',$abono['ID_MOVIMIENTO']);
+		$this->db->update('VEN_MOVIMIENTOS');
+	}
 }

@@ -82,7 +82,8 @@ class InventarioController extends CI_Controller {
 			
 			$data = array(
 				'CANTIDAD' => $this->input->post('cantidad'),
-				'TOTAL_DOCENA' => $this->input->post('total'),
+				'UNITARIO' => $this->input->post('unitario'),
+				'TOTAL_DOCENA' => ($this->input->post('cantidad')*$this->input->post('unitario')),
 				'ID_LISTA' => $this->input->post('id_lista')
 			);
 

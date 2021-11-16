@@ -43,7 +43,10 @@ class RolController extends CI_Controller {
 	{
 		if ($this->session->userdata('is_logued_in') === TRUE) {
 			$data = array(
-				'NOMBRE_ROL' => $this->input->post('nombre_rol')
+				'NOMBRE_ROL' => $this->input->post('nombre_rol'),
+				'CREAR' => $this->input->post('crear'),
+				'ACTUALIZAR' => $this->input->post('actualizar'),
+				'ELIMINAR' => $this->input->post('eliminar')
 			);
 
 			$this->Roles->insert_rol($data);
@@ -75,6 +78,9 @@ class RolController extends CI_Controller {
 		if ($this->session->userdata('is_logued_in') === TRUE) {
 			$rol = array(
 				'NOMBRE_ROL' => $this->input->post('nombre_rol'),
+				'CREAR' => $this->input->post('crear'),
+				'ACTUALIZAR' => $this->input->post('actualizar'),
+				'ELIMINAR' => $this->input->post('eliminar'),
 				'ID_ROL' => $this->input->post('id_rol')
 			);
 

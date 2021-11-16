@@ -43,7 +43,9 @@ class Roles extends CI_Model {
 	public function editar_rol($rol)
 	{
 		$this->db->set('NOMBRE_ROL',$rol['NOMBRE_ROL']);
-
+		$this->db->set('CREAR',$rol['CREAR']);
+		$this->db->set('ACTUALIZAR',$rol['ACTUALIZAR']);
+		$this->db->set('ELIMINAR',$rol['ELIMINAR']);
 		$this->db->where('ID_ROL',$rol['ID_ROL']);
 		$this->db->update('TBL_ROL');
 	}

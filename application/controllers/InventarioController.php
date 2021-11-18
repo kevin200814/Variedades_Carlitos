@@ -43,7 +43,7 @@ class InventarioController extends CI_Controller {
 				'view' => 'inventario/verInventario',
 				'data_view' => array()
 			);
-
+ 
 			$data['lista'] = $this->Inventario->getLista();
 			$data['total'] = 0;
 			$this->load->view('template/main_view',$data);

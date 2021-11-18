@@ -14,7 +14,7 @@
     <ul class="nav nav-tabs card-header-tabs">
       <li class="nav-item">
         <a class="nav-link active" href="<?php echo base_url(); ?>InventarioController/inicio">Productos</a>
-      </li>
+      </li> 
       <li class="nav-item">
         <a class="nav-link" href="<?php echo base_url(); ?>InventarioController/index">Venta</a>
       </li>

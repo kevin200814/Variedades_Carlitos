@@ -13,5 +13,21 @@ class VentaModel extends CI_Model {
         $query = $this->db->get('TBL_PRODUCTOS P');
         return $query->result();
     }
+
+
+     public function getLista(){
+
+        
+        $query = $this->db->get('LISTA_VENTA');
+        return $query->result();
+    }
+    
+    public function insertLista($data)
+    {
+        if ($this->db->insert('LISTA_VENTA',$data))
+            return true;
+        else
+            return false;
+    }
 	
 }

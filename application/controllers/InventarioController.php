@@ -73,6 +73,7 @@ class InventarioController extends CI_Controller {
 			$this->load->view('login');
 		}
 	}
+	
 
 	public function nuevoInventario(){
 		if ($this->session->userdata('is_logued_in') === TRUE) {	
@@ -91,7 +92,7 @@ class InventarioController extends CI_Controller {
 
 
 			$this->Inventario->insertLista($data);
-
+			
 			redirect(base_url().'InventarioController/index');
 		}else{
 			$this->load->view('login');
@@ -120,7 +121,7 @@ class InventarioController extends CI_Controller {
 
 			if ($this->input->post('Actualizar')) {
 				//Boton actualizar
-
+				$this->session->set_flashdata('update','¡Registro de inventario actualizado correctamente!');
 				redirect(base_url().'InventarioController/index');				
 
 			}else{
@@ -196,7 +197,7 @@ class InventarioController extends CI_Controller {
 			
 
 		}
-
+		$this->session->set_flashdata('insert','¡El inventario ha sido registrado!');
 		$this->Inventario->eliminarLP();
 		redirect('DeudasController/index');
 
@@ -216,6 +217,7 @@ class InventarioController extends CI_Controller {
 		if ($this->session->userdata('is_logued_in') === TRUE) {	
 
 			$this->Inventario->eliminarProd($ID_LISTA);
+			$this->session->set_flashdata('delete','¡El producto ha sido eliminado correctamente!');
 			redirect('InventarioController/');
 		}else{
 			$this->load->view('login');
@@ -238,7 +240,7 @@ class InventarioController extends CI_Controller {
 				'page_title' => 'Sistema de Inventario',
 				'view' => 'inventario/ViewInventario',
 				'data_view' => array()
-			);
+			); 
 			$data['intermedia'] = $this->Inventario->getintermedia();
 			$this->load->view('template/main_view',$data);
 			

@@ -53,6 +53,7 @@ class GeneroController extends CI_Controller {
 			);
 
 			$this->GeneroModel->insert_genero($data);
+			$this->session->set_flashdata('insert','¡Nuevo genero, guardado correctamente!');
 			redirect('GeneroController/');
 		}else{
 			$this->load->view('login');
@@ -69,6 +70,7 @@ class GeneroController extends CI_Controller {
 			);
 
 			$data['update'] = $this->GeneroModel->obtener_genero_update($ID_GENERO);
+			$this->session->set_flashdata('update','¡Genero editado correctamente!');
 			$this->load->view('template/main_view',$data);
 		}else{
 			$this->load->view('login');
@@ -92,9 +94,12 @@ class GeneroController extends CI_Controller {
 
 	public function eliminar_genero($ID_GENERO)
 	{
-		if ($this->session->userdata('is_logued_in') === TRUE) {	
+		if ($this->session->userdata('is_logued_in') === TRUE) {
+
 			$this->GeneroModel->delete_genero($ID_GENERO);
-			redirect('GeneroController/');}else{
+			$this->session->set_flashdata('delete','¡Genero eliminado correctamente!');
+			redirect('GeneroController/');
+		}else{
 				$this->load->view('login');
 			}
 		}

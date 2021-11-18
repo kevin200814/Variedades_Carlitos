@@ -50,6 +50,7 @@ class RolController extends CI_Controller {
 			);
 
 			$this->Roles->insert_rol($data);
+			$this->session->set_flashdata('insert','¡El rol se ha registrado!');
 			$this->index();
 		}else{
 			$this->load->view('login');
@@ -85,6 +86,7 @@ class RolController extends CI_Controller {
 			);
 
 			$this->Roles->editar_rol($rol);
+			$this->session->set_flashdata('update','¡El rol se ha actualizado correctamente!');
 			$this->index();
 		}else{
 			$this->load->view('login');
@@ -102,10 +104,11 @@ class RolController extends CI_Controller {
 		if ($this->session->userdata('is_logued_in') === TRUE) {
 
 			if($id_rol == 1){
-				echo "No se puede eliminar el usuario administrador";
+				
+				$this->session->set_flashdata('delete','No tiene permiso para eliminar este usuario!');
 
 			}elseif($info == $ID_ROL){
-				echo "No se puede eliminar, Un usuario esta usando este rol";
+				$this->session->set_flashdata('delete','No se puede eliminar un usuario esta usando este rol!');
 				redirect('RolController/');
 
 			}else{

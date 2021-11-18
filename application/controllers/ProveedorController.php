@@ -54,6 +54,7 @@ class ProveedorController extends CI_Controller {
 			);
 
 			$this->ProveedorModel->insertProveedor($data);
+			$this->session->set_flashdata('insert','¡Nuevo proveedor guardado correctamente!');
 			redirect('ProveedorController/index');
 		}else{
 			$this->load->view('login');
@@ -85,6 +86,7 @@ class ProveedorController extends CI_Controller {
 			);
 
 			$this->ProveedorModel->updateProveedor($stock);
+			$this->session->set_flashdata('update','¡Proveedor actualizado correctamente!');
 			redirect('ProveedorController/index');
 		}else{
 			$this->load->view('login');
@@ -95,7 +97,7 @@ class ProveedorController extends CI_Controller {
 	{
 		if ($this->session->userdata('is_logued_in') === TRUE) {	
 			$this->ProveedorModel->deleteProveedor($ID_PROVEEDOR);
-			
+			$this->session->set_flashdata('delete','¡El proveedor ha sido eliminado!');
 			redirect('ProveedorController/index');
 		}else{
 			$this->load->view('login');

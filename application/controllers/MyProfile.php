@@ -67,6 +67,7 @@ class MyProfile extends CI_Controller
 			);
 
 			$this->Usuario->editar_usuario($usuario);
+			$this->session->set_flashdata('update','¡Usuario editado correctamente!');
 			redirect('LoginController/inicio');
 		}else{
 			$this->load->view('login');

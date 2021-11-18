@@ -19,17 +19,12 @@
 						<li class="nav-item">
 							<a class="nav-link active" href="<?php echo base_url(); ?>InventarioController/StockInventario">Stock de productos</a>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="<?php echo base_url(); ?>RolController/index">Ventas</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link " href="<?php echo base_url(); ?>PermisosController/index"> Registros de nuevo inventario</a>
-						</li>
+						
 					</ul>
 					<br>
 				</div><br>
 				<br />
-				<hr>
+				<hr> 
 				<div class="col-12 col-sm-12 col-md-12 col-lg-12">
 
 
@@ -39,6 +34,7 @@
 							<thead>
 								<tr>
 									<th>CODIGO</th>
+									
 									<th>PRODUCTO</th>
 									<th>CATEGORIA</th>
 									<th>COLOR</th>
@@ -47,7 +43,9 @@
 									<th>MARCA</th>
 									<th>FECHA_SALIDA</th>
 									<th>ESTADO STOCK</th>
-									<th>STOCK</th>
+									<th>ENTRADA STOCK</th>
+									<th>CANTIDAD SALIDA</th>
+									<th>STOCK FINAL</th>
 									<th>ACCION</th>
 								</tr>
 							</thead>
@@ -64,6 +62,7 @@
 
 										<tr>
 											<td><?=$l->COD_DEUDA ?></td>
+											
 											<td><?=$l->NOMBRE_PRODUCTO ?></td>
 											<td><?=$l->TIPO_CATEGORIA ?></td>
 											<td><?=$l->NOMBRE_COLOR ?></td>
@@ -73,12 +72,18 @@
 											<td><?=$l->FECHA_SALIDA ?></td>
 											
 											<?php 
+											
+											
 											if ($l->ID_ESTADO_STOCK == 1) {
 												echo "<td style='background-color: #1FA51D;color: white;'> $l->ESTADO_STOCK</td>";
 											}else if($l->ID_ESTADO_STOCK == 2) {
 												echo "<td style='background-color: #F50A0A;color: white;'> $l->ESTADO_STOCK </td>";
 											}
+											
+
 											?>
+											<td><?=$l->STOCK_ACTUAL ?></td>
+											<td><?=$l->CANTIDAD_SALIDA ?></td>
 											<td><?=$l->STOCK_FINAL ?></td>
 											<td>
 												<a href="<?php echo base_url() . 'InventarioController/editarEntrada/' . $l->ID_ENTRADA; ?>" class="btn btn-info">

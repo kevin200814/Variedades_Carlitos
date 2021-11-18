@@ -35,9 +35,9 @@
 					</thead>
 					<tbody>
 						<?php foreach ($producto as $p) : ?>
-							<tr>
+							<tr> 
 								<td><?= $p->ID_PRODUCTO; ?></td>
-								<td><img src="<?= base_url() ?>./assets/images/Upload/<?php echo $p->IMAGEN; ?>" style="width: 100px;height: 75px;"></td>
+								<td><img src="<?php echo base_url().'assets/productos/'.$p->IMAGEN; ?>" style="width: 100px;height: 75px;"></td>
 								<td><?= $p->NOMBRE_PRODUCTO; ?></td>
 								<td><?= $p->TIPO_CATEGORIA; ?></td>
 								<td><?= $p->TIPO_GENERO; ?></td>

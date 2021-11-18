@@ -28,7 +28,7 @@
           icon: 'info',
           title: 'Pocas Existencias',
           text: 'Tiene productos que tienen existencias minimas a 20 piezas',
-          footer: '<a href="#">Ver Inventario</a>'
+          footer: '<a href="<?php echo base_url(); ?>InventarioController/StockInventario">Ver Inventario</a>'
         })
     </script>
 <?php endif ?>

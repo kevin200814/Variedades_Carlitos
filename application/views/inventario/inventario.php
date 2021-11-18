@@ -16,7 +16,7 @@
         <a class="nav-link active" href="<?php echo base_url(); ?>InventarioController/inicio">Productos</a>
       </li> 
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url(); ?>InventarioController/index">Venta</a>
+        <a class="nav-link" href="<?php echo base_url(); ?>InventarioController/index">Inventario</a>
       </li>
     </ul>
     

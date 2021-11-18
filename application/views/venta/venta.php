@@ -1,4 +1,4 @@
-<style>
+<style type="text/css">
 	div.scrollmenu {
 
 		overflow: auto;
@@ -15,10 +15,10 @@
 		  <div class="row">
 		    <ul class="nav nav-tabs card-header-tabs">
 		      <li class="nav-item">
-		        <a class="nav-link" href="<?php echo base_url(); ?>InventarioController/inicio">Productos</a>
+		        <a class="nav-link" href="<?php echo base_url(); ?>VentaController/index">Productos</a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link active" href="<?php echo base_url(); ?>InventarioController/index">Inventario</a>
+		        <a class="nav-link active" href="<?php echo base_url(); ?>VentaController/index">Venta</a>
 		      </li>
 		    </ul>
 		    
@@ -28,7 +28,7 @@
 		<div class="scrollmenu">
 			<div class="row" style="width: 1900px">
 				<div class="col-md-12">
-					<h3>Lista de Nuevo Inventario</h3>
+					<h3>Lista de productos en venta</h3>
 
 				</div><br>
 				<br />
@@ -83,11 +83,11 @@
 										<td><?=$l->NOMBRE_MARCA ?></td>
 										<td >
 											<input type="hidden" name="id_lista[]" value="<?=$l->ID_LISTA ?>">
-											<input type="number" class="form-control" style="width: 50%;" name="cantidad[]" value="<?=$l->CANTIDAD ?>">
+											<input type="number" class="form-control" style="width: 50%;" name="cantidad[]" value="<?=$l->CANTIDAD_VENDIDA ?>">
 										</td>
 										<td >
 											
-											<input type="number" class="form-control" style="width: 50%;" name="unitario[]" value="<?=$l->UNITARIO ?>">
+											<!--<input type="number" class="form-control" style="width: 50%;" name="unitario[]" value="<?=$l->UNITARIO ?>">-->
 										</td>
 										<td>
 										<!--	<a href="<?php echo base_url() . 'InventarioController/updateInventario/' ?>" class="btn btn-primary editar"><i class="bi bi-pencil-square"></i></a>-->
@@ -101,7 +101,7 @@
 								<tr>
 									<td colspan="8" ></td>
 									<td ><b>Total</b></td>
-									<td ><input type="number" step="any" class="form-control" style="width: 50%;" name="total" value="<?= $l->TOTAL_DOCENA;   ?>"></td>
+									<!--<td ><input type="number" step="any" class="form-control" style="width: 50%;" name="total" value="<?= $l->TOTAL_DOCENA;   ?>"></td>-->
 								</tr>
 							</tbody>
 						</table>
@@ -119,67 +119,3 @@
 			<input type="submit" name="Siguiente" class="btn btn-success" value="Siguiente">
 			<br>
 			<br>
-			<!--
-			<div class="row">
-				<div class="col-md-6 col-sm-12">
-					<label>Código de deuda:</label>
-					<input type="text" disabled class="form-control" name="cod_deuda" value="<?php echo rand(1000,9999); ?>">
-				</div>
-
-				<div class="col-md-6 col-sm-12">
-					<label>Fecha de entrada:</label>
-					<input type="text" disabled class="form-control" name="fecha" value="15-11-2021">
-				</div>
-			</div>
-			<br>
-			<div class="row">
-				<div class="col-md-6 col-sm-12">
-					<label>Proveedor:</label>
-					<select name="id_rol" class="form-select" required>
-						<option class="option" required>Seleccionar</option>
-						<?php foreach ($roles as $r): ?>
-							<?php if ($accion == 'insert_usuario'): ?>
-								<option required value="<?=$r->ID_ROL;?>"><?=$r->NOMBRE_ROL;?></option>
-							<?php else: ?>
-								<option required value="<?=$r->ID_ROL?>" <?=$r->ID_ROL == $id_rol ? 'selected' : ""; ?>>
-									<?=$r->NOMBRE_ROL; ?>
-								</option>
-							<?php endif ?>
-						<?php endforeach; ?>
-					</select>
-				</div>
-
-				<div class="col-md-6 col-sm-12">
-					<label>Costo de deuda:</label>
-					<td ><input type="number" step="any" class="form-control" name="total" value="<?php  echo $total ?>"></td>
-				</div>				
-			</div>
-			<br>
-			<div class="row">
-				<div class="col-md-6 col-sm-12">
-					<label>Estado de pago:</label>
-					<select name="id_rol" class="form-select" required>
-						<option class="option" required>Seleccionar</option>
-						<?php foreach ($roles as $r): ?>
-							<?php if ($accion == 'insert_usuario'): ?>
-								<option required value="<?=$r->ID_ROL;?>"><?=$r->NOMBRE_ROL;?></option>
-							<?php else: ?>
-								<option required value="<?=$r->ID_ROL?>" <?=$r->ID_ROL == $id_rol ? 'selected' : ""; ?>>
-									<?=$r->NOMBRE_ROL; ?>
-								</option>
-							<?php endif ?>
-						<?php endforeach; ?>
-					</select>
-				</div>
-
-				<div class="col-md-6 col-sm-12">
-					<label>Abono:</label>
-					<td ><input type="number" step="any" class="form-control" name="total" value="<?= $l->TOTAL_DOCENA ?>"></td>
-				</div>				
-			</div>
-			<br>
-			<input type="submit" name="Actualizar" class="btn btn-success" value="Actualizar lista">
-			-->
-		</div>
-	</form>
-</section>

@@ -33,7 +33,7 @@ class DeudasController extends CI_Controller {
 	
 
 	
-	public function editarMovimiento($ID_MOVIMIENTO)
+	public function editarMovimiento($COD_DEUDA)
 	{
 		if ($this->session->userdata('is_logued_in') === TRUE) {
 			$data = array(
@@ -42,18 +42,18 @@ class DeudasController extends CI_Controller {
 				'data_view' => array()
 			);
 
-			$data['movimientos'] = $this->DeudaModel->obtenerMovimiento($ID_MOVIMIENTO);
+			$data['movimientos'] = $this->DeudaModel->obtenerMovimiento($COD_DEUDA);
 			$this->load->view('template/main_view',$data);
 		}else{
 			$this->load->view('login');
 		}
 	}
-
+ 
 	public function detallesMovimiento($COD_DEUDA)
 	{
 		if ($this->session->userdata('is_logued_in') === TRUE) {
 			$data = array(
-				'page_title' => 'Editar movimiento',
+				'page_title' => 'Detalles movimientos',
 				'view' => 'deudas/detalleDeuda',
 				'data_view' => array()
 			);
@@ -71,10 +71,26 @@ class DeudasController extends CI_Controller {
 	public function updateAbono()
 	{
 		if ($this->session->userdata('is_logued_in') === TRUE) {
+
+			$ABONO_PROVEEDOR = $this->input->post('DEUDA_PROVEEDOR');
+			$DEUDA_PROVEEDOR = $this->input->post('ABONO_PROVEEDOR');
+
+			$ESTADO = 2;
+
+			if ($ABONO_PROVEEDOR == $DEUDA_PROVEEDOR) {
+				
+				$ESTADO = 1;
+			}
+
+
 			$abono = array(
+				$deuda =  $this->input->post('DEUDA_PROVEEDOR'),
 				'ABONO_PROVEEDOR' => $this->input->post('ABONO_PROVEEDOR'),
+				'TOTAL_A_PAGAR' => $deuda -  $this->input->post('ABONO_PROVEEDOR'),
 				'COD_DEUDA' => $this->input->post('COD_DEUDA'),
-				'ID_MOVIMIENTO' => $this->input->post('ID_MOVIMIENTO')
+				'ID_MOVIMIENTO' => $this->input->post('ID_MOVIMIENTO'),
+				'ESTADO_STOCK' => $ESTADO
+				
 			);
 
 			$this->DeudaModel->updateAbono($abono);

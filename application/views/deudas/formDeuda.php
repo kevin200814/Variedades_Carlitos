@@ -4,14 +4,14 @@
 	<div class="container" style="position: relative; ">
 		<div class="row">
 			<div class="col-xs-6" style="margin-left: 0px; padding-right: 20px">
-				<h3>Actualizar deuda</h3>
-				<br>
+				<h3>Actualizar deuda</h3> 
+				<br> 
 				<form class="row g-3" action="<?php echo base_url(); ?>DeudasController/updateAbono" method="post" autocomplete="off">
 					
 					<div class="col-xs-6 col-md-12">
 						<label class="form-label">Código de deuda</label>
-				<input type="hidden" class="form-control" style="width: 90%;" disabled name="ID_MOVIMIENTO" value="<?=$movimientos->ID_MOVIMIENTO ?>">
-						<input type="text" class="form-control" style="width: 90%;" disabled name="COD_DEUDA" value="<?=$movimientos->COD_DEUDA ?>" required>
+				<input type="hidden" class="form-control" style="width: 90%;" readonly name="ID_MOVIMIENTO" value="<?=$movimientos->ID_MOVIMIENTO ?>">
+						<input type="text" class="form-control" style="width: 90%;" readonly name="COD_DEUDA" value="<?=$movimientos->COD_DEUDA ?>" required>
 					</div>
 
 					<div class="col-xs-6 col-md-12">
@@ -21,7 +21,7 @@
 					
 					<div class="col-xs-6 col-md-12">
 						<label class="form-label">Deuda actual</label>
-						<input type="text" class="form-control" style="width: 90%;" disabled name="DEUDA_PROVEEDOR" value="<?=$movimientos->DEUDA_PROVEEDOR ?>" required>
+						<input type="text" class="form-control" style="width: 90%;" readonly name="DEUDA_PROVEEDOR" value="<?=$movimientos->DEUDA_PROVEEDOR ?>" required>
 					</div>
 
 					<div class="col-xs-6 col-md-12">

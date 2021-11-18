@@ -96,7 +96,7 @@ class RolController extends CI_Controller {
 		$data = $this->Roles->getUsuarios();
 		$info;
 		foreach($data as $d){
-			$info = $d->id_rol;
+			$info = $d->ID_ROL;
 		}
 
 		if ($this->session->userdata('is_logued_in') === TRUE) {
@@ -104,7 +104,7 @@ class RolController extends CI_Controller {
 			if($id_rol == 1){
 				echo "No se puede eliminar el usuario administrador";
 
-			}elseif($info === $id_rol){
+			}elseif($info == $ID_ROL){
 				echo "No se puede eliminar, Un usuario esta usando este rol";
 				redirect('RolController/');
 

@@ -5,7 +5,7 @@ class VentaModel extends CI_Model {
 
 	public function obtener_inventario(){
 
-        $this->db->join('TBL_CATEGORIA C','P.ID_CATEGORIA = P.ID_CATEGORIA');
+        $this->db->join('TBL_CATEGORIA C','P.ID_CATEGORIA = C.ID_CATEGORIA');
         $this->db->join('TBL_GENERO G','P.ID_GENERO = G.ID_GENERO');
         $this->db->join('TBL_TALLA T','P.ID_TALLA = T.ID_TALLA');
         $this->db->join('TBL_COLORES CO','P.ID_COLORES = CO.ID_COLORES');

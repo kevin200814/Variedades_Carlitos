@@ -68,21 +68,10 @@
 
 									 <?php
 
-									 if (isset($total)){
-
-									 	//$total = $total + $l->TOTAL_DOCENA;
-
-									 }else{
-
-									 	
-
-									 }
-
+									 	//$total += $l->TOTAL_DOCENA;
 									 	
 									 ?>
 
-									
-									
 									<tr>
 										<td><?=$l->ID_LISTA ?></td>
 										<td><?=$l->ID_PRODUCTO ?></td>
@@ -93,12 +82,12 @@
 										<td><?=$l->TALLA ?></td>
 										<td><?=$l->NOMBRE_MARCA ?></td>
 										<td >
-											<input type="hidden" name="id_lista" value="<?=$l->ID_LISTA ?>">
-											<input type="number" class="form-control" style="width: 50%;" name="cantidad" value="<?=$l->CANTIDAD ?>">
+											<input type="hidden" name="id_lista[]" value="<?=$l->ID_LISTA ?>">
+											<input type="number" class="form-control" style="width: 50%;" name="cantidad[]" value="<?=$l->CANTIDAD ?>">
 										</td>
 										<td >
-											<input type="hidden" name="id_lista" value="<?=$l->ID_LISTA ?>">
-											<input type="number" class="form-control" style="width: 50%;" name="unitario" value="<?=$l->UNITARIO ?>">
+											
+											<input type="number" class="form-control" style="width: 50%;" name="unitario[]" value="<?=$l->UNITARIO ?>">
 										</td>
 										<td>
 										<!--	<a href="<?php echo base_url() . 'InventarioController/updateInventario/' ?>" class="btn btn-primary editar"><i class="bi bi-pencil-square"></i></a>-->
@@ -111,8 +100,8 @@
 
 								<tr>
 									<td colspan="8" ></td>
-									<td ><b>Costo docena</b></td>
-									<td ><input type="number" step="any" class="form-control" style="width: 50%;" name="total" value="<?php // echo $total ?>"></td>
+									<td ><b>Total</b></td>
+									<td ><input type="number" step="any" class="form-control" style="width: 50%;" name="total" value="<?= $l->TOTAL_DOCENA;   ?>"></td>
 								</tr>
 							</tbody>
 						</table>
@@ -127,8 +116,10 @@
 			<br>
 			
 			<input type="submit" name="Actualizar" class="btn btn-success" value="Actualizar lista">
+			<input type="submit" name="Siguiente" class="btn btn-success" value="Siguiente">
 			<br>
 			<br>
+			<!--
 			<div class="row">
 				<div class="col-md-6 col-sm-12">
 					<label>Código de deuda:</label>
@@ -160,7 +151,7 @@
 
 				<div class="col-md-6 col-sm-12">
 					<label>Costo de deuda:</label>
-					<td ><input type="number" step="any" class="form-control" name="total" value="<?php // echo $total ?>"></td>
+					<td ><input type="number" step="any" class="form-control" name="total" value="<?php  echo $total ?>"></td>
 				</div>				
 			</div>
 			<br>
@@ -188,7 +179,7 @@
 			</div>
 			<br>
 			<input type="submit" name="Actualizar" class="btn btn-success" value="Actualizar lista">
-			
+			-->
 		</div>
 	</form>
 </section>

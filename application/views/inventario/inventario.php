@@ -70,5 +70,5 @@
 <?php } ?>
 </main>
  
-<?php echo md5("Este es my Encryptasion pArá el Karro") ?>
+
 

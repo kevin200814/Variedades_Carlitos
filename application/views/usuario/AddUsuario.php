@@ -94,7 +94,7 @@ $hoy = date('Y-m-d');
 					</div>
 					<div class="col-md-12 alert alert-success">
 						<label class="text-success">Subjerecias de posibles preguntas o pistas</label>
-						<select class="form-control" name="generador" id="generador" required>
+						<select class="form-control" name="generador" id="generador">
 							<option value="" selected="selected">Seleccione</option>
                                 <option value="1">Nombre de tu mamá</option>
                                 <option value="2">Nombre de tu papá</option>
@@ -112,11 +112,11 @@ $hoy = date('Y-m-d');
 					</div>
 					<div class="col-md-6 alert alert-warning">
 						<label for="inputAddress2" class="form-label">Pregunta de recuperación</label>
-						<input type="text" class="form-control" id="pregunta" name="pregunta"  value="<?= $recovery_pregunta; ?>" required>
+						<input type="text" class="form-control" id="pregunta" name="pregunta"  value="<?= $recovery_pregunta; ?>">
 					</div>
 					<div class="col-md-6 alert alert-danger">
 						<label for="inputAddress2" class="form-label">Respuesta de recuperación</label>
-						<input type="text" class="form-control" name="respuesta"  value="<?= $recovery_respuesta; ?>" required>
+						<input type="text" class="form-control" name="respuesta"  value="<?= $recovery_respuesta; ?>">
 					</div>
 					<div class="col-md-4">
 						<label for="inputAddress" class="form-label">Fecha</label>

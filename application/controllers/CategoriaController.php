@@ -52,6 +52,7 @@ class CategoriaController extends CI_Controller {
 			);
 
 			$this->CategoriaModel->insertCategoria($data);
+			$this->session->set_flashdata('insert','¡Nueva categoria, guardada correctamente!');
 			redirect('CategoriaController/index');
 			
 		}else{
@@ -84,7 +85,7 @@ class CategoriaController extends CI_Controller {
 			);
 
 			$this->CategoriaModel->updateCategoria($categoria);
-			
+			$this->session->set_flashdata('update','¡Categoria editada correctamente!');
 			redirect('CategoriaController/index');
 		}else{
 			$this->load->view('login');
@@ -95,7 +96,7 @@ class CategoriaController extends CI_Controller {
 	{
 		if ($this->session->userdata('is_logued_in') === TRUE) {
 			$this->CategoriaModel->deleteCategoria($ID_CATEGORIA);
-			
+			$this->session->set_flashdata('delete','¡Categoria eliminada correctamente!');
 			redirect('CategoriaController/index');
 		}else{
 			$this->load->view('login');

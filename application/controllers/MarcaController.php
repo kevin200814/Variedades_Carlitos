@@ -53,6 +53,7 @@ class MarcaController extends CI_Controller {
 			);
 
 			$this->MarcaModel->insert_marca($data);
+			$this->session->set_flashdata('insert','¡Nueva marca, guardada correctamente!');
 		$this->index(); //index
 		redirect('MarcaController/');
 	}else{
@@ -85,6 +86,7 @@ public function update_marca()
 		);
 
 		$this->MarcaModel->editar_marcas($marca);
+		$this->session->set_flashdata('update','¡Marca editada correctamente!');
 		$this->index();
 		redirect('MarcaController/');
 	}else{
@@ -96,6 +98,7 @@ public function eliminar_marca($ID_MARCA)
 {
 	if ($this->session->userdata('is_logued_in') === TRUE) {	
 		$this->MarcaModel->delete_marca($ID_MARCA);
+		$this->session->set_flashdata('delete','¡Marca eliminada correctamente!');
 		$this->index();
 		redirect('MarcaController/');
 	}else{

@@ -67,6 +67,7 @@ class MyProfile extends CI_Controller
 			);
 
 			$this->Usuario->editar_usuario($usuario);
+			$this->session->set_flashdata('profile','¡Sus datos fueron modificados!');
 			redirect('LoginController/inicio');
 		}else{
 			$this->load->view('login');

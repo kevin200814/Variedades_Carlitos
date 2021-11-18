@@ -31,6 +31,8 @@
 	<script type="text/javascript" src="<?= base_url() . 'assets/js/jquery.dataTables.min.js'; ?>"></script>
 	<script type="text/javascript" src="<?= base_url() . 'assets/js/dataTables.bootstrap4.min.js'; ?>"></script>
 
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.9/dist/sweetalert2.all.min.js"></script>
+
 
 	<link rel="stylesheet" type="text/css" href="<?= base_url() . 'assets/css/button_style.css'; ?>">
 
@@ -80,6 +82,56 @@
 </head>
 
 <body style="background-color: #E4E9F7">
+
+	<?php if ($this->session->flashdata('insert')): ?>
+		<script type="text/javascript">
+			Swal.fire({
+				icon: 'success',
+				title: '<?=$this->session->flashdata('insert')?>',
+				text: 'El registro fue guardado'
+			})
+		</script>
+	<?php endif; ?>
+
+	<?php if ($this->session->flashdata('update')): ?>
+		<script type="text/javascript">
+			Swal.fire({
+				icon: 'success',
+				title: '<?=$this->session->flashdata('update')?>',
+				text: 'El registro fue modificado'
+			})
+		</script>
+	<?php endif; ?>
+
+	<?php if ($this->session->flashdata('delete')): ?>
+		<script type="text/javascript">
+			Swal.fire({
+				icon: 'success',
+				title: '<?=$this->session->flashdata('delete')?>',
+				text: 'El registro fue eliminado'
+			})
+		</script>
+	<?php endif; ?>
+
+	<?php if ($this->session->flashdata('profile')): ?>
+		<script type="text/javascript">
+			Swal.fire({
+				icon: 'info',
+				title: '<?=$this->session->flashdata('profile')?>',
+				text: 'Su información fue alterada'
+			})
+		</script>
+	<?php endif; ?>
+
+	<?php if ($this->session->flashdata('error')): ?>
+		<script type="text/javascript">
+			Swal.fire({
+				icon: 'error',
+				title: '<?=$this->session->flashdata('error')?>',
+				text: 'Su información fue alterada'
+			})
+		</script>
+	<?php endif; ?>
 
 	<div class="float-right navbar" width="100%">
 		<div class="dropdown dropdown-menu-right">

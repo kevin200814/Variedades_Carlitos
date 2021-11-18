@@ -53,6 +53,7 @@ class TallaController extends CI_Controller {
 			);
 
 			$this->TallaModel->insert_talla($data);
+			$this->session->set_flashdata('insert','¡Nueva talla, guardada correctamente!');
 			redirect('TallaController/index');
 		}else{
 			$this->load->view('login');
@@ -84,6 +85,7 @@ class TallaController extends CI_Controller {
 			);
 
 			$this->TallaModel->update_talla($talla);
+			$this->session->set_flashdata('update','¡Talla editada correctamente!');
 			redirect('TallaController/index');
 		}else{
 			$this->load->view('login');
@@ -94,7 +96,7 @@ class TallaController extends CI_Controller {
 	{
 		if ($this->session->userdata('is_logued_in') === TRUE) {	
 			$this->TallaModel->delete_talla($ID_TALLA);
-			
+			$this->session->set_flashdata('delete','¡Talla eliminada correctamente!');
 			redirect('TallaController/index');
 		}else{
 			$this->load->view('login');

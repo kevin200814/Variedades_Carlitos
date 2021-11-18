@@ -89,6 +89,7 @@ class ProductosController extends CI_Controller {
 				);
 
 				$this->ProductosModel->insert_producto($data);
+				$this->session->set_flashdata('insert','¡Nuevo producto, guardado correctamente!');
 				redirect('/ProductosController/index', 'refresh');
 
 
@@ -156,6 +157,7 @@ class ProductosController extends CI_Controller {
 				);
 
 				$this->ProductosModel->update_producto($productos);
+				$this->session->set_flashdata('update','¡Producto editado correctamente!');
 				redirect('ProductosController/index');
 
 
@@ -180,6 +182,7 @@ class ProductosController extends CI_Controller {
 				);
 
 				$this->ProductosModel->update_producto($productos);
+				$this->session->set_flashdata('update','¡Producto editado correctamente!');
 				redirect('ProductosController/index');
 
 			}
@@ -192,6 +195,7 @@ class ProductosController extends CI_Controller {
 	public function eliminar_producto($ID_PRODUCTO)
 	{if ($this->session->userdata('is_logued_in') === TRUE) {
 		$this->ProductosModel->delete_producto($ID_PRODUCTO);
+		$this->session->set_flashdata('delete','¡Producto eliminado correctamente!');
 		redirect('ProductosController/index');
 	}else{
 		$this->load->view('login');

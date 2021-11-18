@@ -54,6 +54,7 @@ class PagoController extends CI_Controller {
 			);
 
 			$this->PagoModel->insertPago($data);
+			$this->session->set_flashdata('insert','¡Nueva forma de pago, guardada correctamente!');
 			redirect('PagoController/index');
 		}else{
 			$this->load->view('login');
@@ -87,6 +88,7 @@ class PagoController extends CI_Controller {
 			);
 
 			$this->PagoModel->updatePago($pago);
+			$this->session->set_flashdata('update','¡Forma de pago editada correctamente!');
 			redirect('PagoController/index');
 		}else{
 			$this->load->view('login');
@@ -99,7 +101,7 @@ class PagoController extends CI_Controller {
 	{
 		if ($this->session->userdata('is_logued_in') === TRUE) {	
 			$this->PagoModel->deletePago($ID_ESTADO_PAGO);
-
+			$this->session->set_flashdata('delete','¡Forma de pago eliminada correctamente!');
 			redirect('PagoController/index');
 		}else{
 			$this->load->view('login');

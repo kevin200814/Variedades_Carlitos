@@ -56,6 +56,7 @@ class PermisosController extends CI_Controller {
 		);
 
 		$this->PermisosModel->insertPermiso($datos);
+		$this->session->set_flashdata('insert','¡Nuevo permiso, guardado correctamente!');
 		redirect('PermisosController/');
 	}
 
@@ -88,12 +89,14 @@ class PermisosController extends CI_Controller {
 		);
 
 		$this->PermisosModel->updatePermiso($datos);
+		$this->session->set_flashdata('update','¡Permiso editado correctamente!');
 		redirect('PermisosController/');
 	}
 
 	public function deletePermiso($id_menu)
 	{
 		$this->PermisosModel->deletePermiso($id_menu);
+		$this->session->set_flashdata('delete','¡Permiso eliminado correctamente!');
 		redirect('PermisosController/');
 	}
 

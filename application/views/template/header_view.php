@@ -172,7 +172,7 @@
 						</div>
 					</li>
 					<li>
-						<a href="#">
+						<a href="<?= base_url("InventarioController/StockInventario") ?>">
 							<i class='bx bx-bar-chart-alt-2'></i>
 							<span class="links_name">Ver Inventario</span>
 						</a>

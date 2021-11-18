@@ -5,7 +5,7 @@
 		<div class="row">
 			<div class="col-xs-6" style="margin-left: 0px; padding-right: 20px">
 				<h3>Actualizar deuda</h3> 
-				<br>
+				<br> 
 				<form class="row g-3" action="<?php echo base_url(); ?>DeudasController/updateAbono" method="post" autocomplete="off">
 					
 					<div class="col-xs-6 col-md-12">

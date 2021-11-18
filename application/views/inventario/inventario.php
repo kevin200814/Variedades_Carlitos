@@ -16,14 +16,13 @@
         <a class="nav-link active" href="<?php echo base_url(); ?>InventarioController/inicio">Productos</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url(); ?>InventarioController/index">Inventario</a>
+        <a class="nav-link" href="<?php echo base_url(); ?>InventarioController/index">Venta</a>
       </li>
     </ul>
     
   </div>
 </div>
-
-
+ 
 <main class="home-section2">
   <?php if(!empty($inventario)){ ?>
     <?php foreach ($inventario as $I): ?>
@@ -46,7 +45,7 @@
            <h5 class="profile__stats__info">Talla:<b class="texto">&nbsp;<?=$I->TALLA;?></b></h5>
 
           
-            <input type="hidden" name="id_producto" value="<?=$I->ID_PRODUCTO ?>">
+             <input type="hidden" name="id_producto" value="<?=$I->ID_PRODUCTO ?>">
              <input type="hidden" name="nombre_producto" value="<?=$I->NOMBRE_PRODUCTO ?>">
              <input type="hidden" name="tipo_categoria" value="<?=$I->TIPO_CATEGORIA ?>">
              <input type="hidden" name="nombre_color" value="<?=$I->NOMBRE_COLOR ?>">
@@ -57,7 +56,7 @@
              <input type="number" class="form-control profile__stats__info" name="cantidad" min="0">
            </div>
 
-           <input type="submit" class="button profile__cta btn btn-success" style="text-decoration:none; height: 45px;" value="Seleccionar">
+           <input type="submit" class="button profile__cta btn btn-success" style="text-decoration:none; " value="Seleccionar">
 
            
            <!-- <div class="profile__cta"><a class="button" style="text-decoration:none;">Seleccionar</a></div> -->

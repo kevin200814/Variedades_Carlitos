@@ -209,6 +209,26 @@ class InventarioController extends CI_Controller {
 
 	}
 
+
+
+	public function eliminarProd($ID_LISTA)
+	{
+		if ($this->session->userdata('is_logued_in') === TRUE) {	
+
+			$this->Inventario->eliminarProd($ID_LISTA);
+			redirect('InventarioController/');
+		}else{
+			$this->load->view('login');
+		}
+
+
+	}
+
+
+
+	/* ------------------------------------------------- VER INVENTARIO ---------------------------------------------- */
+
+
 	public function StockInventario()
 	{
 		if ($this->session->userdata('is_logued_in') === TRUE) {	
@@ -230,20 +250,25 @@ class InventarioController extends CI_Controller {
 	}
 
 
-
-	public function eliminarProd($ID_LISTA)
+	public function editarEntrada($ID_ENTRADA)
 	{
 		if ($this->session->userdata('is_logued_in') === TRUE) {	
 
-			$this->Inventario->eliminarProd($ID_LISTA);
-			redirect('InventarioController/');
+			$data = array(
+				'icon' => '../assets/images/favicon.png',
+				'page_title' => 'Sistema de Inventario',
+				'view' => 'inventario/updateEntrada',
+				'data_view' => array()
+			);
+			$data['Entrada'] = $this->Inventario->getEntrada($ID_ENTRADA);
+			$this->load->view('template/main_view',$data);
+			
 		}else{
 			$this->load->view('login');
 		}
 
 
 	}
-
 
 
 

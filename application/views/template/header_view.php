@@ -32,8 +32,6 @@
 	<script type="text/javascript" src="<?= base_url() . 'assets/js/dataTables.bootstrap4.min.js'; ?>"></script>
 
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.9/dist/sweetalert2.all.min.js"></script>
-
-
 	<link rel="stylesheet" type="text/css" href="<?= base_url() . 'assets/css/button_style.css'; ?>">
 
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
@@ -60,28 +58,10 @@
 			text-decoration: none;
 		}
 	</style>
-
-	<script type="text/javascript">
-		window.onload = function() {
-			crear = "<?= $this->session->userdata('CREAR'); ?>"
-			editar = "<?= $this->session->userdata('ACTUALIZAR'); ?>"
-			eliminar = "<?= $this->session->userdata('ELIMINAR'); ?>"
-
-			if (crear != "Si") {
-				$('.crear').addClass('disabled');
-				$('.crear').prop("disabled",true);
-			}
-			if (editar != "Si") {
-				$('.editar').addClass('disabled');
-			}
-			if (eliminar != "Si") {
-				$('.eliminar').addClass('disabled');
-			}
-		};
-	</script>
 </head>
 
 <body style="background-color: #E4E9F7">
+
 
 	<?php if ($this->session->flashdata('insert')): ?>
 		<script type="text/javascript">

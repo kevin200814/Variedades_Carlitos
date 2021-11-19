@@ -9,7 +9,7 @@ Class Inventario extends CI_Model{
         $this->db->join('TBL_GENERO G','P.ID_GENERO = G.ID_GENERO');
         $this->db->join('TBL_TALLA T','P.ID_TALLA = T.ID_TALLA');
         $this->db->join('TBL_COLORES CO','P.ID_COLORES = CO.ID_COLORES');
-        $this->db->join('TBL_MARCA M','P.ID_TALLA = M.ID_MARCA');
+        $this->db->join('TBL_MARCA M','P.ID_MARCA = M.ID_MARCA');
         $query = $this->db->get('TBL_PRODUCTOS P');
         return $query->result();
     }
@@ -29,7 +29,7 @@ Class Inventario extends CI_Model{
         $query = $this->db->get('TBL_ESTADO_STOCK');
         return $query->result();
     }
-
+ 
     public function getintermedia(){   
         $this->db->join('TBL_ESTADO_STOCK S','I.ID_ESTADO_STOCK = S.ID_ESTADO_STOCK');
         $this->db->join('TBL_PRODUCTOS P','I.ID_PRODUCTO = P.ID_PRODUCTO');
@@ -38,6 +38,8 @@ Class Inventario extends CI_Model{
         $this->db->join('TBL_TALLA T','P.ID_TALLA = T.ID_TALLA');
         $this->db->join('TBL_COLORES CO','P.ID_COLORES = CO.ID_COLORES');
         $this->db->join('TBL_MARCA M','P.ID_TALLA = M.ID_MARCA');
+        $this->db->join('TBL_SALIDA SA','I.ID_SALIDA = SA.ID_SALIDA');
+        $this->db->join('TBL_ENTRADA E','I.ID_ENTRADA = E.ID_ENTRADA');
         $query = $this->db->get('INTER_ENTRADA_SALIDA I');
         return $query->result();
     }
@@ -60,7 +62,7 @@ Class Inventario extends CI_Model{
         $query = $this->db->get();
         return  $query->row();
     }
-
+ 
     public function insertLista($data)
     {
         if ($this->db->insert('LISTA_PRODUCTOS',$data))

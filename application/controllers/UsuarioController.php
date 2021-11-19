@@ -62,7 +62,7 @@ class UsuarioController extends CI_Controller
 			);
 
 			$this->Usuario->insert_usuario($data);
-			$this->session->set_flashdata('insert','¡Nuevo usuario, guardado correctamente!');
+			$this->session->set_flashdata('insert','¡El usuario se ha guardado correctamente!');
 			$this->index();
 		}else{
 			$this->load->view('login');
@@ -106,7 +106,7 @@ class UsuarioController extends CI_Controller
 			);
 
 			$this->Usuario->editar_usuario($usuario);
-			$this->session->set_flashdata('update','¡Usuario editado correctamente!');
+			$this->session->set_flashdata('update','¡El usuario se ha actualizado correctament!');
 			redirect('usuarioController/');
 		}else{
 			$this->load->view('login');
@@ -132,10 +132,12 @@ class UsuarioController extends CI_Controller
 		{
 			if ($this->session->userdata('is_logued_in') === TRUE) {
 				if ($this->session->userdata('ID_USUARIO') == $ID_USUARIO) {
-					$this->session->set_flashdata('error','¡No se puede eliminar su usuario!');
+
+					
+					$this->session->set_flashdata('delete','¡No se puede eliminar su usuario en sesion!');
 				}else{
 					$this->Usuario->delete_usuario($ID_USUARIO);
-					$this->session->set_flashdata('delete','¡Usuario eliminado correctamente!');
+					$this->session->set_flashdata('delete','El usuario se ha eliminado!');
 					redirect('usuarioController/');
 				}
 				redirect('usuarioController/');

@@ -42,12 +42,12 @@ if (isset($productos)) {
 			<h3><?php echo $titulo ?></h3>
 			<?php
 				if (isset($productos)) {?>
-					<img src="<?=base_url()?>./assets/images/Upload/<?php echo $productos->IMAGEN ;?>" style="width: 270px;height: auto;">
+					<img src="<?php echo base_url().'assets/productos/'.$productos->IMAGEN; ?>" style="width: 270px;height: auto;">
 					<br><br>
 					<?php
 				}
 			?>
-			
+			 
 			<br>
 			<form class="row g-3" enctype="multipart/form-data" action="<?= base_url() . 'ProductosController/' . $accion; ?>" method="post" autocomplete="off" >
 				<?php echo $id_producto; ?>

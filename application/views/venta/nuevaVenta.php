@@ -48,7 +48,7 @@
        <h5 class="profile__stats__info">Para:<b class="texto">&nbsp;<?=$I->TIPO_GENERO;?></b></h5>
        <h5 class="profile__stats__info">Talla:<b class="texto">&nbsp;<?=$I->TALLA;?></b></h5>
 
-
+        <input type="hidden" name="id_salida" value="<?=$I->ID_SALIDA ?>">
        <input type="hidden" name="id_producto" value="<?=$I->ID_PRODUCTO ?>">
        <input type="hidden" name="nombre_producto" value="<?=$I->NOMBRE_PRODUCTO ?>">
        <input type="hidden" name="tipo_categoria" value="<?=$I->TIPO_CATEGORIA ?>">
@@ -56,8 +56,9 @@
        <input type="hidden" name="tipo_genero" value="<?=$I->TIPO_GENERO ?>">
        <input type="hidden" name="talla" value="<?=$I->TALLA ?>">
        <input type="hidden" name="nombre_marca" value="<?=$I->NOMBRE_MARCA ?>">
-       <h5 class="profile__stats__info">Cantidad</h5>
-       <input type="number" class="form-control profile__stats__info" name="cantidad" min="0">
+       <input type="hidden" name="stock_actual" value="<?=$I->STOCK_ACTUAL ?>">
+       <h5 class="profile__stats__info">Cantidad</h5> 
+       <input type="number" class="form-control profile__stats__info" name="cantidad" min="0" max="<?=$I->STOCK_ACTUAL ?>">
      </div>
       <input type="submit" class="button profile__cta btn btn-success" style="text-decoration:none; " value="Agregar a nueva venta">
      

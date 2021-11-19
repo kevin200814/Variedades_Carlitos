@@ -106,7 +106,7 @@
 			<br>
 			<div class="row">
 				<div class="col-md-6 col-sm-12">
-					<label>Estado de pago:</label>
+					<label>Estado de stock:</label>
 					<select name="id_stock" class="form-select" required>
 						<option class="option" required>Seleccionar</option>
 						<?php foreach ($stock as $s): ?>

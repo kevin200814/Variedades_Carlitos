@@ -94,6 +94,7 @@ class DeudasController extends CI_Controller {
 			);
 
 			$this->DeudaModel->updateAbono($abono);
+			$this->session->set_flashdata('update','¡Abono editado correctamente!');
 			redirect('DeudasController/index');
 		}else{
 			$this->load->view('login');

@@ -53,7 +53,7 @@ class StockController extends CI_Controller {
 			);
 
 			$this->StockModel->insertStock($data);
-			$this->session->set_flashdata('insert','¡Nuevo stock, guardado correctamente!');
+			$this->session->set_flashdata('insert','¡Nuevo estado de stock guardado correctamente!');
 			redirect('StockController/index');
 		}else{
 			$this->load->view('login');
@@ -85,7 +85,7 @@ class StockController extends CI_Controller {
 			);
 
 			$this->StockModel->updateStock($stock);
-			$this->session->set_flashdata('update','¡Stock editado correctamente!');
+			$this->session->set_flashdata('update','¡Estado de stock actualizado correctamente!');
 			redirect('StockController/index');
 		}else{
 			$this->load->view('login');
@@ -95,8 +95,9 @@ class StockController extends CI_Controller {
 	public function eliminarStock($ID_ESTADO_STOCK)
 	{
 		if ($this->session->userdata('is_logued_in') === TRUE) {
+
 			$this->StockModel->deleteStock($ID_ESTADO_STOCK);
-			$this->session->set_flashdata('delete','¡Stock eliminado correctamente!');
+			$this->session->set_flashdata('delete','¡El estado de stock ha sido eliminado!');
 			redirect('StockController/index');
 		}else{
 			$this->load->view('login');

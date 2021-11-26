@@ -10,46 +10,34 @@
 <section class="home-section">
 
 	<div class="container">
-		<div class="scrollmenu">
-			<div class="row" style="width: 1900px">
-				<div class="col-md-12">
-					<h3>Stock de productos</h3>
-					<br>
-					<ul class="nav nav-tabs card-header-tabs">
-						<li class="nav-item">
-							<a class="nav-link active" href="<?php echo base_url(); ?>InventarioController/StockInventario">Stock de productos</a>
-						</li>
-						
-					</ul>
-					<br>
-				</div><br>
-				<br />
-				<hr> 
-				<div class="col-12 col-sm-12 col-md-12 col-lg-12">
-
-
+		<div class="col-12 col-sm-12 col-md-12 col-lg-12">
+			
+			<h3>Stock de productos</h3>
+			<br>
+			<hr> 		
+			<div class="scrollmenu">
+				<div style="width: 1900px">
 					<form method="POST", autocomplete="off" action="<?= base_url('InventarioController/updateInventario')?>">
 
-						<table id="example" class="table table-striped table-bordered nowrap" style="width: 100%">
-							<thead>
+						<table id="example" class="table table-hover table-bordered">
+							<thead class="thead-dark">
 								<tr>
-									<th>CODIGO</th>
-									
-									<th>PRODUCTO</th>
-									<th>CATEGORIA</th>
-									<th>COLOR</th>
-									<th>TALLA</th>
-									<th>GENERO</th>
-									<th>MARCA</th>
-									<th>FECHA_SALIDA</th>
-									<th>ESTADO STOCK</th>
-									<th>ENTRADA STOCK</th>
-									<th>CANTIDAD SALIDA</th>
-									<th>STOCK FINAL</th>
-									<th>ACCION</th>
+									<th>Código</th>
+									<th>Producto</th>
+									<th>Categoria</th>
+									<th>Color</th>
+									<th>Talla</th>
+									<th>Genero</th>
+									<th>Marca</th>
+									<th>Fecha de salida</th>
+									<th>Estado de stock</th>
+									<th>Entrada de stock</th>
+									<th>Cantidad de salida</th>
+									<th>Stock final</th>
+									<th>Acción</th>
 								</tr>
 							</thead>
-							<tbody>
+							<tbody style="background-color:white;">
 								<?php 
 									/*if ( $intermedia ) { // SOLO ES PARA REDIRECCIONAR AL INDEX SI LA TABLA ESTA VACIA
 										//echo "falso";
@@ -100,14 +88,10 @@
 				</div>
 			</div>
 		</div>
-
-		<div class="container">
-
-		</div>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
 	</section>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>

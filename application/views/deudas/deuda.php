@@ -6,22 +6,18 @@
 	}
 
 </style>
-<link rel="stylesheet" type="text/css" href="<?= base_url() . 'assets/css/button_style.css'; ?>">
 <section class="home-section">
 
 	<div class="container">
-		<div class="scrollmenu">
-			<div class="row" style="width: 1400px">
-				<div class="col-md-12">
-					<h3>Deudas y Abonos</h3>
-					<br>
-					<br>
-				</div><br>
-				<br />
-				<hr>
-				<div class="col-12 col-sm-12 col-md-12 col-lg-12">
-					<table id="example" class="table table-striped table-bordered nowrap" style="width: 100%">
-						<thead>
+		<div class="col-md-12 col-sm-12 col-lg-12">
+			<h3>Deudas y Abonos</h3>
+			<br>
+			<hr>
+			
+			<div class="scrollmenu">
+				<div  style="width: 1400px">
+					<table id="example" class="table table-hover table-bordered" >
+						<thead class="thead-dark">
 							<tr>
 								<th>Codigo deuda</th>
 								<th>Fecha</th>
@@ -33,7 +29,7 @@
 								<th>Accion</th>
 							</tr>
 						</thead> 
-						<tbody>
+						<tbody style="background-color:white;">
 							<?php foreach ($movimientos as $m) : ?>
 
 								<tr>
@@ -55,8 +51,8 @@
 											<i class="bi bi-pencil-square"></i> Productos relacionados
 										</a>
 										<a href="<?php echo base_url() . 'DeudasController/editarMovimiento/' . $m->COD_DEUDA; ?>" class="btn btn-success detalles">
-										<i class="bi bi-pencil-square"></i> Editar
-									</a>
+											<i class="bi bi-pencil-square"></i> Editar
+										</a>
 									</td>
 								</tr>
 							<?php endforeach ?>
@@ -65,7 +61,6 @@
 				</div>
 			</div>
 		</div>
-	</div>
 
 
-</section>
+	</section>

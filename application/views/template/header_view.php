@@ -113,7 +113,7 @@
 		</script>
 	<?php endif; ?>
 
-	<div class="float-right navbar" width="100%">
+	<div class="float-right navbar"  width="100%">
 		<div class="dropdown dropdown-menu-right">
 			<a class="dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="text-decoration: none;">
 				<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
@@ -137,113 +137,118 @@
 		</div>
 	</div>
 
-	<div class="sidebar ">
-		<div class="scrollbar" id="style-1">
-			<div class="logo-details">
-				<i class="icon-logo3 icon -2x" id="icon"></i>
-				<div class="logo_name">Variedades Carlitos</div>
-				<i class='bx bx-menu' id="btn"></i>
-			</div>
 
-			<ul class="nav-links">
-				<?php if ($this->session->userdata('ID_ROL') === 1) : ?>
-					<li>
-						<a href="<?= base_url("LoginController/inicio") ?>">
-							<i class="fas fa-home"></i></i>
-							<span class="links_name">Inicio</span>
-						</a>
-						<span class="tooltip">Pagina Principal</span>
-					</li>
-					<li>
-						<a href="<?= base_url("InventarioController/inicio") ?>">
-							<i class="fas fa-boxes "></i>
-							<span class="links_name">Nuevo Inventario</span>
-						</a>
-						<span class="tooltip">Nuevo Inventario</span>
-					</li>
-					<li>
-						<a href="<?= base_url("ProductosController/index") ?>">
-							<i class="fab fa-shopify"></i>
-							<span class="links_name">Productos</span>
-						</a>
-						<span class="tooltip">Productos</span>
-					</li>
-					<li>
-						<a href="<?= base_url("ProveedorController/index") ?>">
-							<i class="fas fa-truck-loading"></i>
-							<span class="links_name">Proveedores</span>
-						</a>
-						<span class="tooltip">Proveedores</span>
-					</li>
+	<div class="row">
+		<div class="col-sm-12 col-md-6 ">
+			<div class="sidebar " >
+				<div class="scrollbar" id="style-1">
+					<div class="logo-details">
+						<i class="icon-logo3 icon -2x" id="icon"></i>
+						<div class="logo_name">Variedades Carlitos</div>
+						<i class='bx bx-menu' id="btn"></i>
+					</div>
 
-					<li>
-						<a href="<?= base_url("VentaController/index") ?>">
-							<i class='bx bx-cart'></i>
-							<span class="links_name">Nueva Venta</span>
-						</a>
-						<span class="tooltip" href="#">Nueva Venta</span>
-					</li>
-					<li>
-						<div class="iocn-link">
-							<a href="<?= base_url("ColoresController/index") ?>">
-								<i class='bx bx-purchase-tag-alt'></i>
-								<span class="links_name">Caracteristicas</span>
-							</a>
-							<span class="tooltip" href="#">Caracteristicas</span>
+					<ul class="nav-links">
+						<?php if ($this->session->userdata('ID_ROL') === 1) : ?>
+							<li>
+								<a href="<?= base_url("LoginController/inicio") ?>">
+									<i class="fas fa-home"></i></i>
+									<span class="links_name">Inicio</span>
+								</a>
+								<span class="tooltip">Pagina Principal</span>
+							</li>
+							<li>
+								<a href="<?= base_url("InventarioController/inicio") ?>">
+									<i class="fas fa-boxes "></i>
+									<span class="links_name">Nuevo Inventario</span>
+								</a>
+								<span class="tooltip">Nuevo Inventario</span>
+							</li>
+							<li>
+								<a href="<?= base_url("ProductosController/index") ?>">
+									<i class="fab fa-shopify"></i>
+									<span class="links_name">Productos</span>
+								</a>
+								<span class="tooltip">Productos</span>
+							</li>
+							<li>
+								<a href="<?= base_url("ProveedorController/index") ?>">
+									<i class="fas fa-truck-loading"></i>
+									<span class="links_name">Proveedores</span>
+								</a>
+								<span class="tooltip">Proveedores</span>
+							</li>
+
+							<li>
+								<a href="<?= base_url("VentaController/index") ?>">
+									<i class='bx bx-cart'></i>
+									<span class="links_name">Nueva Venta</span>
+								</a>
+								<span class="tooltip" href="#">Nueva Venta</span>
+							</li>
+							<li>
+								<div class="iocn-link">
+									<a href="<?= base_url("ColoresController/index") ?>">
+										<i class='bx bx-purchase-tag-alt'></i>
+										<span class="links_name">Caracteristicas</span>
+									</a>
+									<span class="tooltip" href="#">Caracteristicas</span>
+								</div>
+								<div class="sub-menu blank">
+									<ul>
+										<li><a class="link_name" href="<?= base_url("ColoresController/vista") ?>">Colores</a></li>
+										<li><a class="link_name" href="<?= base_url("GeneroController/index") ?>">Genero</a></li>
+										<li><a class="link_name" href="<?= base_url("TallaController/index") ?>">Talla</a></li>
+										<li><a class="link_name" href="<?= base_url("MarcaController/index") ?>">Marca</a></li>
+										<li><a class="link_name" href="<?= base_url("StockController/index") ?>">Stock</a></li>
+										<li><a class="link_name" href="<?= base_url("PagoController/index") ?>">Pago</a></li>
+										<li><a class="link_name" href="<?= base_url("CategoriaController/index") ?>">Categoria</a></li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="<?= base_url("InventarioController/StockInventario") ?>">
+									<i class='bx bx-bar-chart-alt-2'></i>
+									<span class="links_name">Ver Inventario</span>
+								</a>
+								<span class="tooltip" href="#">Ver Inventario</span>
+							</li>
+							<li>
+								<a href="<?= base_url("UsuarioController/index") ?>">
+									<i class='bx bx-user'></i>
+									<span class="links_name">Usuarios y Roles</span>
+								</a>
+								<span class="tooltip" href="<?= base_url("UsuarioController/index") ?>">Usuarios y Roles</span>
+							</li>
+							<li>
+								<a href="<?= base_url("DeudasController/index") ?>">
+									<i class='bx bx-bar-chart-alt'></i>
+									<span class="links_name">Contabilidad</span>
+								</a>
+								<span class="tooltip" href="#">Contabilidad</span>
+							</li>
+
+						<?php elseif ($this->session->userdata('ID_ROL') != 1) : ?>
+							<?php $menu = $this->PermisosModel->getModulos($this->session->userdata("ID_USUARIO")); ?>
+							<?php foreach ($menu as $m) : ?>
+								<li>
+									<a href="<?php echo base_url() . $m->URL_MODULO ?>">
+										<i class="<?= $m->ICONO_MODULO ?>"></i>
+										<span class="links_name"><?= $m->NOMBRE_MODULO ?></span>
+									</a>
+									<span class="tooltip"><?= $m->NOMBRE_MODULO ?></span>
+								</li>
+							<?php endforeach; ?>
+
+						<?php endif ?>
+						<div id="page-wrapper">
 						</div>
-						<div class="sub-menu blank">
-							<ul>
-								<li><a class="link_name" href="<?= base_url("ColoresController/vista") ?>">Colores</a></li>
-								<li><a class="link_name" href="<?= base_url("GeneroController/index") ?>">Genero</a></li>
-								<li><a class="link_name" href="<?= base_url("TallaController/index") ?>">Talla</a></li>
-								<li><a class="link_name" href="<?= base_url("MarcaController/index") ?>">Marca</a></li>
-								<li><a class="link_name" href="<?= base_url("StockController/index") ?>">Stock</a></li>
-								<li><a class="link_name" href="<?= base_url("PagoController/index") ?>">Pago</a></li>
-								<li><a class="link_name" href="<?= base_url("CategoriaController/index") ?>">Categoria</a></li>
-							</ul>
-						</div>
-					</li>
-					<li>
-						<a href="<?= base_url("InventarioController/StockInventario") ?>">
-							<i class='bx bx-bar-chart-alt-2'></i>
-							<span class="links_name">Ver Inventario</span>
-						</a>
-						<span class="tooltip" href="#">Ver Inventario</span>
-					</li>
-					<li>
-						<a href="<?= base_url("UsuarioController/index") ?>">
-							<i class='bx bx-user'></i>
-							<span class="links_name">Usuarios y Roles</span>
-						</a>
-						<span class="tooltip" href="<?= base_url("UsuarioController/index") ?>">Usuarios y Roles</span>
-					</li>
-					<li>
-						<a href="<?= base_url("DeudasController/index") ?>">
-							<i class='bx bx-bar-chart-alt'></i>
-							<span class="links_name">Contabilidad</span>
-						</a>
-						<span class="tooltip" href="#">Contabilidad</span>
-					</li>
-
-				<?php elseif ($this->session->userdata('ID_ROL') != 1) : ?>
-					<?php $menu = $this->PermisosModel->getModulos($this->session->userdata("ID_USUARIO")); ?>
-					<?php foreach ($menu as $m) : ?>
-						<li>
-							<a href="<?php echo base_url() . $m->URL_MODULO ?>">
-								<i class="<?= $m->ICONO_MODULO ?>"></i>
-								<span class="links_name"><?= $m->NOMBRE_MODULO ?></span>
-							</a>
-							<span class="tooltip"><?= $m->NOMBRE_MODULO ?></span>
-						</li>
-					<?php endforeach; ?>
-
-				<?php endif ?>
-				<div id="page-wrapper">
+					</ul>
 				</div>
-			</ul>
+			</div>
 		</div>
 	</div>
-
+	
 	<section class="">
 		<div class="text"><br><br></div>
 	</section>

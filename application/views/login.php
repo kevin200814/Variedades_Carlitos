@@ -6,10 +6,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Login</title>
 	<link rel="shortcut icon" href="./assets/images/favicon.png">
-	<link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
+	
+	
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/css/login.css">
+	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/login.css">
 
 	<style type="text/css">
 		label.error {
@@ -83,31 +83,7 @@
 		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-		<script type="">
-			$(document).ready(function() {
-			$("#basic-form").validate({
-				rules: {
-					user : {
-						required: true,
-						minlength: 3
-					},
-					pass : {
-						required: true,
-						minlength: 3
-					},
-
-				},
-				messages : {
-					user: {
-						minlength: "El nombre debe tener más de 3 caracteres"
-					},
-					pass: {
-						minlength: "La contraseña debe tener más de 3 caracteres"
-					},
-				}
-			});
-		});
-	</script>
+		
 	</body>
 
 </html>

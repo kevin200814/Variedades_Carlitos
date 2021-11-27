@@ -8,11 +8,10 @@
 </style>
 <link rel="stylesheet" type="text/css" href="<?= base_url() . 'assets/css/button_style.css'; ?>">
 <section class="home-section">
-
-
 	<div class="container">
-		
-		<div class="row">
+		<div class="col-12 col-sm-12 col-md-12 col-lg-12">
+			<h3>Lista de productos en venta</h3>
+			<br>
 			<ul class="nav nav-tabs card-header-tabs">
 				<li class="nav-item">
 					<a class="nav-link" href="<?php echo base_url(); ?>VentaController/index">Productos</a>
@@ -21,42 +20,30 @@
 					<a class="nav-link active" href="<?php echo base_url(); ?>VentaController/index">Venta</a>
 				</li>
 			</ul>
-
-		</div>
-		<br><br><br>
-
-		<div class="scrollmenu">
-			<div class="row" style="width: 2100px">
-				<div class="col-md-12">
-					<h3>Lista de productos en venta</h3>
-
-				</div><br>
-				<br />
-				<hr>
-				<div class="col-12 col-sm-12 col-md-12 col-lg-12">
-
-
+			<br>
+			<div class="scrollmenu">
+				<div class="row" style="width: 2100px">
 					<form method="POST", autocomplete="off" action="<?= base_url('VentaController/updateVenta')?>">
 
-						<table id="example" class="table table-striped table-bordered nowrap" style="width: 100%">
-							<thead>
+						<table id="example" class="table table-hover table-bordered">
+							<thead class="thead-dark">
 								<tr>
-									<th>ID_LISTA</th>
-									<th>ID_PRODUCTO</th>
-									<th>ID_SALIDA</th>
-									<th>NOMBRE_PRODUCTO</th>
-									<th>TIPO_CATEGORIA</th>
-									<th>NOMBRE_COLOR</th>
-									<th>TIPO_GENERO</th>
-									<th>TALLA</th>
-									<th>NOMBRE_MARCA</th>
+									<th>N. Lista</th>
+									<th>N. Producto</th>
+									<th>N. Salida</th>
+									<th>Nombre de producto</th>
+									<th>Categoria</th>
+									<th>Color</th>
+									<th>Genero</th>
+									<th>Talla</th>
+									<th>Marca</th>
 									<th>Cantidad vendida</th>
-									<th style="width: 500px;">Precio de venta</th>
-									<th style="width: 900px;">Total Pago</th>
+									<th style="width: 200px;">Precio de venta</th>
+									<th style="width: 200px;">Total Pago</th>
 									<th></th>
 								</tr>
 							</thead>
-							<tbody>
+							<tbody style="background-color:white;">
 								<?php 
 								if ( $lista ) {
 										//echo "falso";
@@ -89,7 +76,7 @@
 											<input type="number" class="form-control" style="width: 50%;" name="cantidad[]" value="<?=$l->CANTIDAD_VENDIDA ?>">
 										</td>
 										<td >
-											
+
 											<input type="number" step="any" class="form-control" style="width: 50%;" name="VENTA_FINAL[]" value="<?=$l->PRECIO_VENTA_FINAL ?>">
 										</td>
 										<td>
@@ -104,11 +91,11 @@
 									</tr>
 
 								<?php endforeach; ?>
-								
+
 
 								<tr>
 									<td colspan="10" ></td>
-									<td ><b>Total</b></td>
+									<td ><b>Total pago:</b></td>
 									<td colspan="2" ><input type="number" step="any" readonly class="form-control" style="width: 50%;" name="total" value="<?= $l->TOTAL_FINAL   ?>"></td>
 								</tr>
 							</tbody>
@@ -143,17 +130,17 @@
 
 				<input type="hidden" name="ID_PRODUCTO_I[]" value="<?=$l->ID_PRODUCTO ?>">
 				<input type="hidden" name="ID_LISTA[]" value="<?=$l->ID_LISTA ?>"> <!-- Lista -->
-				
+
 				<input type="hidden" name="ID_SALIDA_S[]" value="<?=$l->ID_SALIDA ?>"> <!-- SALIDA -->
-				
+
 				<input type="hidden" step="any"  name="STOCK_ACTUAL[]" value="<?=$l->STOCK_ACTUAL ?>"> <!-- STOCK_ACTUAL -->
-				
+
 				<input type="hidden"  name="CANTIDAD_SALIDA[]" value="<?=$l->CANTIDAD_VENDIDA ?>"> <!-- CANTIDAD -->
-				
+
 				<input type="hidden" step="any" name="VENTA_FINAL_S[]" value="<?=$l->PRECIO_VENTA_FINAL ?>"> <!-- VENTA -->
-				
+
 				<input type="hidden" step="any"  name="TOTAL_A_CANCELAR_S[]" value="<?=$l->TOTAL_A_CANCELAR ?>"> <!-- TOTAL CANCELAR -->
-				
+
 			<?php endforeach; ?>
 			<input type="hidden" step="any"  name="TOTAL_FINAL_S" value="<?= $l->TOTAL_FINAL   ?>"> <!-- TOTAL FINAL -->
 			<br>

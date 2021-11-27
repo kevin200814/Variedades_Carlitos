@@ -6,25 +6,19 @@
 	}
 
 </style>
-<link rel="stylesheet" type="text/css" href="<?= base_url() . 'assets/css/button_style.css'; ?>">
-<section class="home-section">
 
+<section class="home-section">
 	<div class="container">
-		<div class="scrollmenu" >
-			<div class="row" style="width: 1600px">
-				<div class="col-md-12">
-					<h3>Deudas y Abonos</h3>
-					<br>
-					<br>
-					<a href="<?php echo base_url(); ?>DeudasController/index" class="btn btn-info">Volver a deudas y abonos</a>
-					<br>
-					<br>
-				</div><br>
-				<br />
-				<hr> 
-				<div class="col-12 col-sm-12 col-md-12 col-lg-12">
-					<table id="example" class="table table-striped table-bordered nowrap" style="width: 100%">
-						<thead>
+		<div class="col-md-12 col-sm-12 col-lg-12">
+			<h3>Detalle de deuda</h3>
+			<br>
+			<a href="<?php echo base_url(); ?>DeudasController/index" class="btn btn-info">Volver a deudas y abonos</a>
+			<br>
+			<hr>
+			<div class="scrollmenu" >
+				<div  style="width: 1600px"> 
+					<table id="example" class="table table-hover table-bordered" style="width: 100%">
+						<thead class="thead-dark">
 							<tr>
 								<th>COD_DEUDA</th>
 								<th>NOMBRE PROVEEDOR</th>
@@ -40,7 +34,7 @@
 								
 							</tr>
 						</thead> 
-						<tbody>
+						<tbody style="background-color:white;">
 							<?php foreach ($deuda as $m) : ?>
 								<tr>
 

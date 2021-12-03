@@ -60,7 +60,7 @@
 									<td><?= $r->FECHA_CAMBIOS; ?></td>
 									<td><?= $r->NOMBRE_ROL; ?></td>
 									<td>
-										<a href="<?php echo base_url() . 'UsuarioController/editar_usuario/' . $r->ID_USUARIO; ?>" class="btn btn-primary editar">
+										<a href="<?php echo base_url() . 'UsuarioController/editar_usuario/' . $r->ID_USUARIO; ?>" class="btn btn-success editar">
 											<i class="bi bi-pencil-square"></i>
 										</a>
 										<a href="<?php echo base_url() . 'UsuarioController/eliminar_usuario/' . $r->ID_USUARIO; ?>" class="btn btn-danger eliminar">

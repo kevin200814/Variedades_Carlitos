@@ -58,62 +58,79 @@
 			text-decoration: none;
 		}
 	</style>
+
+	<script type="text/javascript">
+		window.onload = function() {
+			crear = "<?= $this->session->userdata('CREAR'); ?>"
+			editar = "<?= $this->session->userdata('ACTUALIZAR'); ?>"
+			eliminar = "<?= $this->session->userdata('ELIMINAR'); ?>"
+
+			if (crear == "No") {
+				$('.crear').addClass('disabled');
+			}
+			if (editar == "No") {
+				$('.editar').addClass('disabled');
+			}
+			if (eliminar == "No") {
+				$('.eliminar').addClass('disabled');
+			}
+		};
+	</script>
 </head>
 
 <body style="background-color: #E4E9F7">
 
-
-	<?php if ($this->session->flashdata('insert')): ?>
+	<?php if ($this->session->flashdata('insert')) : ?>
 		<script type="text/javascript">
 			Swal.fire({
 				icon: 'success',
-				title: '<?=$this->session->flashdata('insert')?>',
+				title: '<?= $this->session->flashdata('insert') ?>',
 				text: 'El registro fue guardado'
 			})
 		</script>
 	<?php endif; ?>
 
-	<?php if ($this->session->flashdata('update')): ?>
+	<?php if ($this->session->flashdata('update')) : ?>
 		<script type="text/javascript">
 			Swal.fire({
 				icon: 'success',
-				title: '<?=$this->session->flashdata('update')?>',
+				title: '<?= $this->session->flashdata('update') ?>',
 				text: 'El registro fue modificado'
 			})
 		</script>
 	<?php endif; ?>
 
-	<?php if ($this->session->flashdata('delete')): ?>
+	<?php if ($this->session->flashdata('delete')) : ?>
 		<script type="text/javascript">
 			Swal.fire({
 				icon: 'success',
-				title: '<?=$this->session->flashdata('delete')?>',
+				title: '<?= $this->session->flashdata('delete') ?>',
 				text: 'El registro fue eliminado'
 			})
 		</script>
 	<?php endif; ?>
 
-	<?php if ($this->session->flashdata('profile')): ?>
+	<?php if ($this->session->flashdata('profile')) : ?>
 		<script type="text/javascript">
 			Swal.fire({
 				icon: 'info',
-				title: '<?=$this->session->flashdata('profile')?>',
+				title: '<?= $this->session->flashdata('profile') ?>',
 				text: 'Su información fue alterada'
 			})
 		</script>
 	<?php endif; ?>
 
-	<?php if ($this->session->flashdata('error')): ?>
+	<?php if ($this->session->flashdata('error')) : ?>
 		<script type="text/javascript">
 			Swal.fire({
 				icon: 'error',
-				title: '<?=$this->session->flashdata('error')?>',
+				title: '<?= $this->session->flashdata('error') ?>',
 				text: 'Su información fue alterada'
 			})
 		</script>
 	<?php endif; ?>
 
-	<div class="float-right navbar"  width="100%">
+	<div class="float-right navbar" width="100%">
 		<div class="dropdown dropdown-menu-right">
 			<a class="dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="text-decoration: none;">
 				<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
@@ -140,7 +157,7 @@
 
 	<div class="row">
 		<div class="col-sm-12 col-md-6 ">
-			<div class="sidebar " >
+			<div class="sidebar ">
 				<div class="scrollbar" id="style-1">
 					<div class="logo-details">
 						<i class="icon-logo3 icon -2x" id="icon"></i>
@@ -248,7 +265,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<section class="">
 		<div class="text"><br><br></div>
 	</section>

@@ -11,8 +11,8 @@ if (isset($productos)) {
     $imagen = $productos->IMAGEN;
     $imgAntes = '<input type="hidden" name="imgVieja" value="' . $imagen . '">';
     
-    $titulo = "Actualizando Producto";
-    $boton = "Actualizar Producto";
+    $titulo = "Actualizar Producto";
+    $boton = "Guardar";
     $accion = "update_producto";
 } else {
     $id_producto = "";
@@ -27,8 +27,8 @@ if (isset($productos)) {
     $imgAntes = "";
 
     
-    $titulo = "Agregando Producto";
-    $boton = "Agregar Producto";
+    $titulo = "Nuevo Producto";
+    $boton = "Guardar";
     $accion = "insert_producto";
 }
 ?>
@@ -149,8 +149,8 @@ if (isset($productos)) {
 			  </div>
 
 			  <div class="col-xs-6 col-md-12">
-			    <button type="submit" class="custom-btn btn-7"><span><?php echo $boton ?></span></button>
-				<a id="boton" class="custom-btn btn-5" href="<?=base_url().'ProductosController/index';?>"><span>Cancelar</span></a>
+			    <button type="submit" class="btn btn-success"><span><?php echo $boton ?></span></button>
+				<a class="btn btn-danger" href="<?=base_url().'ProductosController/index';?>"><span>Cancelar</span></a>
 			  </div>
 			</form>
 		</div>		

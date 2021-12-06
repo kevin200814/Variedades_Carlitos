@@ -93,34 +93,21 @@ class RolController extends CI_Controller {
 		}
 	}
 //redireccionar al controlador porque si no se friega el diseño tanto del controlador como del navbar
-	public function eliminar_rol($ID_ROL)
+	public function eliminar_rol($id_rol)
 	{
-		$data = $this->Roles->getUsuarios();
-		$info;
-		foreach($data as $d){
-			$info = $d->ID_ROL;
-		}
+		
+		
 
 		if ($this->session->userdata('is_logued_in') === TRUE) {
-
 			if($id_rol == 1){
-				
-				$this->session->set_flashdata('delete','No tiene permiso para eliminar este usuario!');
-
-			}elseif($info == $ID_ROL){
-				$this->session->set_flashdata('delete','No se puede eliminar un usuario esta usando este rol!');
-				redirect('RolController/');
-
+				$this->session->set_flashdata('denied','¡No tiene permiso para eliminar este usuario!');
 			}else{
-				$this->Roles->delete_rol($ID_ROL);
+				$this->Roles->delete_rol($id_rol);
 				redirect('RolController/');
 			}
-			
 		}else{
 			$this->load->view('login');
 		}
-
-
 		redirect('RolController/');
 
 	}

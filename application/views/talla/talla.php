@@ -37,7 +37,7 @@
                                    <td><?= $c->ID_TALLA; ?></td>
                                    <td><?= $c->TALLA; ?></td>
                                    <td>
-                                      <a href="<?php echo base_url() . 'TallaController/editar_talla/' . $c->ID_TALLA; ?>" class="btn btn-primary editar">
+                                      <a href="<?php echo base_url() . 'TallaController/editar_talla/' . $c->ID_TALLA; ?>" class="btn btn-success editar">
                                          <i class="bi bi-pencil-square"></i>
                                      </a>
                                      <a href="<?php echo base_url() . 'TallaController/eliminar_talla/' . $c->ID_TALLA; ?>" class="btn btn-danger eliminar">

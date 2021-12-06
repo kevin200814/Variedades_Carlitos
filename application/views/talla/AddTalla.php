@@ -3,15 +3,15 @@ if (isset($update)) {
     $id = '<input type="hidden" name="id_talla" value="' . $this->uri->segment(3) . '">';
     $talla = $update->TALLA;
     
-    $titulo = "Actualizando talla";
-    $boton = "Actualizar talla";
+    $titulo = "Actualizar talla";
+    $boton = "Guardar";
     $accion = "update_talla";
 } else {
     $id = "";
     $talla = "";
     
-    $titulo = "Agregar Talla";
-    $boton = "Agregar Talla";
+    $titulo = "Nueva Talla";
+    $boton = "Guardar";
     $accion = "insert_talla";
 }
 ?>
@@ -27,13 +27,13 @@ if (isset($update)) {
 			<form class="row g-3" action="<?= base_url() . 'TallaController/' . $accion; ?>" method="post" autocomplete="off">
 				<?php echo $id; ?>
 			  <div class="col-xs-6 col-md-12">
-			    <label class="form-label">Nombre del talla</label>
+			    <label class="form-label">Talal:</label>
 			    <input type="text" class="form-control" style="width: 90%;" name="talla" value="<?= $talla; ?>" required>
 			  </div>
 
 			  <div class="col-xs-6 col-md-12">
-			    <button class="custom-btn btn-7"><span><?php echo $boton ?></span></button>
-				<a id="boton" class="custom-btn btn-5" href="<?=base_url().'TallaController/index';?>"><span>Cancelar</span></a>
+			    <button class="btn btn-success"><span><?php echo $boton ?></span></button>
+				<a  class="btn btn-danger" href="<?=base_url().'TallaController/index';?>"><span>Cancelar</span></a>
 			  </div>
 			</form>
 		</div>		

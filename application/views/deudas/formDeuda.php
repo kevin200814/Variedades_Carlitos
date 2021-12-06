@@ -30,8 +30,8 @@
 					</div>
 
 					<div class="col-xs-6 col-md-12">
-						<button class="custom-btn btn-7"><span>Guardar</span></button>
-						<a id="boton" class="custom-btn btn-5" href="<?=base_url().'DeudasController/index';?>"><span>Cancelar</span></a>
+						<button class="btn btn-success"><span>Guardar</span></button>
+						<a  class="btn btn-danger" href="<?=base_url().'DeudasController/index';?>"><span>Cancelar</span></a>
 					</div>
 				</form>
 			</div>		

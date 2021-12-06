@@ -130,6 +130,17 @@
 		</script>
 	<?php endif; ?>
 
+
+	<?php if ($this->session->flashdata('denied')) : ?>
+		<script type="text/javascript">
+			Swal.fire({
+				icon: 'error',
+				title: '<?= $this->session->flashdata('denied') ?>',
+				text: 'No se pudo eliminar'
+			})
+		</script>
+	<?php endif; ?>
+
 	<div class="float-right navbar" width="100%">
 		<div class="dropdown dropdown-menu-right">
 			<a class="dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="text-decoration: none;">

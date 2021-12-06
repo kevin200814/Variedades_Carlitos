@@ -113,21 +113,7 @@ class UsuarioController extends CI_Controller
 		}
 	}
 	//redireccionar al controlador porque si no se friega el diseño tanto del controlador como del navbar
-	/*
-	if($this->session->userdata('id_usuario') == $id_usuario){
-			
-			$this->session->set_flashdata('delete','¡No se puede eliminar su usuario!');
-
-		}else{
-
-			$this->Usuarios->deleteUsuario($id_usuario);
-			$this->session->set_flashdata('delete','¡Registro fue borrado!');
-			$this->index();
-			redirect('UsuarioController/');
-
-		}
-		redirect('UsuarioController/');
-	*/
+	
 		public function eliminar_usuario($ID_USUARIO)
 		{
 			if ($this->session->userdata('is_logued_in') === TRUE) {

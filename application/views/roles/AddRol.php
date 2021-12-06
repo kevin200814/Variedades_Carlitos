@@ -6,8 +6,8 @@ if (isset($update)) {
 	$actualizar = $update->ACTUALIZAR;
 	$eliminar = $update->ELIMINAR;
 
-	$titulo = "Actualizando Rol";
-	$boton = "Actualizar Rol";    
+	$titulo = "Actualizar Rol";
+	$boton = "Guardar";    
 	$accion = "update_rol";
 } else {
 	$id = "";
@@ -16,8 +16,8 @@ if (isset($update)) {
 	$actualizar = "";
 	$eliminar = "";
 
-	$titulo = "Agregar Rol";
-	$boton = "Agregar Rol";
+	$titulo = "Nuevo Rol";
+	$boton = "Guardar";
 	$accion = "insert_rol";
 }
 ?>
@@ -108,8 +108,8 @@ if (isset($update)) {
 							</div>
 
 							<div class="col-xs-6 col-md-12">
-								<button class="custom-btn btn-7"><span><?php echo $boton ?></span></button>
-								<a id="boton" class="custom-btn btn-5" href="<?=base_url().'RolController/index';?>"><span>Cancelar</span></a>
+								<button class="btn btn-success"><span><?php echo $boton ?></span></button>
+								<a class="btn btn-danger" href="<?=base_url().'RolController/index';?>"><span>Cancelar</span></a>
 							</div>
 						</div>
 					</form>

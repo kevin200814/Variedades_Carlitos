@@ -105,8 +105,6 @@ class ColoresController extends CI_Controller {
 
 			$this->ColoresModel->editar_color($colores);
 			$this->session->set_flashdata('update','¡Color editado correctamente!');
-			$this->vista();
-			$this->session->set_flashdata('update','¡Color editado correctamente!');
 			redirect('ColoresController/vista');
 		}else{
 			$this->load->view('login');
@@ -117,8 +115,6 @@ class ColoresController extends CI_Controller {
 	{
 		if ($this->session->userdata('is_logued_in') === TRUE) {
 			$this->ColoresModel->delete_color($ID_COLORES);
-			$this->session->set_flashdata('delete','¡Color eliminado correctamente!');
-			$this->vista();
 			$this->session->set_flashdata('delete','¡Color eliminado correctamente!');
 			redirect('ColoresController/vista');
 		}else{

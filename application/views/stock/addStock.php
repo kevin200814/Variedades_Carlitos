@@ -3,15 +3,15 @@ if (isset($update)) {
     $id = '<input type="hidden" name="id_estado_stock" value="' . $this->uri->segment(3) . '">';
     $estado_stock = $update->ESTADO_STOCK;
     
-    $titulo = "Actualizando estado de stock";
-    $boton = "Actualizar estado de stock";
+    $titulo = "Actualizar estado de stock";
+    $boton = "Guardar";
     $accion = "updateStock";
 } else {
     $id = "";
     $estado_stock = "";
     
-    $titulo = "Agregar estado de stock";
-    $boton = "Agregar estado de stock";
+    $titulo = "Nuevo estado de stock";
+    $boton = "Guardar";
     $accion = "insertStock";
 }
 ?>
@@ -32,8 +32,8 @@ if (isset($update)) {
 			  </div>
 
 			  <div class="col-xs-6 col-md-12">
-			    <button class="custom-btn btn-7"><span><?php echo $boton ?></span></button>
-				<a id="boton" class="custom-btn btn-5" href="<?=base_url().'StockController/index';?>"><span>Cancelar</span></a>
+			    <button class="btn btn-success"><span><?php echo $boton ?></span></button>
+				<a class="btn btn-danger" href="<?=base_url().'StockController/index';?>"><span>Cancelar</span></a>
 			  </div>
 			</form>
 		</div>		

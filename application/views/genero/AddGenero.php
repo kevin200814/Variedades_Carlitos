@@ -3,15 +3,15 @@ if (isset($update)) {
     $id = '<input type="hidden" name="id_genero" value="' . $this->uri->segment(3) . '">';
     $genero = $update->TIPO_GENERO;
     
-    $titulo = "Actualizando Genero";
-    $boton = "Actualizar Genero";
+    $titulo = "Actualizar Genero";
+    $boton = "Guardar";
     $accion = "update_genero";
 } else {
     $id = "";
     $genero = "";
 
-    $titulo = "Agregar Genero";
-    $boton = "Agregar Genero";    
+    $titulo = "Nuevo Genero";
+    $boton = "Guardar";    
     $accion = "insert_genero";
 }
 ?>
@@ -27,13 +27,13 @@ if (isset($update)) {
 			<form class="row g-3" action="<?= base_url() . 'GeneroController/' . $accion; ?>" method="post" autocomplete="off">
 				<?php echo $id; ?>
 			  <div class="col-xs-6 col-md-12">
-			    <label class="form-label">Nombre del genero</label>
+			    <label class="form-label">Genero:</label>
 			    <input type="text" class="form-control" name="genero" style="width: 90%;" value="<?= $genero; ?>" required>
 			  </div>
 
 			  <div class="col-xs-6 col-md-12">
-			    <button class="custom-btn btn-7"><span><?php echo $boton ?></span></button>
-				<a id="boton" class="custom-btn btn-5" href="<?=base_url().'GeneroController/index';?>"><span>Cancelar</span></a>
+			    <button class="btn btn-success"><span><?php echo $boton ?></span></button>
+				<a class="btn btn-danger" href="<?=base_url().'GeneroController/index';?>"><span>Cancelar</span></a>
 			  </div>
 			</form>
 		</div>		

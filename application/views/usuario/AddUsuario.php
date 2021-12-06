@@ -10,8 +10,8 @@ if (isset($update)) {
 	$fecha_cambios = $update->FECHA_CAMBIOS;
 	$id_rol = $update->ID_ROL;
 
-	$titulo = "Actualizando a: ". $nick;
-	$boton = "Actualizar Usuario";
+	$titulo = "Actualizar a: ". $nick;
+	$boton = "Guardar";
 	$accion = "update_usuario";
 } else {
 	$id = "";
@@ -24,8 +24,8 @@ if (isset($update)) {
 	$fecha_cambios = "";
 	$id_rol = "";
 
-	$titulo = "Agregar Usuario";
-	$boton = "Agregar Usuario";
+	$titulo = "Nuevo Usuario";
+	$boton = "Guardar";
 	$accion = "insert_usuario";
 }
 ?>
@@ -139,8 +139,8 @@ $hoy = date('Y-m-d');
 					</div>
 
 					<div class="col-12">
-						<button class="custom-btn btn-7"><span><?php echo $boton ?></span></button>
-						<a id="boton" class="custom-btn btn-5" href="<?=base_url().'UsuarioController/index';?>"><span>Cancelar</span></a>
+						<button class="btn btn-success"><span><?php echo $boton ?></span></button>
+						<a class="btn btn-danger" href="<?=base_url().'UsuarioController/index';?>"><span>Cancelar</span></a>
 					</div>
 				</form>
 			</div>		

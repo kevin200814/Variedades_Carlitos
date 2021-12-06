@@ -9,7 +9,7 @@
 <section class="home-section">
 	<div class="container">
 		<div class="col-md-12 col-sm-12 col-lg-12">
-			<h3>Colores</h3>
+			<h3>Registro de Colores</h3>
 			<br>
 			<?php if ($this->session->userdata('CREAR') == 'Si') : ?>
 				<a class="btn btn-primary crear" href="<?= base_url() . 'ColoresController/nuevo_color'; ?>">

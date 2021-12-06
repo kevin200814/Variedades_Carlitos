@@ -3,15 +3,15 @@ if (isset($update)) {
     $id = '<input type="hidden" name="id_color" value="' . $this->uri->segment(3) . '">';
     $color = $update->NOMBRE_COLOR;
     
-    $titulo = "Actualizando Color";
-    $boton = "Actualizar Color";
+    $titulo = "Actualizar Color";
+    $boton = "Guardar";
     $accion = "update_color";
 } else {
     $id = "";
     $color = "";
     
-    $titulo = "Agregar Color";
-    $boton = "Agregar Color";
+    $titulo = "Nuevo Color";
+    $boton = "Guardar";
     $accion = "insert_color";
 }
 ?>
@@ -27,13 +27,13 @@ if (isset($update)) {
 			<form class="row g-3" action="<?= base_url() . 'ColoresController/' . $accion; ?>" method="post" autocomplete="off">
 				<?php echo $id; ?>
 			  <div class="col-xs-6 col-md-12">
-			    <label class="form-label">Nombre del color</label>
+			    <label class="form-label">Color:</label>
 			    <input type="text" class="form-control" style="width: 90%;" name="color" value="<?= $color; ?>" required>
 			  </div>
 
 			  <div class="col-xs-6 col-md-12">
-			    <button class="custom-btn btn-7"><span><?php echo $boton ?></span></button>
-				<a id="boton" class="custom-btn btn-5" href="<?=base_url().'ColoresController/vista';?>"><span>Cancelar</span></a>
+			    <button class="btn btn-success"><span><?php echo $boton ?></span></button>
+				<a class="btn btn-danger" href="<?=base_url().'ColoresController/vista';?>"><span>Cancelar</span></a>
 			  </div>
 			</form>
 		</div>		

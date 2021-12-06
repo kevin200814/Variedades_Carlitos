@@ -4,7 +4,7 @@
 	<div class="container" style="position: relative; ">
 		<div class="row">
 			<div class="col-xs-6" style="margin-left: 0px; padding-right: 20px">
-				<h3>Actualizar Producto</h3>
+				<h3>Actualizar Stock de producto</h3>
 				<br>
 				<form class="row g-3" action="<?php echo base_url(); ?>InventarioController/" method="post" autocomplete="off">
 
@@ -49,8 +49,8 @@
 					</div>
 
 					<div class="col-xs-6 col-md-12">
-						<button class="custom-btn btn-7"><span>Guardar</span></button>
-						<a id="boton" class="custom-btn btn-5" href="<?=base_url().'InventarioController/StockInventario';?>"><span>Cancelar</span></a>
+						<button class="btn btn-success"><span>Guardar</span></button>
+						<a class="btn btn-danger" href="<?=base_url().'InventarioController/StockInventario';?>"><span>Cancelar</span></a>
 					</div>
 				</form>
 			</div>		

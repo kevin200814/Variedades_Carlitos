@@ -4,15 +4,15 @@ if (isset($update)) {
 	$id_rol = $update->ID_ROL;
 	$id_modulo = $update->ID_MODULO;
 
-	$titulo = "Actualizando Permiso de rol ";
-	$boton = "Actualizar permiso";
+	$titulo = "Actualizar Permiso de rol ";
+	$boton = "Guardar";
 	$accion = "updatePermiso";
 } else {
 	$id = "";
 	$id_rol = "";
 	$id_modulo = "";
 	$titulo = "Nuevo Permiso de rol";
-	$boton = "Guardar permiso";
+	$boton = "Guardar";
 	$accion = "insertPermiso";
 }
 ?>
@@ -28,7 +28,7 @@ if (isset($update)) {
 					<?php echo $id; ?>
 					
 					<div class="col-md-4">
-						<label for="inputState" class="form-label">Rol</label>
+						<label for="inputState" class="form-label">Rol:</label>
 						<select name="id_rol" class="form-select" required>
 							<option class="option" required>Seleccionar</option>
 							<?php foreach ($rol as $r): ?>
@@ -43,7 +43,7 @@ if (isset($update)) {
 						</select>
 					</div>
 					<div class="col-md-4">
-						<label for="inputState" class="form-label">Modulo</label>
+						<label for="inputState" class="form-label">Modulo:</label>
 						<select name="id_modulo" class="form-select" required>
 							<option class="option" required>Seleccionar</option>
 							<?php foreach ($modulo as $m): ?>
@@ -60,8 +60,8 @@ if (isset($update)) {
 
 
 					<div class="col-12">
-						<button class="custom-btn btn-7"><span><?php echo $boton ?></span></button>
-						<a id="boton" class="custom-btn btn-5" href="<?=base_url().'PermisosController/index';?>"><span>Cancelar</span></a>
+						<button class="btn btn-success"><span><?php echo $boton ?></span></button>
+						<a class="btn btn-danger" href="<?=base_url().'PermisosController/index';?>"><span>Cancelar</span></a>
 					</div>
 				</form>
 			</div>		

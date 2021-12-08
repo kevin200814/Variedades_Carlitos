@@ -82,7 +82,7 @@ $hoy = date('Y-m-d');
 					</div>
 					<div class="col-md-6">
 						<label for="inputPassword4" class="form-label">Nick</label>
-						<input type="text" class="form-control" name="nick" value="<?= $nick; ?>" required>
+						<input type="text" class="form-control" name="nick" value="<?= $nick; ?>" maxlength="10" required>
 					</div>
 					<div class="col-md-6">
 						<label for="inputAddress" class="form-label">Correo</label>

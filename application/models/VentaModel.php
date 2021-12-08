@@ -12,6 +12,7 @@ class VentaModel extends CI_Model {
         $this->db->join('TBL_COLORES CO','P.ID_COLORES = CO.ID_COLORES');
         $this->db->join('TBL_MARCA M','P.ID_MARCA = M.ID_MARCA');
         $this->db->join('TBL_ENTRADA E','I.ID_ENTRADA = E.ID_ENTRADA');
+        $this->db->where('I.STOCK_FINAL > 0');
         $query = $this->db->get('INTER_ENTRADA_SALIDA I');
         return $query->result();
     }
@@ -26,9 +27,6 @@ class VentaModel extends CI_Model {
 
 
     public function getLista(){
-
-
-
         $query = $this->db->get('LISTA_VENTA V');
         return $query->result();
     }

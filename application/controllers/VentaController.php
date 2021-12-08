@@ -14,7 +14,7 @@ class VentaController extends CI_Controller {
 
 	public function index()
 	{
-
+ 
 		if ($this->session->userdata('is_logued_in') === TRUE) {	
 			$data = array(
 				'icon' => '../assets/images/favicon.png',

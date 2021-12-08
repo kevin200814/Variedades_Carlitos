@@ -69,7 +69,7 @@ class DeudasController extends CI_Controller {
 	}
 
 	public function updateAbono()
-	{
+	{ 
 		if ($this->session->userdata('is_logued_in') === TRUE) {
 
 			$ABONO_PROVEEDOR = $this->input->post('DEUDA_PROVEEDOR');

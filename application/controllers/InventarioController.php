@@ -242,8 +242,10 @@ class InventarioController extends CI_Controller {
 				'page_title' => 'Sistema de Inventario',
 				'view' => 'inventario/ViewInventario',
 				'data_view' => array()
-			); 
+			);  
+
 			$data['intermedia'] = $this->Inventario->getintermedia();
+			
 			$this->load->view('template/main_view',$data);
 			
 		}else{

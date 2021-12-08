@@ -21,7 +21,7 @@
 
 						<table id="example" class="table table-hover table-bordered">
 							<thead class="thead-dark">
-								<tr>
+								<tr> 
 									<th>Código</th>
 									<th>Producto</th>
 									<th>Categoria</th>
@@ -34,7 +34,7 @@
 									<th>Entrada de stock</th>
 									<th>Cantidad de salida</th>
 									<th>Stock final</th>
-									<th>Acción</th>
+									
 								</tr>
 							</thead>
 							<tbody style="background-color:white;">
@@ -62,10 +62,17 @@
 											<?php 
 											
 											
-											if ($l->ID_ESTADO_STOCK == 1) {
+											/*if ($l->ID_ESTADO_STOCK == 1) {
 												echo "<td style='background-color: #1FA51D;color: white;'> $l->ESTADO_STOCK</td>";
 											}else if($l->ID_ESTADO_STOCK == 2) {
 												echo "<td style='background-color: #F50A0A;color: white;'> $l->ESTADO_STOCK </td>";
+											}*/
+											if($l->STOCK_FINAL == 0){
+												echo "<td style='background-color: #F50A0A;color: white;'>No hay existencias</td>";
+											}else if($l->STOCK_FINAL < 20){
+												echo "<td style='background-color: #0B0E6F;color: white;'>Pocas existencias</td>";
+											}else{
+												echo "<td style='background-color: #1FA51D;color: white;'>Disponible</td>";
 											}
 											
 
@@ -73,11 +80,7 @@
 											<td><?=$l->STOCK_ACTUAL ?></td>
 											<td><?=$l->CANTIDAD_SALIDA ?></td>
 											<td><?=$l->STOCK_FINAL ?></td>
-											<td>
-												<a href="<?php echo base_url() . 'InventarioController/editarEntrada/' . $l->ID_ENTRADA; ?>" class="btn btn-info">
-													<i class="bi bi-pencil-square"></i>
-												</a>
-											</td>
+											
 										</tr>
 									<?php endforeach; ?>
 								</tbody>

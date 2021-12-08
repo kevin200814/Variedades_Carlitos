@@ -73,7 +73,7 @@
 										<td >
 											<input type="hidden" name="id_lista[]" value="<?=$l->ID_LISTA ?>">
 											<input type="hidden" name="id_salida[]" value="<?=$l->ID_SALIDA ?>">
-											<input type="number" class="form-control" style="width: 50%;" name="cantidad[]" value="<?=$l->CANTIDAD_VENDIDA ?>">
+											<input type="number" class="form-control" style="width: 50%;" name="cantidad[]" value="<?=$l->CANTIDAD_VENDIDA ?>" min="0" max="<?=$l->STOCK_ACTUAL ?>">
 										</td>
 										<td >
 
